@@ -1,0 +1,9 @@
+[project]
+name = "mvpi"
+version = "0.1.0"
+requires-python = ">=3.12"
+description = "Mississippi high-school volleyball computer rankings"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
