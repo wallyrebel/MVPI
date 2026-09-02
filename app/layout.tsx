@@ -5,10 +5,11 @@ import { siteUrl } from './site';
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Mississippi Volleyball Power Index | Mississippi Volleyball Rankings',
+    default: 'Mississippi Volleyball Rankings & Power Index | MVPI',
     template: '%s | Mississippi Volleyball Power Index',
   },
-  description: 'Mississippi high school volleyball rankings using records, set scores, strength of schedule, opponent quality, and statewide rankings.',
+  description: 'The Mississippi Volleyball Power Index ranks every MHSAA 1A–7A team using records, set scores, strength of schedule, opponent quality and recent results.',
+  applicationName: 'Mississippi Volleyball Power Index',
   category: 'Sports',
   authors: [{ name: 'Mississippi Volleyball Power Index' }],
   creator: 'Mississippi Volleyball Power Index',
@@ -26,17 +27,27 @@ export const metadata: Metadata = {
     type: 'website',
     url: siteUrl,
     siteName: 'Mississippi Volleyball Power Index',
-    title: 'Mississippi Volleyball Power Index | Mississippi Volleyball Rankings',
-    description: 'Mississippi high school volleyball rankings using records, set scores, strength of schedule, opponent quality, and statewide rankings.',
+    title: 'Mississippi Volleyball Rankings & Power Index | MVPI',
+    description: 'The Mississippi Volleyball Power Index ranks every MHSAA 1A–7A team using records, set scores, strength of schedule, opponent quality and recent results.',
     images: [{ url: '/og.png', width: 1734, height: 907, alt: 'Mississippi Volleyball Power Index' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mississippi Volleyball Power Index | Mississippi Volleyball Rankings',
-    description: 'Mississippi high school volleyball rankings with match results, set differential, and strength of schedule.',
+    title: 'Mississippi Volleyball Rankings & Power Index | MVPI',
+    description: 'Mississippi high school volleyball rankings for every MHSAA class, powered by results, set scores and strength of schedule.',
     images: ['/og.png'],
   },
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
