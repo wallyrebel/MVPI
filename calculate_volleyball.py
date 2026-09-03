@@ -7,7 +7,15 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from mvpi.live import CLASSIFICATIONS_URL, SCORE_API_URL, fetch_matches, fetch_teams
-from mvpi.maxpreps import RANKINGS_URL, fetch_rankings, fetch_schedules, merge_matches, reconcile_rankings
+from mvpi.maxpreps import (
+    RANKINGS_URL,
+    build_team_inventory,
+    fetch_classified_teams,
+    fetch_rankings,
+    fetch_schedules,
+    merge_matches,
+    reconcile_rankings,
+)
 from mvpi.ranking import rank
 from mvpi.volleyball import match_result_value
 
@@ -50,8 +58,10 @@ def _advance_media_records(media_signals, media_matches, source_updated_at: str 
 
 def main() -> None:
     today = date.today()
-    teams = fetch_teams()
+    official_teams = fetch_teams()
     media_fetch = fetch_rankings(Path("data/cache/volleyball-rankings.json"))
+    classified_fetch = fetch_classified_teams(Path("data/cache/volleyball-classes.json"))
+    teams, unverified_class_teams = build_team_inventory(official_teams, classified_fetch.teams)
     media_signals, unmatched_media = reconcile_rankings(teams, media_fetch.rankings)
     missing_media = [team.name for team in teams if team.team_id not in media_signals]
     media_matches, failed_schedules = fetch_schedules(
@@ -75,10 +85,13 @@ def main() -> None:
             "completed_matches": len(matches),
             "media_schedule_matches": len(media_matches),
             "media_ranked_teams": len(media_signals),
+            "class_feed_teams": len(classified_fetch.teams),
+            "unverified_class_feed_teams": len(unverified_class_teams),
             "failed_schedules": failed_schedules,
             "unmatched_media_teams": len(unmatched_media),
             "missing_media_teams": len(missing_media),
             "classification_source": CLASSIFICATIONS_URL,
+            "team_discovery_source": RANKINGS_URL.format(page=1),
             "ranking_source": RANKINGS_URL.format(page=1),
             "fallback_score_source": SCORE_API_URL,
             "ranking_source_updated_at": media_fetch.source_updated_at,
@@ -90,6 +103,8 @@ def main() -> None:
     print(json.dumps({
         "teams": len(teams),
         "media_ranked_teams": len(media_signals),
+        "class_feed_teams": len(classified_fetch.teams),
+        "unverified_class_feed_teams": unverified_class_teams,
         "media_schedule_matches": len(media_matches),
         "completed_matches": len(matches),
         "failed_schedules": failed_schedules,

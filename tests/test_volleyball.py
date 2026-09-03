@@ -1,7 +1,17 @@
 from datetime import datetime, timezone
 
 from mvpi.live import Team
-from mvpi.maxpreps import MediaRanking, _name_key, _parse_rankings, merge_matches, parse_schedule, reconcile_rankings
+from mvpi.maxpreps import (
+    ClassifiedMediaTeam,
+    MediaRanking,
+    _class_ranking_urls,
+    _name_key,
+    _parse_rankings,
+    build_team_inventory,
+    merge_matches,
+    parse_schedule,
+    reconcile_rankings,
+)
 from mvpi.volleyball import Match, match_result_value, set_margin
 
 
@@ -33,6 +43,16 @@ def test_media_ranking_parser_keeps_record_rank_rating_and_strength():
     """
     row = _parse_rankings(html)[0]
     assert (row.state_rank, row.record, row.rating, row.strength) == (11, "16-5-0", 17.12, 10.6)
+
+
+def test_class_ranking_urls_are_discovered_from_current_season_navigation():
+    html = """
+    <a href="/ms/volleyball/26-27/class/class-1a/rankings/1/?id=one&amp;x=1">1A</a>
+    <a href="/ms/volleyball/26-27/class/class-7a/rankings/1/?id=seven">7A</a>
+    """
+    urls = _class_ranking_urls(html)
+    assert set(urls) == {"1A", "7A"}
+    assert urls["1A"].endswith("?id=one&x=1")
 
 
 def test_common_mhsaa_and_media_name_variants_normalize_together():
@@ -80,6 +100,32 @@ def test_verified_media_aliases_map_to_their_mhsaa_programs():
     matched, unresolved = reconcile_rankings(teams, rankings)
     assert set(matched) == {team.team_id for team in teams}
     assert unresolved == []
+
+
+def test_class_feeds_update_official_names_and_preserve_unranked_official_team():
+    official = [
+        Team("tupelo-christian", "Tupelo Christian", "1A", "3"),
+        Team("waiting-for-results", "Waiting For Results", "2A", "4"),
+    ]
+    classified = [
+        ClassifiedMediaTeam(
+            "Tupelo Christian Prep",
+            "https://www.maxpreps.com/ms/belden/tupelo-christian-prep-eagles/volleyball/",
+            "1A",
+        ),
+        ClassifiedMediaTeam(
+            "New Discovery",
+            "https://www.maxpreps.com/ms/example/new-discovery/volleyball/",
+            "3A",
+        ),
+    ]
+    inventory, unverified = build_team_inventory(official, classified)
+    by_id = {team.team_id: team for team in inventory}
+    assert by_id["tupelo-christian"].name == "Tupelo Christian Prep"
+    assert by_id["tupelo-christian"].region == "3"
+    assert "new-discovery" not in by_id
+    assert "waiting-for-results" in by_id
+    assert unverified == ["New Discovery"]
 
 
 def test_media_schedule_parser_reads_volleyball_set_score():

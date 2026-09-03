@@ -25,8 +25,20 @@ function RankingRow({ row, displayRank = row.rank, classView = false }: { row: R
 
 export default function Home() {
   const [scope, setScope] = useState<Scope>('7A');
+  const [query, setQuery] = useState('');
   const rankedWithMatches = snapshot.rankings;
-  const displayed = scope === 'Overall' ? rankedWithMatches : rankedWithMatches.filter((row) => row.classification === scope);
+  const normalizedQuery = query.trim().toLocaleLowerCase();
+  const searching = normalizedQuery.length > 0;
+  const displayed = searching
+    ? rankedWithMatches.filter((row) => {
+        const words = row.team.toLocaleLowerCase().match(/[a-z0-9]+/g) ?? [];
+        const initials = words.map((word) => word[0]).join('');
+        const searchText = `${row.team} ${row.team_id} ${row.classification} ${initials} ${initials}s`.toLocaleLowerCase();
+        return searchText.includes(normalizedQuery);
+      })
+    : scope === 'Overall'
+      ? rankedWithMatches
+      : rankedWithMatches.filter((row) => row.classification === scope);
   const strongestSchedule = [...rankedWithMatches]
     .filter((row) => row.media_rank !== null)
     .sort((a, b) => b.sos - a.sos)[0];
@@ -88,15 +100,23 @@ export default function Home() {
         <article><span>Set-score coverage</span><strong>{setMatches.toLocaleString()} of {publishedMatches.toLocaleString()} team-results</strong><small>Records stay authoritative even when a tournament has no public match-level set score</small></article>
       </section>
       <section className="vb-panel">
-        <div className="vb-panel-title"><div><p className="vb-eyebrow">Live computer rankings</p><h2>{scope === 'Overall' ? 'Statewide' : `Class ${scope}`}</h2></div><span>Formula MVPI 0.2 · Media data authoritative</span></div>
+        <div className="vb-panel-title"><div><p className="vb-eyebrow">Live computer rankings</p><h2>{searching ? 'Team search' : scope === 'Overall' ? 'Statewide' : `Class ${scope}`}</h2></div><span>{searching ? `${displayed.length} matching team${displayed.length === 1 ? '' : 's'}` : 'Formula MVPI 0.2 · Media data authoritative'}</span></div>
+        <div className="vb-team-search">
+          <label htmlFor="team-search">Search teams</label>
+          <div>
+            <input id="team-search" type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Team name or abbreviation (for example, TCPS)" autoComplete="off" />
+            {searching && <button type="button" onClick={() => setQuery('')} aria-label="Clear team search">Clear</button>}
+          </div>
+        </div>
         <nav className="vb-class-tabs" aria-label="Classification rankings">
           {[...classes, 'Overall' as const].map((label) => (
-            <button key={label} className={scope === label ? 'active' : ''} type="button" onClick={() => setScope(label)}>{label}</button>
+            <button key={label} className={!searching && scope === label ? 'active' : ''} type="button" onClick={() => { setScope(label); setQuery(''); }}>{label}</button>
           ))}
         </nav>
         <div className="vb-table-wrap">
-          <div className="vb-head vb-row"><span>{scope === 'Overall' ? 'Rank' : 'Class rank'}</span><span>Team</span><span>Record</span><span>MVPI</span><span>Media rank</span><span>SOS</span><span>Sets</span><span>Set data</span></div>
-          {displayed.map((row, index) => <RankingRow key={row.team_id} row={row} displayRank={scope === 'Overall' ? row.rank : index + 1} classView={scope !== 'Overall'} />)}
+          <div className="vb-head vb-row"><span>{searching || scope === 'Overall' ? 'Rank' : 'Class rank'}</span><span>Team</span><span>Record</span><span>MVPI</span><span>Media rank</span><span>SOS</span><span>Sets</span><span>Set data</span></div>
+          {displayed.map((row, index) => <RankingRow key={row.team_id} row={row} displayRank={searching || scope === 'Overall' ? row.rank : index + 1} classView={!searching && scope !== 'Overall'} />)}
+          {displayed.length === 0 && <p className="vb-empty" role="status">No ranked teams match “{query.trim()}”.</p>}
         </div>
         <p className="vb-source-note">Record is the statewide media record. “Sets” totals publicly listed match scores; “Set data” shows how many published matches have usable set scores. Official association results only fill missing data and never override the media record.</p>
       </section>

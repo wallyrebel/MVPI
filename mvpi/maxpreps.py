@@ -1,8 +1,8 @@
-"""Secondary statewide ranking and schedule data for Mississippi volleyball.
+"""Statewide ranking, classified team, and schedule data for MVPI.
 
-The MHSAA classification list remains the authority for which schools belong in
-MVPI.  This module supplies the much more complete public match schedules that
-are needed to calculate records, set margins, and schedule strength.
+The seven public 1A-7A ranking feeds discover active team candidates and supply
+their current public names.  The MHSAA directory confirms membership, supplies
+official region metadata, and keeps not-yet-ranked member schools in inventory.
 """
 
 from __future__ import annotations
@@ -13,10 +13,12 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
+from html import unescape
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
 from urllib.parse import parse_qs, urljoin, urlparse
+from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
 from .live import Team, _slug
@@ -41,6 +43,20 @@ class MediaFetch:
     rankings: list[MediaRanking]
     retrieved_at: datetime
     source_updated_at: str | None
+    used_cache: bool = False
+
+
+@dataclass(frozen=True)
+class ClassifiedMediaTeam:
+    team_name: str
+    team_url: str
+    classification: str
+
+
+@dataclass(frozen=True)
+class ClassifiedTeamsFetch:
+    teams: list[ClassifiedMediaTeam]
+    retrieved_at: datetime
     used_cache: bool = False
 
 
@@ -191,6 +207,83 @@ def fetch_rankings(cache_path: Path, request_delay: float = 0.08) -> MediaFetch:
         )
 
 
+def _class_ranking_urls(html: str) -> dict[str, str]:
+    """Extract the current-season 1A-7A feeds from the statewide page."""
+    urls: dict[str, str] = {}
+    pattern = re.compile(
+        r'href=["\']([^"\']*/class/class-([1-7])a/rankings/1/[^"\']*)["\']',
+        flags=re.IGNORECASE,
+    )
+    for match in pattern.finditer(html):
+        classification = f"{match.group(2)}A"
+        urls[classification] = urljoin(RANKINGS_ROOT, unescape(match.group(1)))
+    return urls
+
+
+def _ranking_page_url(url: str, page: int) -> str:
+    return re.sub(r"/rankings/\d+/", f"/rankings/{page}/", url, count=1)
+
+
+def fetch_classified_teams(cache_path: Path, request_delay: float = 0.08) -> ClassifiedTeamsFetch:
+    """Fetch every team listed in the current 1A-7A ranking feeds."""
+    retrieved_at = datetime.now(timezone.utc)
+    try:
+        statewide_html = _request(RANKINGS_URL.format(page=1))
+        class_urls = _class_ranking_urls(statewide_html)
+        if set(class_urls) != {f"{number}A" for number in range(1, 8)}:
+            raise ValueError(f"Expected seven class ranking feeds, found {sorted(class_urls)}")
+
+        by_url: dict[str, ClassifiedMediaTeam] = {}
+        for classification in sorted(class_urls, key=lambda value: int(value[:-1])):
+            for page in range(1, 21):
+                try:
+                    html = _request(_ranking_page_url(class_urls[classification], page))
+                except HTTPError as error:
+                    # Some class feeds contain exactly 25 teams. Their second
+                    # page returns 404 instead of an empty ranking table.
+                    if error.code == 404 and page > 1:
+                        break
+                    raise
+                page_rows = _parse_rankings(html)
+                if not page_rows:
+                    break
+                for row in page_rows:
+                    key = _url_key(row.team_url)
+                    current = by_url.get(key)
+                    if current and current.classification != classification:
+                        raise ValueError(f"Team appears in multiple classes: {row.team_name}")
+                    by_url[key] = ClassifiedMediaTeam(row.team_name, row.team_url, classification)
+                if len(page_rows) < 25:
+                    break
+                time.sleep(request_delay)
+
+        teams = list(by_url.values())
+        if len(teams) < 150:
+            raise ValueError(f"Class ranking feeds returned only {len(teams)} teams")
+        cache_path.parent.mkdir(parents=True, exist_ok=True)
+        cache_path.write_text(
+            json.dumps(
+                {
+                    "retrieved_at": retrieved_at.isoformat(),
+                    "teams": [asdict(team) for team in teams],
+                },
+                indent=2,
+            )
+            + "\n",
+            encoding="utf-8",
+        )
+        return ClassifiedTeamsFetch(teams, retrieved_at)
+    except Exception:
+        if not cache_path.exists():
+            raise
+        payload = json.loads(cache_path.read_text(encoding="utf-8"))
+        return ClassifiedTeamsFetch(
+            [ClassifiedMediaTeam(**row) for row in payload["teams"]],
+            datetime.fromisoformat(payload["retrieved_at"]),
+            True,
+        )
+
+
 def _name_key(name: str) -> str:
     value = re.sub(r"\([^)]*\)", " ", name).casefold().replace("saint", "st")
     # Apostrophes are not word boundaries in school names: D'Iberville and
@@ -252,6 +345,50 @@ def reconcile_rankings(teams: list[Team], rankings: list[MediaRanking]) -> tuple
         else:
             unresolved.append(row.team_name)
     return matched, unresolved
+
+
+def build_team_inventory(
+    official_teams: list[Team],
+    classified_media_teams: list[ClassifiedMediaTeam],
+) -> tuple[list[Team], list[str]]:
+    """Merge class-feed discovery with official class and region metadata.
+
+    The class feeds lead discovery and naming. An official member absent from
+    those feeds remains available so it is not dropped merely because it has no
+    published ranking yet. Class-feed entries not confirmed by the official
+    directory are reported for review but excluded; a public 1A-7A label alone
+    does not prove MHSAA membership.
+    """
+    discovery_rows = [
+        MediaRanking(index, row.team_name, "", 0.0, 0.0, row.team_url)
+        for index, row in enumerate(classified_media_teams, 1)
+    ]
+    matched, _ = reconcile_rankings(official_teams, discovery_rows)
+    official_by_id = {team.team_id: team for team in official_teams}
+    official_by_url = {
+        _url_key(signal.team_url): official_by_id[team_id]
+        for team_id, signal in matched.items()
+    }
+
+    inventory: list[Team] = []
+    used_ids: set[str] = set()
+    media_only: list[str] = []
+    for row in classified_media_teams:
+        official = official_by_url.get(_url_key(row.team_url))
+        if official:
+            team = Team(official.team_id, row.team_name, row.classification, official.region)
+        else:
+            media_only.append(row.team_name)
+            continue
+        if team.team_id not in used_ids:
+            inventory.append(team)
+            used_ids.add(team.team_id)
+
+    for team in official_teams:
+        if team.team_id not in used_ids:
+            inventory.append(team)
+            used_ids.add(team.team_id)
+    return inventory, sorted(media_only)
 
 
 def _events(value: Any):
