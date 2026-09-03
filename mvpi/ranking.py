@@ -136,7 +136,7 @@ def rank(
             Ranking(
                 position,
                 team.team_id,
-                team.name,
+                signal.team_name if signal else team.name,
                 team.classification,
                 team.region,
                 f"{wins}-{losses}",

@@ -53,6 +53,7 @@ def main() -> None:
     teams = fetch_teams()
     media_fetch = fetch_rankings(Path("data/cache/volleyball-rankings.json"))
     media_signals, unmatched_media = reconcile_rankings(teams, media_fetch.rankings)
+    missing_media = [team.name for team in teams if team.team_id not in media_signals]
     media_matches, failed_schedules = fetch_schedules(
         teams,
         media_signals,
@@ -76,6 +77,7 @@ def main() -> None:
             "media_ranked_teams": len(media_signals),
             "failed_schedules": failed_schedules,
             "unmatched_media_teams": len(unmatched_media),
+            "missing_media_teams": len(missing_media),
             "classification_source": CLASSIFICATIONS_URL,
             "ranking_source": RANKINGS_URL.format(page=1),
             "fallback_score_source": SCORE_API_URL,
@@ -91,6 +93,8 @@ def main() -> None:
         "media_schedule_matches": len(media_matches),
         "completed_matches": len(matches),
         "failed_schedules": failed_schedules,
+        "missing_media_teams": missing_media,
+        "unmatched_media_teams": unmatched_media,
         "output": str(output),
         "lewisburg": lewisburg.to_dict() if lewisburg else None,
         "top_five": [row.team for row in rankings[:5]],

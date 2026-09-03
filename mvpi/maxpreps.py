@@ -192,22 +192,57 @@ def fetch_rankings(cache_path: Path, request_delay: float = 0.08) -> MediaFetch:
 
 
 def _name_key(name: str) -> str:
-    value = re.sub(r"\([^)]*\)", " ", name).lower().replace("saint", "st")
+    value = re.sub(r"\([^)]*\)", " ", name).casefold().replace("saint", "st")
+    # Apostrophes are not word boundaries in school names: D'Iberville and
+    # Andrews must compare as diberville and andrews, not as split tokens.
+    value = re.sub(r"(?<=[a-z0-9])['’](?=[a-z0-9])", "", value)
     words = re.findall(r"[a-z0-9]+", value)
-    ignored = {"high", "school", "senior", "attendance", "center", "campus"}
-    return " ".join(word for word in words if word not in ignored)
+    ignored = {
+        "high", "school", "senior", "attendance", "center", "campus",
+        "public", "middle", "jr", "sr", "memorial", "secondary", "hi",
+        "sch", "prep",
+    }
+    normalized = ("county" if word == "co" else word for word in words if word not in ignored)
+    # Collapsing whitespace intentionally treats North Side and Northside as
+    # the same label while preserving word order for every other school.
+    return "".join(normalized)
+
+
+# Verified MHSAA member names whose media labels omit or add meaningful words.
+# These are explicit because globally discarding words such as "county" would
+# incorrectly merge distinct programs (for example, Newton and Newton County).
+_MEDIA_TEAM_ALIASES = {
+    _name_key("Edwards"): "thomas-e-edwards",
+    _name_key("St. Andrew's Episcopal"): "st-andrew-s",
+    _name_key("Franklin County"): "franklin",
+    _name_key("Palmer"): "m-s-palmer",
+    _name_key("Byers"): "h-w-byers-high-school-5-12",
+    _name_key("Resurrection Catholic"): "resurrection",
+}
 
 
 def reconcile_rankings(teams: list[Team], rankings: list[MediaRanking]) -> tuple[dict[str, MediaRanking], list[str]]:
+    team_by_id = {team.team_id: team for team in teams}
     by_key: dict[str, list[Team]] = {}
     for team in teams:
         by_key.setdefault(_name_key(team.name), []).append(team)
     matched: dict[str, MediaRanking] = {}
     unresolved: list[str] = []
     for row in rankings:
+        alias_id = _MEDIA_TEAM_ALIASES.get(_name_key(row.team_name))
+        if alias_id:
+            if alias_id in team_by_id and alias_id not in matched:
+                matched[alias_id] = row
+            else:
+                unresolved.append(row.team_name)
+            continue
         candidates = by_key.get(_name_key(row.team_name), [])
         if len(candidates) == 1:
-            matched[candidates[0].team_id] = row
+            team_id = candidates[0].team_id
+            if team_id in matched:
+                unresolved.append(row.team_name)
+            else:
+                matched[team_id] = row
         elif candidates:
             # City in the team URL resolves the rare duplicate school name.
             url_path = urlparse(row.team_url).path.lower()
