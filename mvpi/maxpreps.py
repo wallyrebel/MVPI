@@ -376,7 +376,7 @@ def build_team_inventory(
     for row in classified_media_teams:
         official = official_by_url.get(_url_key(row.team_url))
         if official:
-            team = Team(official.team_id, row.team_name, row.classification, official.region)
+            team = Team(official.team_id, row.team_name, official.classification, official.region, official.association)
         else:
             media_only.append(row.team_name)
             continue
@@ -511,20 +511,22 @@ def fetch_schedules(
     cache_dir: Path,
     *,
     workers: int = 8,
+    team_urls: dict[str, str] | None = None,
 ) -> tuple[list[Match], list[str]]:
     team_by_id = {team.team_id: team for team in teams}
     official_by_name = {_name_key(team.name): team for team in teams}
-    official_by_url = {_url_key(row.team_url): team_by_id[team_id] for team_id, row in signals.items()}
+    urls = {**(team_urls or {}), **{team_id: row.team_url for team_id, row in signals.items()}}
+    official_by_url = {_url_key(url): team_by_id[team_id] for team_id, url in urls.items()}
     failures: list[str] = []
 
-    def fetch_one(team_id: str, signal: MediaRanking) -> tuple[str, list[Match]]:
+    def fetch_one(team_id: str, team_url: str) -> tuple[str, list[Match]]:
         cache_path = cache_dir / f"{team_id}.json"
         try:
-            html = _request(_schedule_url(signal.team_url))
+            html = _request(_schedule_url(team_url))
             parsed = parse_schedule(
                 html,
                 source_team=team_by_id[team_id],
-                source_url=signal.team_url,
+                source_url=team_url,
                 official_by_name=official_by_name,
                 official_by_url=official_by_url,
             )
@@ -558,7 +560,7 @@ def fetch_schedules(
 
     observations: list[Match] = []
     with ThreadPoolExecutor(max_workers=workers) as executor:
-        jobs = {executor.submit(fetch_one, team_id, signal): team_id for team_id, signal in signals.items()}
+        jobs = {executor.submit(fetch_one, team_id, url): team_id for team_id, url in urls.items()}
         for future in as_completed(jobs):
             team_id = jobs[future]
             try:

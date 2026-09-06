@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import json
 from dataclasses import replace
-from datetime import date, timedelta
+from datetime import date
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -17,6 +17,7 @@ from mvpi.maxpreps import (
     reconcile_rankings,
 )
 from mvpi.ranking import rank
+from mvpi.private import load_private_teams, include_private_teams
 from mvpi.volleyball import match_result_value
 
 
@@ -56,19 +57,32 @@ def _advance_media_records(media_signals, media_matches, source_updated_at: str 
     return advanced
 
 
+def current_season_matches(matches, today: date):
+    """Exclude stale-season and future results, including cache fallbacks."""
+    season_start = date(today.year, 7, 1)
+    return [match for match in matches if match.played_at
+            and season_start <= match.played_at.astimezone(ZoneInfo("America/Chicago")).date() <= today]
+
+
 def main() -> None:
     today = date.today()
     official_teams = fetch_teams()
     media_fetch = fetch_rankings(Path("data/cache/volleyball-rankings.json"))
     classified_fetch = fetch_classified_teams(Path("data/cache/volleyball-classes.json"))
     teams, unverified_class_teams = build_team_inventory(official_teams, classified_fetch.teams)
+    private_teams, private_urls, private_sources = load_private_teams(today.year)
+    teams = include_private_teams(teams, private_teams)
     media_signals, unmatched_media = reconcile_rankings(teams, media_fetch.rankings)
     missing_media = [team.name for team in teams if team.team_id not in media_signals]
     media_matches, failed_schedules = fetch_schedules(
         teams,
         media_signals,
         Path("data/cache/volleyball-schedules"),
+        team_urls=private_urls,
     )
+    # An unranked school's default page can still expose last season's scores.
+    # Apply this boundary to both fresh and cached schedule observations.
+    media_matches = current_season_matches(media_matches, today)
     media_signals = _advance_media_records(media_signals, media_matches, media_fetch.source_updated_at)
     official_matches, names = fetch_matches(date(today.year, 7, 27), today)
     # MaxPreps is authoritative for volleyball. MHSAA score-center results only
@@ -82,6 +96,10 @@ def main() -> None:
             "generated_at": today.isoformat(),
             "teams": len(teams),
             "ranked_teams": len(rankings),
+            "private_teams": len(private_teams),
+            "private_ranked_teams": sum(row.classification == "Private" for row in rankings),
+            "private_school_sources": private_sources,
+            "unranked_private_teams": [team.name for team in private_teams if team.team_id not in {row.team_id for row in rankings}],
             "completed_matches": len(matches),
             "media_schedule_matches": len(media_matches),
             "media_ranked_teams": len(media_signals),

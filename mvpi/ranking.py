@@ -33,6 +33,7 @@ class Ranking:
     recent: float
     media_rank: int | None
     media_rating: float | None
+    association: str = "MHSAA"
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -152,6 +153,7 @@ def rank(
                 round(components[4][team.team_id], 1),
                 signal.state_rank if signal else None,
                 round(signal.rating, 2) if signal else None,
+                team.association,
             )
         )
     return rows

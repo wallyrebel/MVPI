@@ -21,6 +21,7 @@ class Team:
     name: str
     classification: str
     region: str
+    association: str = "MHSAA"
 
 
 class _TableParser(HTMLParser):

@@ -1,6 +1,6 @@
 # Mississippi Volleyball Power Index (MVPI)
 
-MVPI is an explainable ranking of Mississippi MHSAA volleyball teams in Classes 1A–7A. It uses authoritative media records, match and set scores, media rank, strength of schedule, opponent-adjusted performance, set percentage, and recent form.
+MVPI is an explainable ranking of Mississippi MHSAA volleyball teams in Classes 1A–7A, plus a separate **Private** group for Mississippi MAIS schools and Northpoint Christian in Southaven (TSSAA). All teams participate in the same Overall rankings. It uses authoritative media records, match and set scores, media rank, strength of schedule, opponent-adjusted performance, set percentage, and recent form.
 
 ## Ranking model
 
@@ -70,3 +70,11 @@ The suite covers margin diminishing returns, home field, SRS convergence, robust
 ## Provisional rankings
 
 The official MHSAA score center sometimes leaves completed-looking scheduled games without a verified final. MFPI checks a secondary public source only for those gaps, records every secondary result in the validation audit, and continues to prefer an official MHSAA final whenever one exists. MFPI still ranks every 1A–7A team from the verified results available and clearly marks the run provisional until at least 95% of expected games have verified scores. Impossible scores, conflicting secondary reports, ambiguous teams, duplicates, future results, and failed SRS convergence remain hard blockers.
+
+## Private school coverage
+
+`data/volleyball/private-schools.json` retains the verified 2026 MAIS volleyball school list, MaxPreps team URLs and association sources, plus Northpoint Christian. Out-of-state MAIS members remain opponents only. Existing MHSAA members keep their official classes. Private is a display group; its teams receive a neutral starting prior, not an invented MHSAA enrollment class.
+
+The updater fetches every registered private school schedule even before it appears in the statewide MaxPreps rankings. Only current-season results count. Schools without results or a media ranking remain in the inventory and are listed in snapshot metadata as unranked. Membership must be reviewed when the season changes.
+
+Sources: [MAIS 2026–27 volleyball alignment, pages 47–48](https://home.msais.org/postoffice/mailouts/aacminutes_102825_1761753701.pdf), [MAIS school list](https://home.msais.org/test2/index.php), [Northpoint TSSAA directory](https://portal.tssaa.org/common/directory/?id=472), and [MaxPreps Mississippi rankings](https://www.maxpreps.com/ms/volleyball/rankings/1/).

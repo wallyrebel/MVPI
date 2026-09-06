@@ -168,3 +168,57 @@ def test_mhsaa_fallback_cannot_expand_authoritative_team_record():
     played = datetime(2026, 8, 12, 0, tzinfo=timezone.utc)
     fallback = Match("mhsaa:other", "lewisburg", "unlisted", 3, 0, played_at=played)
     assert merge_matches([], [fallback], {"lewisburg"}) == []
+
+
+def test_private_registry_includes_mais_and_northpoint_without_mhsaa_reclassification():
+    from mvpi.private import include_private_teams, load_private_teams
+    private, urls, sources = load_private_teams(2026)
+    northpoint = next(team for team in private if team.team_id == "northpoint-christian")
+    assert (northpoint.classification, northpoint.association, northpoint.region) == ("Private", "TSSAA", "")
+    assert "/ms/southaven/" in urls[northpoint.team_id]
+    assert sum(team.association == "MAIS" for team in private) == 21
+    assert sources["mais"]
+    mhsaa = Team("tupelo-christian", "Tupelo Christian Prep", "1A", "3")
+    combined = include_private_teams([mhsaa], private)
+    assert combined[0] == mhsaa
+    assert len({team.team_id for team in combined}) == len(combined)
+
+
+def test_private_teams_rank_in_same_overall_calculation_and_unplayed_teams_wait():
+    from mvpi.ranking import rank
+    teams = [Team("public", "Public", "4A", "1"),
+             Team("mais", "MAIS School", "Private", "", "MAIS"),
+             Team("northpoint", "Northpoint Christian", "Private", "", "TSSAA"),
+             Team("waiting", "Waiting", "Private", "", "MAIS")]
+    matches = [Match("one", "mais", "public", 3, 0), Match("two", "northpoint", "mais", 3, 1)]
+    rows = rank(teams, matches, {})
+    assert {row.team_id for row in rows} == {"public", "mais", "northpoint"}
+    assert [row.rank for row in rows] == [1, 2, 3]
+    assert all(row.classification == "Private" for row in rows if row.association != "MHSAA")
+    assert next(row for row in rows if row.team_id == "northpoint").to_dict()["association"] == "TSSAA"
+
+
+def test_private_schedules_are_fetched_without_fabricating_media_rank(monkeypatch, tmp_path):
+    from mvpi import maxpreps
+    team = Team("waiting", "Waiting", "Private", "", "MAIS")
+    url = "https://www.maxpreps.com/ms/example/waiting/volleyball/"
+    requested = []
+    monkeypatch.setattr(maxpreps, "_request", lambda address: requested.append(address) or "<html></html>")
+    matches, failures = maxpreps.fetch_schedules([team], {}, tmp_path, team_urls={team.team_id: url})
+    assert requested == [url + "schedule/"]
+    assert matches == [] and failures == []
+
+
+def test_private_membership_requires_season_review():
+    import pytest
+    from mvpi.private import load_private_teams
+    with pytest.raises(ValueError, match="needs review"):
+        load_private_teams(2027)
+
+
+def test_schedule_season_filter_rejects_old_and_future_results():
+    from datetime import date
+    from calculate_volleyball import current_season_matches
+    matches = [Match(str(year), "a", "b", 3, 0, played_at=datetime(year, 8, 1, tzinfo=timezone.utc))
+               for year in (2025, 2026, 2027)]
+    assert current_season_matches(matches, date(2026, 9, 5)) == [matches[1]]

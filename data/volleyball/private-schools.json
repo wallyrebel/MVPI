@@ -1,0 +1,144 @@
+{
+  "season": 2026,
+  "verified_at": "2026-09-05",
+  "sources": {
+    "mais": "https://home.msais.org/postoffice/mailouts/aacminutes_102825_1761753701.pdf",
+    "mais_members": "https://home.msais.org/test2/index.php",
+    "northpoint": "https://portal.tssaa.org/common/directory/?id=472"
+  },
+  "notes": "Mississippi schools in the MAIS 2026-27 volleyball alignment (pages 47-48), plus Northpoint Christian in Southaven. Out-of-state MAIS schools remain opponents only. Private is an MVPI display group, not an association division.",
+  "teams": [
+    {
+      "team_id": "jackson-academy",
+      "name": "Jackson Academy",
+      "association": "MAIS",
+      "team_url": "https://www.maxpreps.com/ms/jackson/jackson-academy-raiders/volleyball/"
+    },
+    {
+      "team_id": "madison-ridgeland-academy",
+      "name": "Madison-Ridgeland Academy",
+      "association": "MAIS",
+      "team_url": "https://www.maxpreps.com/ms/madison/madison-ridgeland-academy-patriots/volleyball/"
+    },
+    {
+      "team_id": "jackson-prep",
+      "name": "Jackson Prep",
+      "association": "MAIS",
+      "team_url": "https://www.maxpreps.com/ms/jackson/jackson-prep-patriots/volleyball/"
+    },
+    {
+      "team_id": "pillow-academy",
+      "name": "Pillow Academy",
+      "association": "MAIS",
+      "team_url": "https://www.maxpreps.com/ms/greenwood/pillow-academy-mustangs/volleyball/"
+    },
+    {
+      "team_id": "hartfield-academy",
+      "name": "Hartfield Academy",
+      "association": "MAIS",
+      "team_url": "https://www.maxpreps.com/ms/flowood/hartfield-academy-hawks/volleyball/"
+    },
+    {
+      "team_id": "simpson-academy",
+      "name": "Simpson Academy",
+      "association": "MAIS",
+      "team_url": "https://www.maxpreps.com/ms/mendenhall/simpson-academy-cougars/volleyball/"
+    },
+    {
+      "team_id": "lamar",
+      "name": "Lamar",
+      "association": "MAIS",
+      "team_url": "https://www.maxpreps.com/ms/meridian/lamar-raiders/volleyball/"
+    },
+    {
+      "team_id": "heritage-academy",
+      "name": "Heritage Academy",
+      "association": "MAIS",
+      "team_url": "https://www.maxpreps.com/ms/columbus/heritage-academy-patriots/volleyball/"
+    },
+    {
+      "team_id": "starkville-academy",
+      "name": "Starkville Academy",
+      "association": "MAIS",
+      "team_url": "https://www.maxpreps.com/ms/starkville/starkville-academy-volunteers/volleyball/"
+    },
+    {
+      "team_id": "st-joseph-catholic",
+      "name": "St. Joseph Catholic",
+      "association": "MAIS",
+      "team_url": "https://www.maxpreps.com/ms/madison/st-joseph-catholic-bruins/volleyball/"
+    },
+    {
+      "team_id": "st-aloysius",
+      "name": "St. Aloysius",
+      "association": "MAIS",
+      "team_url": "https://www.maxpreps.com/ms/vicksburg/st-aloysius-flashes/volleyball/"
+    },
+    {
+      "team_id": "christian-collegiate-academy",
+      "name": "Christian Collegiate Academy",
+      "association": "MAIS",
+      "team_url": "https://www.maxpreps.com/ms/gulfport/christian-collegiate-academy-bulldogs/volleyball/"
+    },
+    {
+      "team_id": "north-delta",
+      "name": "North Delta",
+      "association": "MAIS",
+      "team_url": "https://www.maxpreps.com/ms/batesville/north-delta-green-wave/volleyball/"
+    },
+    {
+      "team_id": "winston-academy",
+      "name": "Winston Academy",
+      "association": "MAIS",
+      "team_url": "https://www.maxpreps.com/ms/louisville/winston-academy-patriots/volleyball/"
+    },
+    {
+      "team_id": "regents",
+      "name": "Regents",
+      "association": "MAIS",
+      "team_url": "https://www.maxpreps.com/ms/oxford/regents-lions/volleyball/"
+    },
+    {
+      "team_id": "christ-covenant",
+      "name": "Christ Covenant",
+      "association": "MAIS",
+      "team_url": "https://www.maxpreps.com/ms/ridgeland/christ-covenant/volleyball/"
+    },
+    {
+      "team_id": "columbus-christian-academy",
+      "name": "Columbus Christian Academy",
+      "association": "MAIS",
+      "team_url": "https://www.maxpreps.com/ms/steens/columbus-christian-academy-rams/volleyball/"
+    },
+    {
+      "team_id": "hillcrest-christian",
+      "name": "Hillcrest Christian",
+      "association": "MAIS",
+      "team_url": "https://www.maxpreps.com/ms/jackson/hillcrest-christian-cougars/volleyball/"
+    },
+    {
+      "team_id": "heritage-christian-academy",
+      "name": "Heritage Christian Academy",
+      "association": "MAIS",
+      "team_url": "https://www.maxpreps.com/ms/picayune/heritage-christian-academy-warriors/volleyball/"
+    },
+    {
+      "team_id": "central-hinds-academy",
+      "name": "Central Hinds Academy",
+      "association": "MAIS",
+      "team_url": "https://www.maxpreps.com/ms/raymond/central-hinds-academy-cougars/volleyball/"
+    },
+    {
+      "team_id": "clinton-christian-academy",
+      "name": "Clinton Christian Academy",
+      "association": "MAIS",
+      "team_url": "https://www.maxpreps.com/ms/clinton/clinton-christian-academy-warriors/volleyball/"
+    },
+    {
+      "team_id": "northpoint-christian",
+      "name": "Northpoint Christian",
+      "association": "TSSAA",
+      "team_url": "https://www.maxpreps.com/ms/southaven/northpoint-christian-trojans/volleyball/"
+    }
+  ]
+}
