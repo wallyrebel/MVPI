@@ -222,3 +222,110 @@ def test_schedule_season_filter_rejects_old_and_future_results():
     matches = [Match(str(year), "a", "b", 3, 0, played_at=datetime(year, 8, 1, tzinfo=timezone.utc))
                for year in (2025, 2026, 2027)]
     assert current_season_matches(matches, date(2026, 9, 5)) == [matches[1]]
+
+
+def test_out_of_state_school_cannot_match_same_named_mississippi_school():
+    from mvpi.maxpreps import _resolve_team
+    ms = Team("oxford", "Oxford", "7A", "1")
+    tn_url = "https://www.maxpreps.com/tn/example/oxford/volleyball/"
+    assert _resolve_team("Oxford", tn_url, {"oxford": ms}, {}) == "external:/tn/example/oxford/volleyball"
+    assert _resolve_team("Oxford", "", {"oxford": ms}, {}) == "oxford"
+
+
+def test_external_parser_uses_exact_school_computer_rating_not_state_rank():
+    import json
+    from datetime import date
+    from mvpi.external import parse_external_rating
+    url = "https://www.maxpreps.com/tn/example/opponent/volleyball/"
+    entry = {"teamCanonicalUrl": url, "year": "26-27", "rating": 12.8, "rank": 45,
+             "schoolName": "Opponent", "schoolState": "TN"}
+    def html(row):
+        data = {"props": {"pageProps": {"rankingsData": {"notes": ["Last update: 9/3/2026"],
+                "contexts": [{"entries": [row]}]}}}}
+        return '<script id="__NEXT_DATA__" type="application/json">' + json.dumps(data) + '</script>'
+    result = parse_external_rating(html(entry), url, 2026, date(2026, 9, 5))
+    assert result["rating"] == 12.8
+    import pytest
+    for change in [{"year": "25-26"}, {"teamCanonicalUrl": url.replace("opponent", "other")}, {"rating": None}]:
+        with pytest.raises(ValueError):
+            parse_external_rating(html({**entry, **change}), url, 2026, date(2026, 9, 5))
+    with pytest.raises(ValueError, match="stale"):
+        parse_external_rating(html(entry), url, 2026, date(2026, 10, 1))
+
+
+def test_external_rating_calibration_matches_internal_scale_and_requires_evidence():
+    from mvpi.ranking import calibrate_external_ratings
+    media = {str(i): MediaRanking(100-i, str(i), "5-0", float(i), 0, "") for i in range(10)}
+    baseline = {str(i): 0.2*i-1 for i in range(10)}
+    contests = {str(i): [None]*5 for i in range(10)}
+    anchors, audit = calibrate_external_ratings(media, baseline, contests, {"tn": 15})
+    assert abs(anchors["tn"] - 2) < 1e-10
+    assert audit["equivalent_matches"] == 8
+    assert calibrate_external_ratings(media, baseline, {}, {"tn": 15})[0] == {}
+
+
+def test_external_prior_influence_fades_as_imported_results_increase():
+    from mvpi.ranking import _solve_ratings
+    def difference(count):
+        games = [Match(str(i), "ms", "tn", 3, 0) for i in range(count)]
+        by_team = {"ms": games, "tn": games}
+        high = _solve_ratings({"ms", "tn"}, {"ms"}, by_team, {"tn": 2}, {"tn"})
+        low = _solve_ratings({"ms", "tn"}, {"ms"}, by_team, {"tn": -2}, {"tn"})
+        return high["tn"] - low["tn"]
+    assert difference(1) > difference(20) > 0
+
+
+def test_embedded_schedule_imports_completed_tournament_not_future_or_duplicate():
+    import json
+    team = Team("northpoint", "Northpoint Christian", "Private", "", "TSSAA")
+    source = "https://www.maxpreps.com/ms/southaven/northpoint/volleyball/"
+    opponent = "https://www.maxpreps.com/tn/brighton/brighton/volleyball/"
+    def side(url, name, score, result):
+        data = [None]*17
+        data[5], data[6], data[13], data[14] = result, score, url, name
+        return data
+    contest = [None]*30
+    contest[0] = [side(source, team.name, 2, "W"), side(opponent, "Brighton", 0, "L")]
+    contest[1], contest[11], contest[15], contest[29] = "tournament", "2026-08-21T17:30:00", 4, "neutral tournament"
+    future = list(contest)
+    future[1], future[15] = "future", 1
+    data = {"props": {"pageProps": {"contests": [contest, contest, future]}}}
+    html = '<script id="__NEXT_DATA__">' + json.dumps(data) + '</script>'
+    matches = parse_schedule(html, source_team=team, source_url=source,
+                             official_by_name={}, official_by_url={source.rstrip('/').replace('https://www.maxpreps.com',''): team})
+    assert len(matches) == 1
+    assert matches[0].perspective("northpoint")[1:3] == (2, 0)
+    assert matches[0].away_team_url == opponent
+
+
+def test_external_fetch_reports_missing_rating_and_reuses_only_recent_cache(monkeypatch, tmp_path):
+    import json
+    from datetime import date
+    from mvpi import external
+    url = "https://www.maxpreps.com/tn/example/opponent/volleyball/"
+    match = Match("one", "ms", "external:tn", 3, 0, away_team_url=url)
+    def fail(_):
+        raise ValueError("not available")
+    monkeypatch.setattr(external, "_request", fail)
+    path = tmp_path / "ratings.json"
+    result = external.fetch_external_ratings([match], {"ms"}, path, date(2026, 9, 5))
+    assert result["external:tn"]["status"] == "unavailable"
+    cached = {"external:tn": {"season": 2026, "rating": 10, "source_url": url+'rankings/', "source_updated_at": "2026-09-03"}}
+    path.write_text(json.dumps(cached))
+    assert external.fetch_external_ratings([match], {"ms"}, path, date(2026, 9, 5))["external:tn"]["status"] == "cached"
+    assert external.fetch_external_ratings([match], {"ms"}, path, date(2026, 10, 1))["external:tn"]["status"] == "unavailable"
+
+
+def test_full_ranking_credits_stronger_external_opponent_without_ranking_it():
+    from mvpi.ranking import rank
+    teams = [Team(f"ms{i}", f"School {i}", "4A", "1") for i in range(12)]
+    matches = [Match(f"{i}-{j}", f"ms{i}", f"ms{j}", 3, 0)
+               for i in range(12) for j in range(i)]
+    matches.append(Match("cross-state", "ms8", "external:tn", 1, 3))
+    media = {f"ms{i}": MediaRanking(12-i, f"School {i}", f"{i}-{11-i}", i*3.0-15, 0, "") for i in range(12)}
+    audit = {}
+    high = rank(teams, matches, {}, media, {"external:tn": 30}, audit)
+    low = rank(teams, matches, {}, media, {"external:tn": -30})
+    assert audit["status"] == "calibrated"
+    assert next(row for row in high if row.team_id == "ms8").mvpi > next(row for row in low if row.team_id == "ms8").mvpi
+    assert {row.team_id for row in high} == {team.team_id for team in teams}

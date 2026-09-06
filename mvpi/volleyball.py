@@ -21,6 +21,8 @@ class Match:
     played_at: datetime | None = None
     status: str = "COMPLETED"
     source: str = "mhsaa_score_center"
+    home_team_url: str = ""
+    away_team_url: str = ""
 
     @property
     def completed(self) -> bool:

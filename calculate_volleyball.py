@@ -19,6 +19,7 @@ from mvpi.maxpreps import (
 from mvpi.ranking import rank
 from mvpi.private import load_private_teams, include_private_teams
 from mvpi.volleyball import match_result_value
+from mvpi.external import fetch_external_ratings
 
 
 def _advance_media_records(media_signals, media_matches, source_updated_at: str | None):
@@ -88,12 +89,21 @@ def main() -> None:
     # MaxPreps is authoritative for volleyball. MHSAA score-center results only
     # fill a contest that the public MaxPreps schedules do not contain.
     matches = merge_matches(media_matches, official_matches, set(media_signals))
-    rankings = rank(teams, matches, names, media_signals)
+    external = fetch_external_ratings(matches, {team.team_id for team in teams},
+                                      Path("data/cache/volleyball-external-ratings.json"), today)
+    calibration = {}
+    rankings = rank(teams, matches, names, media_signals,
+                    {key: row["rating"] for key, row in external.items() if row["rating"] is not None}, calibration)
     output = Path("data/volleyball/current.json")
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps({
         "metadata": {
             "generated_at": today.isoformat(),
+            "formula_version": "MVPI-0.3",
+            "external_opponents": len(external),
+            "external_opponents_rated": sum(row["rating"] is not None for row in external.values()),
+            "external_opponents_unavailable": [row["team"] for row in external.values() if row["rating"] is None],
+            "external_rating_calibration": calibration,
             "teams": len(teams),
             "ranked_teams": len(rankings),
             "private_teams": len(private_teams),
@@ -116,6 +126,7 @@ def main() -> None:
             "status": "LIVE",
         },
         "rankings": [row.to_dict() for row in rankings],
+        "external_opponents": external,
     }, indent=2) + "\n", encoding="utf-8")
     lewisburg = next((row for row in rankings if row.team_id == "lewisburg"), None)
     print(json.dumps({

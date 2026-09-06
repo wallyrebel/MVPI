@@ -78,3 +78,15 @@ The official MHSAA score center sometimes leaves completed-looking scheduled gam
 The updater fetches every registered private school schedule even before it appears in the statewide MaxPreps rankings. Only current-season results count. Schools without results or a media ranking remain in the inventory and are listed in snapshot metadata as unranked. Membership must be reviewed when the season changes.
 
 Sources: [MAIS 2026–27 volleyball alignment, pages 47–48](https://home.msais.org/postoffice/mailouts/aacminutes_102825_1761753701.pdf), [MAIS school list](https://home.msais.org/test2/index.php), [Northpoint TSSAA directory](https://portal.tssaa.org/common/directory/?id=472), and [MaxPreps Mississippi rankings](https://www.maxpreps.com/ms/volleyball/rankings/1/).
+
+## Out-of-state opponent strength (MVPI 0.3)
+
+Every completed imported schedule result preserves each school's MaxPreps URL. Out-of-state opponents use URL-based identities so a same-named Mississippi school cannot absorb their results. The importer also reads completed tournament results in MaxPreps' embedded schedule data when JSON-LD omits them.
+
+For every out-of-state opponent with a known MaxPreps URL, the updater fetches its team rankings page and selects the exact school's current-season **computer rating**, never its state rank. Ratings must be dated within 14 days of the calculation date. A recent cached rating can be used after a fetch failure; unavailable and stale ratings are reported explicitly in the snapshot's `external_opponents` audit. Missing ratings keep the existing neutral prior. Opponents with no known source URL cannot receive a MaxPreps rating.
+
+First, MVPI solves its existing set-based model. It then fits a linear conversion from MaxPreps computer ratings to that internal strength scale, using Mississippi teams with at least five imported results (at least ten calibration teams and a positive slope required). The conversion is fitted afresh for each update; it does not compare numerical state ranks. Calibration coefficients and each opponent's converted prior are saved in snapshot metadata.
+
+A second solve uses each converted external rating as an eight-match prior: `(8 × converted rating + sum of opponent-adjusted imported performances) / (8 + imported match count)`, followed by the usual statewide centering. Thus one imported result gives the external rating 8/9 of the pre-centering estimate; eight give it half; more results gradually take precedence. Eight matches is a modeling choice, not a MaxPreps rule. Without sufficient calibration, external priors are not applied and the audit states why. The seven final component weights are unchanged. The existing Media SOS column remains MaxPreps' published schedule-strength value, not the internal opponent-strength percentile.
+
+This applies to all ranked schools and affects opponent strength, adjusted performance and recent form. External schools remain opponents only; they do not enter Mississippi's Overall or Private tables. Source URLs, source dates, retrieval times and cache/unavailable flags are retained with the published snapshot.

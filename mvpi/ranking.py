@@ -51,11 +51,50 @@ def _record(value: str) -> tuple[int, int] | None:
     return (int(match.group(1)), int(match.group(2))) if match else None
 
 
+def _solve_ratings(all_ids, ranked_ids, by_team, priors, anchored_ids=frozenset()):
+    ratings = {team_id: priors.get(team_id, 0.0) for team_id in all_ids}
+    for _ in range(100):
+        updated: dict[str, float] = {}
+        for team_id in all_ids:
+            contests = by_team.get(team_id, [])
+            prior = priors.get(team_id, 0.0)
+            weight = 8.0 if team_id in anchored_ids else (1.5 if team_id in ranked_ids and len(contests) <= 4 else 0.35)
+            values = [ratings.get(match.perspective(team_id)[0], 0.0) + set_margin(match, team_id) for match in contests]
+            updated[team_id] = (prior * weight + sum(values)) / (weight + len(values)) if values else prior
+        center = statistics.fmean(updated[team_id] for team_id in ranked_ids)
+        updated = {team_id: value - center for team_id, value in updated.items()}
+        if max(abs(updated[k] - ratings.get(k, 0.0)) for k in updated) < 0.001:
+            ratings = updated
+            break
+        ratings = updated
+
+    return ratings
+
+
+def calibrate_external_ratings(media, baseline, by_team, external_ratings):
+    """Fit the MaxPreps rating scale to connected Mississippi set ratings."""
+    pairs = [(row.rating, baseline[team_id]) for team_id, row in media.items()
+             if team_id in baseline and len(by_team.get(team_id, [])) >= 5]
+    if len(pairs) < 10:
+        return {}, {"status": "insufficient_calibration", "teams": len(pairs)}
+    xmean = statistics.fmean(x for x, _ in pairs)
+    ymean = statistics.fmean(y for _, y in pairs)
+    variance = sum((x - xmean) ** 2 for x, _ in pairs)
+    slope = sum((x - xmean) * (y - ymean) for x, y in pairs) / variance if variance else 0.0
+    if slope <= 0:
+        return {}, {"status": "invalid_calibration", "teams": len(pairs)}
+    intercept = ymean - slope * xmean
+    return ({team_id: intercept + slope * rating for team_id, rating in external_ratings.items()},
+            {"status": "calibrated", "teams": len(pairs), "slope": slope, "intercept": intercept, "equivalent_matches": 8})
+
+
 def rank(
     teams: list[Team],
     matches: list[Match],
     external_names: dict[str, str],
     media: dict[str, MediaRanking] | None = None,
+    external_ratings: dict[str, float] | None = None,
+    audit: dict | None = None,
 ) -> list[Ranking]:
     media = media or {}
     ranked_ids = {team.team_id for team in teams}
@@ -65,21 +104,15 @@ def rank(
         if match.completed and ({match.home_team_id, match.away_team_id} & ranked_ids):
             by_team[match.home_team_id].append(match)
             by_team[match.away_team_id].append(match)
-    ratings = {team_id: CLASS_PRIOR.get(next((t.classification for t in teams if t.team_id == team_id), ""), 0.0) for team_id in all_ids}
-    for _ in range(100):
-        updated: dict[str, float] = {}
-        for team_id in all_ids:
-            contests = by_team.get(team_id, [])
-            prior = CLASS_PRIOR.get(next((t.classification for t in teams if t.team_id == team_id), ""), 0.0)
-            weight = 1.5 if team_id in ranked_ids and len(contests) <= 4 else 0.35
-            values = [ratings.get(match.perspective(team_id)[0], 0.0) + set_margin(match, team_id) for match in contests]
-            updated[team_id] = (prior * weight + sum(values)) / (weight + len(values)) if values else prior
-        center = statistics.fmean(updated[team_id] for team_id in ranked_ids)
-        updated = {team_id: value - center for team_id, value in updated.items()}
-        if max(abs(updated[k] - ratings.get(k, 0.0)) for k in updated) < 0.001:
-            ratings = updated
-            break
-        ratings = updated
+    priors = {team.team_id: CLASS_PRIOR.get(team.classification, 0.0) for team in teams}
+    ratings = _solve_ratings(all_ids, ranked_ids, by_team, priors)
+    external_ratings = {key: value for key, value in (external_ratings or {}).items() if key in all_ids and key not in ranked_ids}
+    anchors, calibration = calibrate_external_ratings(media, ratings, by_team, external_ratings)
+    if audit is not None:
+        audit.update(calibration)
+        audit["opponent_priors"] = anchors
+    if anchors:
+        ratings = _solve_ratings(all_ids, ranked_ids, by_team, {**priors, **anchors}, set(anchors))
 
     # A published statewide row is enough to include a team even when its page
     # has not exposed every individual tournament match.

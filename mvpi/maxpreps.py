@@ -415,6 +415,22 @@ def _url_key(value: str) -> str:
     return urlparse(urljoin(RANKINGS_ROOT, value)).path.rstrip("/").lower()
 
 
+def _next_data(html: str) -> dict:
+    found = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', html, re.DOTALL)
+    return json.loads(found.group(1)).get("props", {}).get("pageProps", {}) if found else {}
+
+
+def _resolve_team(name, url, by_name, by_url):
+    key = _url_key(url)
+    team = by_url.get(key)
+    # A Tennessee school named Oxford must never resolve to Oxford, MS.
+    if not team and (not url or key.startswith("/ms/")):
+        team = by_name.get(_name_key(name))
+    if team:
+        return team.team_id
+    return "external:" + key if url and not key.startswith("/ms/") else _slug(name)
+
+
 _SCORE_RE = re.compile(r"\b(won|lost|tied)\b.*?\bby a score of\s+(\d+)-(\d+)", re.IGNORECASE)
 _ACTOR_RE = re.compile(r"\bthe (.+?) varsity (?:girls )?volleyball team (won|lost|tied)\b", re.IGNORECASE)
 
@@ -451,9 +467,9 @@ def parse_schedule(
             if not home_name or not away_name or not started:
                 continue
             source_key = _url_key(source_url)
-            if _url_key(home_url) == source_key or _name_key(home_name) == _name_key(source_team.name):
+            if _url_key(home_url) == source_key or (not home_url and _name_key(home_name) == _name_key(source_team.name)):
                 source_side = "home"
-            elif _url_key(away_url) == source_key or _name_key(away_name) == _name_key(source_team.name):
+            elif _url_key(away_url) == source_key or (not away_url and _name_key(away_name) == _name_key(source_team.name)):
                 source_side = "away"
             else:
                 continue
@@ -474,10 +490,8 @@ def parse_schedule(
             actor_score, other_score = (high, low) if result.lower() != "lost" else (low, high)
             home_sets, away_sets = (actor_score, other_score) if actor_side == "home" else (other_score, actor_score)
 
-            home_team = official_by_url.get(_url_key(home_url)) or official_by_name.get(_name_key(home_name))
-            away_team = official_by_url.get(_url_key(away_url)) or official_by_name.get(_name_key(away_name))
-            home_id = home_team.team_id if home_team else _slug(home_name)
-            away_id = away_team.team_id if away_team else _slug(away_name)
+            home_id = _resolve_team(home_name, home_url, official_by_name, official_by_url)
+            away_id = _resolve_team(away_name, away_url, official_by_name, official_by_url)
             if source_side == "home":
                 home_id = source_team.team_id
             else:
@@ -493,8 +507,43 @@ def parse_schedule(
                     tournament="tournament" in description.lower(),
                     played_at=played_at,
                     source="media_schedule",
+                    home_team_url=home_url,
+                    away_team_url=away_url,
                 )
             )
+    # MaxPreps omits some tournament contests from JSON-LD. Its schedule's
+    # embedded data contains the completed results used by the visible table.
+    for row in _next_data(html).get("contests", []):
+        if not isinstance(row, list) or len(row) < 30 or row[15] != 4:
+            continue
+        sides = row[0]
+        if not isinstance(sides, list) or len(sides) != 2 or any(len(side) < 17 for side in sides):
+            continue
+        if {side[5] for side in sides} != {"W", "L"}:
+            continue
+        if any(type(side[6]) is not int or side[6] not in range(4) for side in sides):
+            continue
+        winner = next(side for side in sides if side[5] == "W")
+        loser = next(side for side in sides if side[5] == "L")
+        if winner[6] not in (2, 3) or loser[6] >= winner[6]:
+            continue
+        if not any(_url_key(side[13]) == _url_key(source_url) for side in sides):
+            continue
+        match_id = f"media:{row[1]}"
+        if any(match.match_id == match_id for match in matches):
+            continue
+        from zoneinfo import ZoneInfo
+        played = datetime.fromisoformat(row[11])
+        if played.tzinfo is None:
+            played = played.replace(tzinfo=ZoneInfo("America/Chicago"))
+        # Side order is immaterial to this neutral, set-based formula.
+        a, b = sides
+        matches.append(Match(
+            match_id, _resolve_team(a[14], a[13], official_by_name, official_by_url),
+            _resolve_team(b[14], b[13], official_by_name, official_by_url), a[6], b[6],
+            played_at=played, tournament="tournament" in str(row[29]).lower(),
+            source="media_schedule", home_team_url=a[13], away_team_url=b[13],
+        ))
     return matches
 
 
@@ -534,6 +583,7 @@ def fetch_schedules(
             cache_path.write_text(
                 json.dumps(
                     {
+                        "schema_version": 2,
                         "retrieved_at": datetime.now(timezone.utc).isoformat(),
                         "matches": [
                             {
@@ -553,6 +603,8 @@ def fetch_schedules(
             if not cache_path.exists():
                 raise
             payload = json.loads(cache_path.read_text(encoding="utf-8"))
+            if payload.get("schema_version") != 2:
+                raise ValueError("Schedule cache requires refresh for state-safe opponent IDs")
             return team_id, [
                 Match(**{**row, "played_at": datetime.fromisoformat(row["played_at"]) if row.get("played_at") else None})
                 for row in payload.get("matches", [])
