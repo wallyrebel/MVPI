@@ -91,8 +91,9 @@ def test_verified_media_aliases_map_to_their_mhsaa_programs():
         Team("m-s-palmer", "M. S. Palmer High School", "2A", "3"),
         Team("h-w-byers-high-school-5-12", "H. W. Byers High School (5-12)", "1A", "2"),
         Team("resurrection", "Resurrection", "1A", "8"),
+        Team("miss-school-for-the-deaf", "Miss. School For The Deaf", "1A", "4"),
     ]
-    media_names = ["Edwards", "St. Andrew's Episcopal", "Franklin County", "Palmer", "Byers", "Resurrection Catholic"]
+    media_names = ["Edwards", "St. Andrew's Episcopal", "Franklin County", "Palmer", "Byers", "Resurrection Catholic", "Mississippi School for the Deaf"]
     rankings = [
         MediaRanking(index, name, "3-1-0", 1.0, 1.0, f"https://example.com/{index}")
         for index, name in enumerate(media_names, 1)

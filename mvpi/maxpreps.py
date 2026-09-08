@@ -311,6 +311,7 @@ _MEDIA_TEAM_ALIASES = {
     _name_key("Palmer"): "m-s-palmer",
     _name_key("Byers"): "h-w-byers-high-school-5-12",
     _name_key("Resurrection Catholic"): "resurrection",
+    _name_key("Mississippi School for the Deaf"): "miss-school-for-the-deaf",
 }
 
 
