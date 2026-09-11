@@ -9,6 +9,10 @@ on:
     paths-ignore:
       - '**.md'
       - '.github/workflows/update-rankings.yml'
+      # The rankings bot pushes these to main three times a week and
+      # update-rankings.yml deploys them itself. Without this, every data
+      # commit would deploy twice, from two workflows racing each other.
+      - 'data/volleyball/**'
   workflow_dispatch:
 
 concurrency:
