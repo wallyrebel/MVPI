@@ -71,3 +71,5 @@ footer { display: flex; justify-content: space-between; padding: 28px 4px 0; col
 /* Team directory */
 .vb-doc-wide{max-width:none}
 .vb-directory{margin:0 0 30px}.vb-directory h2{display:flex;align-items:baseline;gap:12px;margin:0 0 12px;font-size:26px;letter-spacing:-.03em}.vb-directory h2 small{color:#78817c;font-size:12px;font-weight:600}.vb-directory>div{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:8px}.vb-directory a{display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:center;padding:11px 14px;border:1px solid #e2ded4;border-radius:10px;background:#fff;color:inherit;text-decoration:none;font-size:14px}.vb-directory a:hover,.vb-directory a:focus-visible{border-color:#9a4f34;background:#fffdf8}.vb-dir-rank{color:#9a4f34;font-weight:800}.vb-dir-name{font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.vb-dir-meta{color:#78817c;font-size:12px}
+
+.vb-sched-wrap{max-height:none}

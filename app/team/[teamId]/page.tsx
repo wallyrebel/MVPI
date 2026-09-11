@@ -143,7 +143,7 @@ export default async function TeamPage({ params }: Params) {
           <div><p className="vb-eyebrow">2026 season</p><h2>Schedule &amp; results</h2></div>
           <span>{wins.length}–{losses.length} · {games.length} matches with published scores</span>
         </div>
-        <div className="vb-table-wrap">
+        <div className="vb-table-wrap vb-sched-wrap">
           <div className="vb-head vb-sched-row"><span>Date</span><span>Opponent</span><span>Site</span><span>Result</span><span>Sets</span><span>Opp. MVPI</span></div>
           {games.map((game, index) => (
             <div className="vb-sched-row" key={`${game.date}-${game.opponentId}-${index}`}>
