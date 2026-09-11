@@ -65,6 +65,49 @@ def current_season_matches(matches, today: date):
             and season_start <= match.played_at.astimezone(ZoneInfo("America/Chicago")).date() <= today]
 
 
+def _schedule_payload(matches, teams, external_names, external, today: date):
+    """Per-match rows so each team page can publish its own season schedule.
+
+    Matches are stored once, keyed by team id on both sides, rather than
+    duplicated per team. `labels` names every id a match can reference,
+    including out-of-state opponents that never appear in the rankings.
+    """
+    central = ZoneInfo("America/Chicago")
+    labels = {team.team_id: team.name for team in teams}
+    for team_id, name in external_names.items():
+        labels.setdefault(team_id, name)
+    for team_id, row in external.items():
+        labels.setdefault(team_id, row.get("team") or team_id)
+
+    rows = []
+    for match in matches:
+        played = match.played_at.astimezone(central).date() if match.played_at else None
+        row = {
+            "date": played.isoformat() if played else None,
+            "home": match.home_team_id,
+            "away": match.away_team_id,
+            "home_sets": match.home_sets,
+            "away_sets": match.away_sets,
+        }
+        if match.tournament:
+            row["tournament"] = True
+        if match.neutral_site:
+            row["neutral"] = True
+        rows.append(row)
+    rows.sort(key=lambda row: (row["date"] or "", row["home"], row["away"]))
+
+    referenced = {row["home"] for row in rows} | {row["away"] for row in rows}
+    return {
+        "metadata": {
+            "generated_at": today.isoformat(),
+            "matches": len(rows),
+            "teams_referenced": len(referenced),
+        },
+        "labels": {team_id: labels.get(team_id, team_id) for team_id in sorted(referenced)},
+        "matches": rows,
+    }
+
+
 def main() -> None:
     today = date.today()
     official_teams = fetch_teams()
@@ -128,6 +171,9 @@ def main() -> None:
         "rankings": [row.to_dict() for row in rankings],
         "external_opponents": external,
     }, indent=2) + "\n", encoding="utf-8")
+    schedule_output = Path("data/volleyball/matches.json")
+    schedule_output.write_text(json.dumps(
+        _schedule_payload(matches, teams, names, external, today), indent=2) + "\n", encoding="utf-8")
     lewisburg = next((row for row in rankings if row.team_id == "lewisburg"), None)
     print(json.dumps({
         "teams": len(teams),
@@ -140,6 +186,7 @@ def main() -> None:
         "missing_media_teams": missing_media,
         "unmatched_media_teams": unmatched_media,
         "output": str(output),
+        "schedule_output": str(schedule_output),
         "lewisburg": lewisburg.to_dict() if lewisburg else None,
         "top_five": [row.team for row in rankings[:5]],
     }, indent=2))

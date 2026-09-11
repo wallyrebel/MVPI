@@ -1,8 +1,10 @@
 'use client';
 
+import Link from 'next/link';
 import { useState } from 'react';
 import snapshot from '../data/volleyball/current.json';
 import { siteUrl } from './site';
+import { SiteFooter, SiteHeader } from './site-nav';
 
 type Row = typeof snapshot.rankings[number];
 const classes = ['7A', '6A', '5A', '4A', '3A', '2A', '1A', 'Private'] as const;
@@ -18,7 +20,7 @@ function RankingRow({ row, displayRank = row.rank, classView = false }: { row: R
   return (
     <div className="vb-row">
       <strong className="vb-rank">{displayRank}</strong>
-      <div className="vb-team"><strong>{row.team}</strong><small>{classView ? `State #${row.rank} · ${teamLabel(row)}` : teamLabel(row)}</small></div>
+      <div className="vb-team"><strong><Link href={`/team/${row.team_id}`}>{row.team}</Link></strong><small>{classView ? `State #${row.rank} · ${teamLabel(row)}` : teamLabel(row)}</small></div>
       <span>{row.record}</span>
       <strong className="vb-score">{row.mvpi.toFixed(1)}</strong>
       <span>{row.media_rank ? `#${row.media_rank}` : '—'}</span>
@@ -95,7 +97,7 @@ export default function Home() {
   return (
     <main className="vb-main">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, '\\u003c') }} />
-      <header className="vb-header"><div className="vb-brand"><span>V</span><div><strong>Mississippi Volleyball</strong><small>POWER INDEX</small></div></div><div className="vb-live"><i />LIVE MEDIA DATA</div></header>
+      <SiteHeader />
       <section className="vb-hero">
         <div><p className="vb-eyebrow">2026 · Updated <time dateTime={snapshot.metadata.generated_at}>{generatedDate}</time></p><h1>Mississippi Volleyball<br />Rankings</h1><p>The Mississippi Volleyball Power Index rates MHSAA 1A–7A teams, Mississippi MAIS programs and Northpoint Christian in Southaven from media records, match and set scores, media rank, strength of schedule, opponent quality, and recent form.</p></div>
         <aside><small>Current data pull</small><strong>{snapshot.metadata.media_schedule_matches.toLocaleString()} published match scores</strong><dl><div><dt>Eligible teams</dt><dd>{snapshot.metadata.teams}</dd></div><div><dt>Ranked now</dt><dd>{rankedWithMatches.length}</dd></div><div><dt>Updates</dt><dd>Tue · Fri · Sun</dd></div></dl></aside>
@@ -136,7 +138,7 @@ export default function Home() {
         <div><p className="vb-eyebrow">About the rankings</p><h2 id="about-mvpi">Mississippi Volleyball Power Index</h2><p>MVPI is an independent computer rating of Mississippi high school volleyball teams. It combines results and opponent quality so the statewide order reflects more than win-loss record alone.</p></div>
         <div><h3>MHSAA classes and Private rankings</h3><p>The page includes Mississippi volleyball rankings for 1A, 2A, 3A, 4A, 5A, 6A and 7A, plus a separate Private group for Mississippi MAIS schools and Northpoint Christian (TSSAA). All groups share the same overall statewide calculation. Private is a display group, not an official association class.</p><h3>Updated three times each week</h3><p>Published records, scores and set results are refreshed Tuesday, Friday and Sunday during the season. The visible update date and sitemap change with every completed data run.</p></div>
       </section>
-      <footer><span>MVPI · Mississippi Volleyball Power Index</span><span>Media records and results · MHSAA 1A–7A · MAIS · Northpoint Christian</span></footer>
+      <SiteFooter />
     </main>
   );
 }
