@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import { GoogleAnalytics } from './analytics';
 import { siteUrl } from './site';
 
 export const metadata: Metadata = {
@@ -51,5 +52,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body>{children}</body></html>;
+  return <html lang="en"><body>{children}<GoogleAnalytics /></body></html>;
 }
