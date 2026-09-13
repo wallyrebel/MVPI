@@ -129,7 +129,7 @@ export default function Home() {
         <p className="vb-source-note">Private includes MAIS teams and Northpoint Christian (TSSAA). Schools without current-season results or a published ranking remain unranked. Record is the statewide media record. “Sets” totals publicly listed match scores; “Set data” shows how many published matches have usable set scores. Official association results only fill missing data and never override the media record.</p>
         <p className="vb-source-note">Out-of-state opponent ratings: {snapshot.metadata.external_opponents_rated} of {snapshot.metadata.external_opponents} available from the national media ratings feed. {snapshot.metadata.external_rating_calibration.status === 'calibrated' ? 'Ratings are blended with match results when calculating opponent strength.' : 'There is not enough reliable calibration data to apply external ratings yet; opponent strength uses imported results.'}
           {Object.values(snapshot.external_opponents).filter((opponent) => opponent.rating === null).map((opponent) => (
-            <span key={opponent.source_url}> Rating unavailable for <a href={opponent.source_url} target="_blank" rel="noreferrer">{opponent.team.replaceAll('-', ' ')} ({opponent.state})</a>; its strength uses available results and a neutral starting estimate.</span>
+            <span key={`${opponent.state}-${opponent.team}`}> Rating unavailable for {opponent.team.replaceAll('-', ' ')} ({opponent.state}); its strength uses available results and a neutral starting estimate.</span>
           ))}
         </p>
       </section>
