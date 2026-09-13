@@ -55,7 +55,9 @@ export default function ContactPage() {
             touch for anything more involved.
           </li>
           <li>
-            <strong>Advertising and privacy.</strong> See the <Link href="/privacy">privacy policy</Link>.
+            <strong>Advertising.</strong> Rates, placements and traffic are on the{' '}
+            <Link href="/advertise">advertise page</Link>. Data handling is covered by the{' '}
+            <Link href="/privacy">privacy policy</Link>.
           </li>
         </ul>
 
