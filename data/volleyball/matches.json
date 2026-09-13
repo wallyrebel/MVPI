@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "generated_at": "2026-09-11",
-    "matches": 1947,
-    "teams_referenced": 359
+    "generated_at": "2026-09-13",
+    "matches": 2026,
+    "teams_referenced": 365
   },
   "labels": {
     "aberdeen": "Aberdeen",
@@ -107,6 +107,7 @@
     "external:/al/odenville/st-clair-county-fighting-saints/volleyball": "St. Clair County",
     "external:/al/pelham/pelham-panthers/volleyball": "Pelham",
     "external:/al/pell-city/pell-city-panthers/volleyball": "Pell City",
+    "external:/al/pike-road/pike-road-patriots/volleyball": "Pike Road",
     "external:/al/pinson/clay-chalkville-cougars/volleyball": "Clay-Chalkville",
     "external:/al/red-bay/red-bay-tigers/volleyball": "Red Bay",
     "external:/al/semmes/mary-g-montgomery-vikings/volleyball": "Mary G. Montgomery",
@@ -121,7 +122,12 @@
     "external:/ga/jonesboro/elite-scholars-academy-knights/volleyball": "Elite Scholars Academy",
     "external:/ga/marietta/pope-greyhounds/volleyball": "Pope",
     "external:/il/red-bud/red-bud-musketeers/volleyball": "Red Bud",
+    "external:/la/donaldsonville/ascension-catholic-bulldogs/volleyball": "Ascension Catholic",
+    "external:/la/gonzales/east-ascension-spartans/volleyball": "east-ascension-spartans",
+    "external:/la/mandeville/mandeville-skippers/volleyball": "Mandeville",
     "external:/la/ruston/ruston-bearcats/volleyball": "Ruston",
+    "external:/la/st-amant/st-amant-gators/volleyball": "St. Amant",
+    "external:/la/watson/live-oak-eagles/volleyball": "Live Oak",
     "external:/mo/jackson/jackson-fighting-indians/volleyball": "Jackson",
     "external:/pseudo/unknown/non-varsity-opponent/volleyball": "external:/pseudo/unknown/non-varsity-opponent/volleyball",
     "external:/pseudo/unknown/varsity-opponent/volleyball": "external:/pseudo/unknown/varsity-opponent/volleyball",
@@ -13990,6 +13996,13 @@
     },
     {
       "date": "2026-09-10",
+      "home": "lewisburg",
+      "away": "southaven",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-09-10",
       "home": "madison-ridgeland-academy",
       "away": "external:/la/ruston/ruston-bearcats/volleyball",
       "home_sets": 3,
@@ -14242,6 +14255,13 @@
     },
     {
       "date": "2026-09-10",
+      "home": "st-joseph-catholic",
+      "away": "jackson-prep",
+      "home_sets": 3,
+      "away_sets": 2
+    },
+    {
+      "date": "2026-09-10",
       "home": "st-martin",
       "away": "diberville",
       "home_sets": 0,
@@ -14330,6 +14350,596 @@
       "away": "center-hill",
       "home_sets": 2,
       "away_sets": 0
+    },
+    {
+      "date": "2026-09-11",
+      "home": "our-lady-academy",
+      "away": "external:/la/st-amant/st-amant-gators/volleyball",
+      "home_sets": 2,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-09-11",
+      "home": "our-lady-academy",
+      "away": "external:/la/watson/live-oak-eagles/volleyball",
+      "home_sets": 2,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-09-11",
+      "home": "sacred-heart",
+      "away": "resurrection",
+      "home_sets": 1,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-09-11",
+      "home": "thrasher",
+      "away": "new-site",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-09-12",
+      "home": "alcorn-central",
+      "away": "booneville",
+      "home_sets": 0,
+      "away_sets": 2,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "alcorn-central",
+      "away": "booneville",
+      "home_sets": 2,
+      "away_sets": 1,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "alcorn-central",
+      "away": "olive-branch",
+      "home_sets": 0,
+      "away_sets": 2,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "alcorn-central",
+      "away": "tupelo",
+      "home_sets": 0,
+      "away_sets": 2,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "booneville",
+      "away": "lake-cormorant-high",
+      "home_sets": 0,
+      "away_sets": 2,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "brandon",
+      "away": "gulfport",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "brandon",
+      "away": "jackson-prep",
+      "home_sets": 2,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-09-12",
+      "home": "brandon",
+      "away": "newton-county",
+      "home_sets": 2,
+      "away_sets": 1
+    },
+    {
+      "date": "2026-09-12",
+      "home": "choctaw-central",
+      "away": "philadelphia",
+      "home_sets": 2,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-09-12",
+      "home": "choctaw-central",
+      "away": "philadelphia",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "choctaw-central",
+      "away": "union",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "east-webster",
+      "away": "neshoba-central",
+      "home_sets": 0,
+      "away_sets": 2
+    },
+    {
+      "date": "2026-09-12",
+      "home": "ethel",
+      "away": "neshoba-central",
+      "home_sets": 0,
+      "away_sets": 2
+    },
+    {
+      "date": "2026-09-12",
+      "home": "gulfport",
+      "away": "lawrence-county",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "gulfport",
+      "away": "presbyterian-christian-school",
+      "home_sets": 1,
+      "away_sets": 2
+    },
+    {
+      "date": "2026-09-12",
+      "home": "jackson-academy",
+      "away": "brandon",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "jackson-academy",
+      "away": "jackson-prep",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "jackson-academy",
+      "away": "northeast-lauderdale",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "jackson-academy",
+      "away": "presbyterian-christian-school",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "lake-cormorant-high",
+      "away": "alcorn-central",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "lake-cormorant-high",
+      "away": "walnut",
+      "home_sets": 1,
+      "away_sets": 2,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "lawrence-county",
+      "away": "hartfield-academy",
+      "home_sets": 0,
+      "away_sets": 2,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "lawrence-county",
+      "away": "southeast-lauderdale",
+      "home_sets": 0,
+      "away_sets": 2,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "madison-central",
+      "away": "lawrence-county",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "madison-central",
+      "away": "presbyterian-christian-school",
+      "home_sets": 2,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-09-12",
+      "home": "madison-ridgeland-academy",
+      "away": "st-andrew-s",
+      "home_sets": 2,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-09-12",
+      "home": "madison-ridgeland-academy",
+      "away": "st-joseph-catholic",
+      "home_sets": 2,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-09-12",
+      "home": "meridian",
+      "away": "choctaw-central",
+      "home_sets": 0,
+      "away_sets": 2
+    },
+    {
+      "date": "2026-09-12",
+      "home": "meridian",
+      "away": "forest",
+      "home_sets": 0,
+      "away_sets": 2
+    },
+    {
+      "date": "2026-09-12",
+      "home": "mooreville",
+      "away": "saltillo",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "neshoba-central",
+      "away": "choctaw-central",
+      "home_sets": 2,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-09-12",
+      "home": "neshoba-central",
+      "away": "east-webster",
+      "home_sets": 2,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-09-12",
+      "home": "neshoba-central",
+      "away": "meridian",
+      "home_sets": 2,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-09-12",
+      "home": "nettleton",
+      "away": "mooreville",
+      "home_sets": 0,
+      "away_sets": 2,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "nettleton",
+      "away": "shannon",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "new-albany",
+      "away": "lake-cormorant-high",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "new-albany",
+      "away": "olive-branch",
+      "home_sets": 3,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "newton-county",
+      "away": "jackson-prep",
+      "home_sets": 1,
+      "away_sets": 2
+    },
+    {
+      "date": "2026-09-12",
+      "home": "newton-county",
+      "away": "oxford",
+      "home_sets": 0,
+      "away_sets": 2,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "northeast-lauderdale",
+      "away": "gulfport",
+      "home_sets": 2,
+      "away_sets": 1,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "ocean-springs",
+      "away": "external:/al/daphne/bayside-academy-admirals/volleyball",
+      "home_sets": 1,
+      "away_sets": 2,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "ocean-springs",
+      "away": "external:/al/montgomery/trinity-presbyterian-wildcats/volleyball",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "ocean-springs",
+      "away": "external:/al/pike-road/pike-road-patriots/volleyball",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "ocean-springs",
+      "away": "external:/al/spanish-fort/spanish-fort-toros/volleyball",
+      "home_sets": 0,
+      "away_sets": 2,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "our-lady-academy",
+      "away": "external:/la/donaldsonville/ascension-catholic-bulldogs/volleyball",
+      "home_sets": 2,
+      "away_sets": 1
+    },
+    {
+      "date": "2026-09-12",
+      "home": "our-lady-academy",
+      "away": "external:/la/gonzales/east-ascension-spartans/volleyball",
+      "home_sets": 2,
+      "away_sets": 1
+    },
+    {
+      "date": "2026-09-12",
+      "home": "our-lady-academy",
+      "away": "external:/la/mandeville/mandeville-skippers/volleyball",
+      "home_sets": 1,
+      "away_sets": 2,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "oxford",
+      "away": "brandon",
+      "home_sets": 1,
+      "away_sets": 2,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "oxford",
+      "away": "hartfield-academy",
+      "home_sets": 1,
+      "away_sets": 2,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "oxford",
+      "away": "madison-central",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "oxford",
+      "away": "southeast-lauderdale",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "petal",
+      "away": "gulfport",
+      "home_sets": 0,
+      "away_sets": 2,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "petal",
+      "away": "jackson-academy",
+      "home_sets": 1,
+      "away_sets": 2,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "petal",
+      "away": "newton-county",
+      "home_sets": 1,
+      "away_sets": 2,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "petal",
+      "away": "northeast-lauderdale",
+      "home_sets": 2,
+      "away_sets": 1,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "philadelphia",
+      "away": "forest",
+      "home_sets": 0,
+      "away_sets": 2
+    },
+    {
+      "date": "2026-09-12",
+      "home": "presbyterian-christian-school",
+      "away": "hartfield-academy",
+      "home_sets": 2,
+      "away_sets": 1
+    },
+    {
+      "date": "2026-09-12",
+      "home": "presbyterian-christian-school",
+      "away": "lawrence-county",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "presbyterian-christian-school",
+      "away": "northeast-lauderdale",
+      "home_sets": 2,
+      "away_sets": 1
+    },
+    {
+      "date": "2026-09-12",
+      "home": "quitman",
+      "away": "heidelberg",
+      "home_sets": 1,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-09-12",
+      "home": "regents",
+      "away": "christ-covenant",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "regents",
+      "away": "grace-christian",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "regents",
+      "away": "grace-christian",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "regents",
+      "away": "tupelo-christian",
+      "home_sets": 2,
+      "away_sets": 1,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "regents",
+      "away": "west-lowndes",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "regents",
+      "away": "winston-academy",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "st-joseph-catholic",
+      "away": "st-andrew-s",
+      "home_sets": 2,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-09-12",
+      "home": "tupelo",
+      "away": "booneville",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "tupelo",
+      "away": "lake-cormorant-high",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "tupelo",
+      "away": "new-albany",
+      "home_sets": 2,
+      "away_sets": 1,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "tupelo",
+      "away": "walnut",
+      "home_sets": 2,
+      "away_sets": 1,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "walnut",
+      "away": "new-albany",
+      "home_sets": 1,
+      "away_sets": 2,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-12",
+      "home": "walnut",
+      "away": "olive-branch",
+      "home_sets": 2,
+      "away_sets": 1,
+      "tournament": true
     }
   ]
 }
