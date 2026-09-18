@@ -1,7 +1,7 @@
 {
   "metadata": {
     "generated_at": "2026-09-18",
-    "matches": 2308,
+    "matches": 2309,
     "teams_referenced": 374
   },
   "labels": {
@@ -16428,6 +16428,13 @@
       "home": "columbus",
       "away": "new-hope",
       "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-09-17",
+      "home": "desoto-central",
+      "away": "lewisburg",
+      "home_sets": 1,
       "away_sets": 3
     },
     {
