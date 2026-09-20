@@ -15670,13 +15670,6 @@
     },
     {
       "date": "2026-09-15",
-      "home": "central-hinds-academy",
-      "away": "hillcrest-christian",
-      "home_sets": 3,
-      "away_sets": 0
-    },
-    {
-      "date": "2026-09-15",
       "home": "cleveland-central",
       "away": "provine",
       "home_sets": 3,
@@ -15806,6 +15799,13 @@
       "home": "heritage-christian-academy",
       "away": "woodlawn-prep",
       "home_sets": 1,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-09-15",
+      "home": "hillcrest-christian",
+      "away": "central-hinds-academy",
+      "home_sets": 0,
       "away_sets": 3
     },
     {
