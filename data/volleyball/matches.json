@@ -15831,13 +15831,6 @@
     },
     {
       "date": "2026-09-15",
-      "home": "heritage-christian-academy",
-      "away": "woodlawn-prep",
-      "home_sets": 1,
-      "away_sets": 3
-    },
-    {
-      "date": "2026-09-15",
       "home": "holly-springs",
       "away": "external:/pseudo/unknown/varsity-opponent/volleyball",
       "home_sets": 3,
@@ -16332,6 +16325,13 @@
       "away": "noxapater",
       "home_sets": 2,
       "away_sets": 3
+    },
+    {
+      "date": "2026-09-15",
+      "home": "woodlawn-prep",
+      "away": "heritage-christian-academy",
+      "home_sets": 3,
+      "away_sets": 1
     },
     {
       "date": "2026-09-15",
