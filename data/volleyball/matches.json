@@ -1,11 +1,12 @@
 {
   "metadata": {
-    "generated_at": "2026-09-25",
-    "matches": 2628,
-    "teams_referenced": 392
+    "generated_at": "2026-09-27",
+    "matches": 2673,
+    "teams_referenced": 400
   },
   "labels": {
     "aberdeen": "Aberdeen",
+    "alabama-school-for-the-deaf": "Alabama School for the Deaf",
     "alcorn-central": "Alcorn Central",
     "alma-bryant": "Alma Bryant",
     "amanda-elzy": "Amanda Elzy",
@@ -121,6 +122,7 @@
     "external:/al/spanish-fort/spanish-fort-toros/volleyball": "Spanish Fort",
     "external:/al/sweet-water/sweet-water-bulldogs/volleyball": "Sweet Water",
     "external:/al/sylacauga/sylacauga-aggies/volleyball": "Sylacauga",
+    "external:/al/talladega/alabama-school-for-the-deaf-silent-warriors/volleyball": "Alabama School for the Deaf",
     "external:/al/tuscaloosa/hillcrest-patriots/volleyball": "Hillcrest",
     "external:/al/vernon/lamar-county-bulldogs/volleyball": "Lamar County",
     "external:/al/vestavia-hills/vestavia-hills-rebels/volleyball": "Vestavia Hills",
@@ -131,6 +133,7 @@
     "external:/ga/jonesboro/elite-scholars-academy-knights/volleyball": "Elite Scholars Academy",
     "external:/ga/marietta/pope-greyhounds/volleyball": "Pope",
     "external:/il/red-bud/red-bud-musketeers/volleyball": "Red Bud",
+    "external:/ks/olathe/kansas-school-for-the-deaf-jackrabbits/volleyball": "kansas-school-for-the-deaf-jackrabbits",
     "external:/la/donaldsonville/ascension-catholic-bulldogs/volleyball": "Ascension Catholic",
     "external:/la/gonzales/east-ascension-spartans/volleyball": "East Ascension",
     "external:/la/mandeville/mandeville-skippers/volleyball": "Mandeville",
@@ -170,6 +173,8 @@
     "external:/tn/newbern/dyer-county-choctaws/volleyball": "Dyer County",
     "external:/tn/rossville/rossville-christian-academy-wolves/volleyball": "Rossville Christian Academy",
     "external:/tn/selmer/mcnairy-central-bobcats/volleyball": "McNairy Central",
+    "external:/ut/ogden/utah-school-for-the-deaf-and-blind-eagles/volleyball": "utah-school-for-the-deaf-and-blind-eagles",
+    "external:/wi/delavan/wisconsin-school-for-the-deaf-firebirds/volleyball": "wisconsin-school-for-the-deaf-firebirds",
     "falkner": "Falkner",
     "florence": "Florence",
     "forest": "Forest",
@@ -213,12 +218,13 @@
     "itawamba-agricultural": "Itawamba Agricultural",
     "j-z-george": "J.Z. George",
     "jackson-academy": "Jackson Academy",
-    "jackson-homeschool": "jackson-homeschool",
+    "jackson-homeschool": "Jackson HomeSchool",
     "jackson-prep": "Jackson Prep",
     "jefferson-co-high": "Jefferson County",
     "jefferson-davis-county": "Jefferson Davis County",
     "jim-hill": "Jim Hill",
     "jumpertown": "Jumpertown",
+    "kansas-school-for-the-deaf": "Kansas School for the Deaf",
     "kemper-county": "Kemper County",
     "kosciusko-senior": "Kosciusko",
     "kossuth": "Kossuth",
@@ -372,6 +378,7 @@
     "tupelo-titans": "tupelo-titans",
     "tylertown": "Tylertown",
     "union": "Union",
+    "utah-school-for-the-deaf-blind": "Utah School for the Deaf & Blind",
     "vancleave": "Vancleave",
     "velma-jackson": "Velma Jackson",
     "vicksburg": "Vicksburg",
@@ -394,6 +401,7 @@
     "wilkinson-county-high": "Wilkinson County",
     "winona-secondary-school": "Winona",
     "winston-academy": "Winston Academy",
+    "wisconsin-school-for-the-deaf": "Wisconsin School for the Deaf",
     "woodlawn-prep": "woodlawn-prep",
     "yazoo-city": "Yazoo City",
     "yazoo-county": "Yazoo County"
@@ -18789,6 +18797,13 @@
     },
     {
       "date": "2026-09-24",
+      "home": "christian-collegiate-academy",
+      "away": "woodlawn-prep",
+      "home_sets": 2,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-09-24",
       "home": "clarkdale",
       "away": "enterprise",
       "home_sets": 2,
@@ -19259,9 +19274,281 @@
     {
       "date": "2026-09-25",
       "home": "miss-school-for-the-deaf",
+      "away": "external:/al/talladega/alabama-school-for-the-deaf-silent-warriors/volleyball",
+      "home_sets": 2,
+      "away_sets": 1,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-25",
+      "home": "miss-school-for-the-deaf",
+      "away": "external:/ks/olathe/kansas-school-for-the-deaf-jackrabbits/volleyball",
+      "home_sets": 2,
+      "away_sets": 1,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-25",
+      "home": "miss-school-for-the-deaf",
       "away": "external:/ok/sulphur/oklahoma-school-for-the-deaf-bison/volleyball",
       "home_sets": 1,
       "away_sets": 2,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-25",
+      "home": "miss-school-for-the-deaf",
+      "away": "external:/ut/ogden/utah-school-for-the-deaf-and-blind-eagles/volleyball",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-26",
+      "home": "alabama-school-for-the-deaf",
+      "away": "mississippi-school-for-the-deaf",
+      "home_sets": 1,
+      "away_sets": 2
+    },
+    {
+      "date": "2026-09-26",
+      "home": "alabama-school-for-the-deaf",
+      "away": "mississippi-school-for-the-deaf",
+      "home_sets": 0,
+      "away_sets": 2
+    },
+    {
+      "date": "2026-09-26",
+      "home": "belmont-school",
+      "away": "south-pontotoc",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-26",
+      "home": "center-hill",
+      "away": "hernando",
+      "home_sets": 0,
+      "away_sets": 2,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-26",
+      "home": "center-hill",
+      "away": "horn-lake-high",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-26",
+      "home": "center-hill",
+      "away": "lewisburg",
+      "home_sets": 0,
+      "away_sets": 2,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-26",
+      "home": "center-hill",
+      "away": "olive-branch",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-26",
+      "home": "choctaw-central",
+      "away": "northeast-lauderdale",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-26",
+      "home": "choctaw-central",
+      "away": "pisgah",
+      "home_sets": 2,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-09-26",
+      "home": "ethel",
+      "away": "lake",
+      "home_sets": 0,
+      "away_sets": 2,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-26",
+      "home": "ethel",
+      "away": "west-lauderdale",
+      "home_sets": 0,
+      "away_sets": 2,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-26",
+      "home": "hernando",
+      "away": "desoto-central",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-26",
+      "home": "hernando",
+      "away": "lake-cormorant-high",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-26",
+      "home": "hernando",
+      "away": "lewisburg",
+      "home_sets": 1,
+      "away_sets": 2,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-26",
+      "home": "hernando",
+      "away": "southaven",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-26",
+      "home": "hickory-flat",
+      "away": "belmont-school",
+      "home_sets": 1,
+      "away_sets": 2,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-26",
+      "home": "hickory-flat",
+      "away": "south-pontotoc",
+      "home_sets": 0,
+      "away_sets": 2,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-26",
+      "home": "kansas-school-for-the-deaf",
+      "away": "mississippi-school-for-the-deaf",
+      "home_sets": 1,
+      "away_sets": 2
+    },
+    {
+      "date": "2026-09-26",
+      "home": "kosciusko-senior",
+      "away": "sebastopol",
+      "home_sets": 1,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-09-26",
+      "home": "kosciusko-senior",
+      "away": "sebastopol",
+      "home_sets": 3,
+      "away_sets": 1
+    },
+    {
+      "date": "2026-09-26",
+      "home": "lake",
+      "away": "west-lauderdale",
+      "home_sets": 0,
+      "away_sets": 2,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-26",
+      "home": "lake-cormorant-high",
+      "away": "desoto-central",
+      "home_sets": 0,
+      "away_sets": 2,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-26",
+      "home": "lake-cormorant-high",
+      "away": "southaven",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-26",
+      "home": "miss-school-for-the-deaf",
+      "away": "external:/al/talladega/alabama-school-for-the-deaf-silent-warriors/volleyball",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-26",
+      "home": "miss-school-for-the-deaf",
+      "away": "external:/ok/sulphur/oklahoma-school-for-the-deaf-bison/volleyball",
+      "home_sets": 0,
+      "away_sets": 2,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-26",
+      "home": "miss-school-for-the-deaf",
+      "away": "external:/wi/delavan/wisconsin-school-for-the-deaf-firebirds/volleyball",
+      "home_sets": 0,
+      "away_sets": 2,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-26",
+      "home": "neshoba-central",
+      "away": "choctaw-central",
+      "home_sets": 1,
+      "away_sets": 2
+    },
+    {
+      "date": "2026-09-26",
+      "home": "neshoba-central",
+      "away": "northeast-lauderdale",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-26",
+      "home": "neshoba-central",
+      "away": "pisgah",
+      "home_sets": 2,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-09-26",
+      "home": "newton-county",
+      "away": "ethel",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-26",
+      "home": "newton-county",
+      "away": "lake",
+      "home_sets": 2,
+      "away_sets": 1,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-26",
+      "home": "newton-county",
+      "away": "lake",
+      "home_sets": 2,
+      "away_sets": 1,
       "tournament": true
     },
     {
@@ -19270,6 +19557,74 @@
       "away": "mississippi-school-for-the-deaf",
       "home_sets": 2,
       "away_sets": 1
+    },
+    {
+      "date": "2026-09-26",
+      "home": "pisgah",
+      "away": "northeast-lauderdale",
+      "home_sets": 2,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-09-26",
+      "home": "utah-school-for-the-deaf-blind",
+      "away": "mississippi-school-for-the-deaf",
+      "home_sets": 0,
+      "away_sets": 2
+    },
+    {
+      "date": "2026-09-26",
+      "home": "walnut",
+      "away": "falkner",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-26",
+      "home": "walnut",
+      "away": "pine-grove",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-26",
+      "home": "walnut",
+      "away": "ripley",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-26",
+      "home": "west-lauderdale",
+      "away": "ethel",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-26",
+      "home": "west-lauderdale",
+      "away": "newton-county",
+      "home_sets": 0,
+      "away_sets": 2,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-26",
+      "home": "wisconsin-school-for-the-deaf",
+      "away": "mississippi-school-for-the-deaf",
+      "home_sets": 2,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-09-27",
+      "home": "oklahoma-school-for-the-deaf",
+      "away": "mississippi-school-for-the-deaf",
+      "home_sets": 2,
+      "away_sets": 0
     }
   ]
 }
