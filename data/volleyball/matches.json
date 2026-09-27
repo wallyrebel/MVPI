@@ -1,7 +1,7 @@
 {
   "metadata": {
     "generated_at": "2026-09-27",
-    "matches": 2673,
+    "matches": 2676,
     "teams_referenced": 400
   },
   "labels": {
@@ -18195,13 +18195,6 @@
     },
     {
       "date": "2026-09-22",
-      "home": "hartfield-academy",
-      "away": "pillow-academy",
-      "home_sets": 3,
-      "away_sets": 0
-    },
-    {
-      "date": "2026-09-22",
       "home": "hattiesburg-homeschool",
       "away": "richton",
       "home_sets": 0,
@@ -18489,6 +18482,13 @@
     },
     {
       "date": "2026-09-22",
+      "home": "pillow-academy",
+      "away": "hartfield-academy",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-09-22",
       "home": "pine-grove",
       "away": "wheeler",
       "home_sets": 3,
@@ -18622,17 +18622,17 @@
     },
     {
       "date": "2026-09-22",
-      "home": "st-andrew-s",
-      "away": "union",
-      "home_sets": 2,
+      "home": "st-aloysius",
+      "away": "st-joseph-catholic",
+      "home_sets": 0,
       "away_sets": 3
     },
     {
       "date": "2026-09-22",
-      "home": "st-joseph-catholic",
-      "away": "st-aloysius",
-      "home_sets": 3,
-      "away_sets": 0
+      "home": "st-andrew-s",
+      "away": "union",
+      "home_sets": 2,
+      "away_sets": 3
     },
     {
       "date": "2026-09-22",
@@ -19477,6 +19477,30 @@
       "date": "2026-09-26",
       "home": "lake-cormorant-high",
       "away": "southaven",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-26",
+      "home": "lewisburg",
+      "away": "desoto-central",
+      "home_sets": 2,
+      "away_sets": 1,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-26",
+      "home": "lewisburg",
+      "away": "horn-lake-high",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-26",
+      "home": "lewisburg",
+      "away": "olive-branch",
       "home_sets": 2,
       "away_sets": 0,
       "tournament": true
