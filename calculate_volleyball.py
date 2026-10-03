@@ -108,6 +108,21 @@ def _schedule_payload(matches, teams, external_names, external, today: date):
     }
 
 
+def _validate_refresh(media_fetch, classified_fetch, failed_schedules, rankings, matches, output: Path, today: date):
+    """Stop incomplete source refreshes before writing either published JSON."""
+    if media_fetch.used_cache or classified_fetch.used_cache or failed_schedules:
+        raise ValueError("Incomplete source refresh: cached statewide/class feeds or failed schedules")
+    if len(rankings) < 120 or not matches:
+        raise ValueError("Incomplete source refresh: insufficient rankings or completed matches")
+    if output.exists():
+        previous = json.loads(output.read_text(encoding="utf-8"))["metadata"]
+        if str(previous.get("generated_at", "")).startswith(str(today.year)):
+            for label, current, key in [("ranked teams", len(rankings), "ranked_teams"),
+                                        ("completed matches", len(matches), "completed_matches")]:
+                if current < previous.get(key, 0) * 0.95:
+                    raise ValueError(f"Incomplete source refresh: {label} fell from {previous[key]} to {current}")
+
+
 def main() -> None:
     today = date.today()
     official_teams = fetch_teams()
@@ -138,6 +153,7 @@ def main() -> None:
     rankings = rank(teams, matches, names, media_signals,
                     {key: row["rating"] for key, row in external.items() if row["rating"] is not None}, calibration)
     output = Path("data/volleyball/current.json")
+    _validate_refresh(media_fetch, classified_fetch, failed_schedules, rankings, matches, output, today)
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps({
         "metadata": {

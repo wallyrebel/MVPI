@@ -32,6 +32,12 @@ npm run dev -- --port 4322
 
 `.github/workflows/update-rankings.yml` refreshes results every Tuesday, Friday, and Sunday afternoon, validates the ranking engine, verifies the production build, and commits an updated `data/volleyball/current.json` when the rankings change.
 
+Official classification fetches accept only HTML from the expected article, at least 120 unique schools, all seven classes, and valid regions. Empty/incomplete responses and transient network/HTTP errors receive at most three attempts with two- and four-second backoff. Challenge pages and permanent HTTP errors stop the refresh. The updater retains each public response body and selected HTTP metadata in the `official-classification-response` Actions artifact for 14 days; it never stores cookies or authorization headers.
+
+Tests run before fetching rankings. Relevant code pushes run tests and an official-source check without publishing data; a manual run can select `validate_only` for the same check. Scheduled and ordinary manual runs retain the existing refresh/deploy behavior. Before either published JSON is written, the refresh rejects cached statewide/class feeds, failed schedules, fewer than 120 rankings, missing matches, or a loss of more than 5% of the current-season snapshot's ranked teams or completed matches. A rejected refresh leaves the last valid snapshot intact.
+
+The October 2, 2026 run reported zero official teams but retained no response body or HTTP metadata, so its original response cannot be classified conclusively. An October 3 fetch with the same user agent returned HTTP 200 and 226 official schools using the existing parser. The captured public classification table is retained only as a regression fixture, never as a live fallback.
+
 ## Cloudflare Workers
 
 The application builds to a Cloudflare Worker with static assets.

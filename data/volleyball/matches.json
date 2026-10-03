@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "generated_at": "2026-10-02",
-    "matches": 2907,
-    "teams_referenced": 402
+    "generated_at": "2026-10-03",
+    "matches": 2922,
+    "teams_referenced": 407
   },
   "labels": {
     "aberdeen": "Aberdeen",
@@ -147,6 +147,7 @@
     "external:/pseudo/unknown/non-varsity-opponent/volleyball": "external:/pseudo/unknown/non-varsity-opponent/volleyball",
     "external:/pseudo/unknown/tournament-opponent/volleyball": "external:/pseudo/unknown/tournament-opponent/volleyball",
     "external:/pseudo/unknown/varsity-opponent/volleyball": "external:/pseudo/unknown/varsity-opponent/volleyball",
+    "external:/sc/spartanburg/south-carolina-school-for-the-deaf-and-blind-hornets/volleyball": "South Carolina School for the Deaf & Blind",
     "external:/tn/alamo/crockett-county-cavaliers/volleyball": "Crockett County",
     "external:/tn/arlington/arlington-tigers/volleyball": "Arlington",
     "external:/tn/bartlett/bartlett-panthers/volleyball": "Bartlett",
@@ -186,6 +187,7 @@
     "gautier": "Gautier",
     "gentry": "Gentry",
     "george-county": "George County",
+    "georgia-school-for-the-deaf": "Georgia School for the Deaf",
     "germantown": "Germantown",
     "grace-christian": "grace-christian",
     "greene-county": "Greene County",
@@ -228,6 +230,7 @@
     "jumpertown": "Jumpertown",
     "kansas-school-for-the-deaf": "Kansas School for the Deaf",
     "kemper-county": "Kemper County",
+    "kentucky-school-for-the-deaf": "Kentucky School for the Deaf",
     "kosciusko-senior": "Kosciusko",
     "kossuth": "Kossuth",
     "lafayette": "Lafayette",
@@ -244,6 +247,7 @@
     "lewisburg": "Lewisburg",
     "long-beach": "Long Beach",
     "long-beach-senior": "Long Beach",
+    "louisiana-school-for-the-deaf": "Louisiana School for the Deaf",
     "louisville": "Louisville",
     "loyd-star-school": "Loyd Star",
     "lumberton": "Lumberton",
@@ -349,6 +353,7 @@
     "simmons": "Simmons",
     "simpson-academy": "Simpson Academy",
     "smithville": "Smithville",
+    "south-carolina-school-for-the-deaf-blind": "South Carolina School for the Deaf & Blind",
     "south-delta": "South Delta",
     "south-jones": "South Jones",
     "south-panola": "South Panola",
@@ -20519,6 +20524,13 @@
     },
     {
       "date": "2026-09-29",
+      "home": "madison-ridgeland-academy",
+      "away": "starkville-academy",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-09-29",
       "home": "meridian",
       "away": "wayne-county",
       "home_sets": 3,
@@ -20946,6 +20958,20 @@
     },
     {
       "date": "2026-10-01",
+      "home": "forrest-county-agricultural-hi-sch",
+      "away": "richton",
+      "home_sets": 3,
+      "away_sets": 2
+    },
+    {
+      "date": "2026-10-01",
+      "home": "franklin",
+      "away": "port-gibson",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-01",
       "home": "george-county",
       "away": "presbyterian-christian-school",
       "home_sets": 3,
@@ -21163,6 +21189,13 @@
     },
     {
       "date": "2026-10-01",
+      "home": "puckett",
+      "away": "lake",
+      "home_sets": 2,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-01",
       "home": "purvis",
       "away": "oak-grove",
       "home_sets": 2,
@@ -21272,6 +21305,84 @@
       "away": "neshoba-central",
       "home_sets": 0,
       "away_sets": 3
+    },
+    {
+      "date": "2026-10-02",
+      "home": "columbia",
+      "away": "choctaw-central",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-02",
+      "home": "itawamba-agricultural",
+      "away": "yazoo-city",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-02",
+      "home": "new-hope",
+      "away": "west-point",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-02",
+      "home": "resurrection",
+      "away": "south-delta",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-02",
+      "home": "stringer",
+      "away": "simmons",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "miss-school-for-the-deaf",
+      "away": "external:/sc/spartanburg/south-carolina-school-for-the-deaf-and-blind-hornets/volleyball",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-10-03",
+      "home": "mississippi-school-for-the-deaf",
+      "away": "alabama-school-for-the-deaf",
+      "home_sets": 1,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "mississippi-school-for-the-deaf",
+      "away": "georgia-school-for-the-deaf",
+      "home_sets": 1,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "mississippi-school-for-the-deaf",
+      "away": "kentucky-school-for-the-deaf",
+      "home_sets": 1,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "mississippi-school-for-the-deaf",
+      "away": "louisiana-school-for-the-deaf",
+      "home_sets": 1,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "mississippi-school-for-the-deaf",
+      "away": "south-carolina-school-for-the-deaf-blind",
+      "home_sets": 2,
+      "away_sets": 0
     }
   ]
 }

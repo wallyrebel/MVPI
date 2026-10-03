@@ -330,3 +330,149 @@ def test_full_ranking_credits_stronger_external_opponent_without_ranking_it():
     assert audit["status"] == "calibrated"
     assert next(row for row in high if row.team_id == "ms8").mvpi > next(row for row in low if row.team_id == "ms8").mvpi
     assert {row.team_id for row in high} == {team.team_id for team in teams}
+
+
+# The public table is a regression fixture, not a fallback data source.
+def _official_fixture():
+    from pathlib import Path
+    return (Path(__file__).parent / 'fixtures/mhsaa-volleyball-regions.html').read_text()
+
+
+def test_official_classification_public_table_and_identity():
+    from mvpi.live import _classification_rows, _validate_classifications
+    teams, rows = _classification_rows(_official_fixture())
+    _validate_classifications(teams)
+    assert len(teams) == 226
+    assert rows > len(teams)
+    assert next(t for t in teams if t.team_id == 'lewisburg') == Team('lewisburg', 'Lewisburg High School', '7A', '1')
+
+
+def _official_response(body, status=200, content_type='text/html; charset=UTF-8', url=None):
+    from io import BytesIO
+    from mvpi.live import CLASSIFICATIONS_URL
+    response = BytesIO(body.encode())
+    response.status = status
+    response.headers = {'Content-Type': content_type}
+    response.geturl = lambda: url or CLASSIFICATIONS_URL
+    return response
+
+
+def test_official_fetch_retries_empty_success_and_records_evidence(monkeypatch, tmp_path):
+    import json
+    from mvpi import live
+    responses = iter([_official_response(''), _official_response(_official_fixture())])
+    monkeypatch.setattr(live, 'urlopen', lambda *a, **k: next(responses))
+    waits = []
+    monkeypatch.setattr(live.time, 'sleep', waits.append)
+    assert len(live.fetch_teams(tmp_path)) == 226
+    audit = json.loads((tmp_path / 'response.json').read_text())['attempts']
+    assert len(audit) == 2 and waits == [2]
+    assert audit[0]['http_status'] == 200 and audit[0]['body_bytes'] == 0
+    assert audit[0]['parsed_teams'] == 0 and audit[0]['failure_kind'] == 'incomplete_classifications'
+    assert audit[1]['parsed_teams'] == 226 and 'failure_kind' not in audit[1]
+    assert (tmp_path / 'attempt-1.html').read_bytes() == b''
+
+
+def test_official_fetch_incomplete_exhaustion_keeps_snapshot(monkeypatch, tmp_path):
+    import json
+    import pytest
+    import calculate_volleyball
+    from mvpi import live
+    monkeypatch.chdir(tmp_path)
+    snapshot = tmp_path / 'data/volleyball/current.json'
+    snapshot.parent.mkdir(parents=True)
+    snapshot.write_text('previous valid snapshot')
+    schedule = snapshot.with_name('matches.json')
+    schedule.write_text('previous valid matches')
+    requests = []
+    def request(*args, **kwargs):
+        requests.append(args)
+        return _official_response('<title>Empty article</title><table></table>')
+    monkeypatch.setattr(live, 'urlopen', request)
+    monkeypatch.setattr(live.time, 'sleep', lambda _: None)
+    with pytest.raises(ValueError, match='after 3 attempt'):
+        calculate_volleyball.main()
+    assert len(requests) == 3
+    assert snapshot.read_text() == 'previous valid snapshot'
+    assert schedule.read_text() == 'previous valid matches'
+    audit = json.loads((tmp_path / 'work/classifications/response.json').read_text())
+    assert audit['attempts'][-1]['title'] == 'Empty article'
+
+
+def test_official_fetch_challenge_fails_without_bypass(monkeypatch, tmp_path):
+    import pytest
+    from mvpi import live
+    requests = []
+    def request(*args, **kwargs):
+        requests.append(args)
+        return _official_response('<title>Just a moment...</title><script src="/cf-chl-test"></script>')
+    monkeypatch.setattr(live, 'urlopen', request)
+    monkeypatch.setattr(live.time, 'sleep', lambda _: pytest.fail('Challenge must not be retried'))
+    with pytest.raises(ValueError, match='challenge page'):
+        live.fetch_teams(tmp_path)
+    assert len(requests) == 1
+
+
+def test_official_fetch_transient_http_and_transport_retry(monkeypatch, tmp_path):
+    from urllib.error import HTTPError, URLError
+    from io import BytesIO
+    from mvpi import live
+    outcomes = iter([URLError('temporary network failure'),
+                     HTTPError(live.CLASSIFICATIONS_URL, 503, 'Unavailable',
+                               {'Content-Type': 'text/html'}, BytesIO(b'<title>Unavailable</title>')),
+                     _official_response(_official_fixture())])
+    def request(*args, **kwargs):
+        item = next(outcomes)
+        if isinstance(item, Exception):
+            raise item
+        return item
+    monkeypatch.setattr(live, 'urlopen', request)
+    monkeypatch.setattr(live.time, 'sleep', lambda _: None)
+    assert len(live.fetch_teams(tmp_path)) == 226
+    assert 'http_error' in (tmp_path / 'response.json').read_text()
+
+
+def test_official_fetch_rejects_wrong_content_or_location(monkeypatch, tmp_path):
+    import pytest
+    from mvpi import live
+    monkeypatch.setattr(live.time, 'sleep', lambda _: pytest.fail('Permanent failure must not be retried'))
+    for response in [_official_response(_official_fixture(), content_type='application/json'),
+                     _official_response(_official_fixture(), url='https://www.misshsaa.com/login/'),
+                     _official_response(_official_fixture(), status=403)]:
+        monkeypatch.setattr(live, 'urlopen', lambda *a, **k: response)
+        with pytest.raises(ValueError, match='after 1 attempt'):
+            live.fetch_teams(tmp_path)
+
+
+def test_official_validation_rejects_partial_duplicate_and_invalid_inventory():
+    import pytest
+    from mvpi.live import _classification_rows, _validate_classifications
+    teams, _ = _classification_rows(_official_fixture())
+    for invalid, message in [(teams[:119], 'only 119'),
+                             ([t for t in teams if t.classification != '1A'], 'seven classes'),
+                             (teams + [teams[0]], 'duplicate'),
+                             (teams + [Team('invalid', 'Invalid', '1A', '9')], 'invalid school')]:
+        with pytest.raises(ValueError, match=message):
+            _validate_classifications(invalid)
+
+
+def test_incomplete_refresh_cannot_replace_valid_snapshot(tmp_path):
+    from datetime import date
+    import json
+    from types import SimpleNamespace
+    import pytest
+    from calculate_volleyball import _validate_refresh
+    output = tmp_path / 'current.json'
+    output.write_text(json.dumps({'metadata': {'generated_at': '2026-10-02',
+                                              'ranked_teams': 247, 'completed_matches': 2907}}))
+    fresh = SimpleNamespace(used_cache=False)
+    cached = SimpleNamespace(used_cache=True)
+    for media, classes, failures, ranks, matches in [
+        (cached, fresh, [], 247, 2907), (fresh, cached, [], 247, 2907),
+        (fresh, fresh, ['School'], 247, 2907), (fresh, fresh, [], 180, 2907),
+        (fresh, fresh, [], 247, 2000), (fresh, fresh, [], 247, 0),
+    ]:
+        with pytest.raises(ValueError, match='Incomplete source refresh'):
+            _validate_refresh(media, classes, failures, [None]*ranks, [None]*matches, output, date(2026, 10, 3))
+    _validate_refresh(fresh, fresh, [], [None]*247, [None]*2907, output, date(2026, 10, 3))
+    assert json.loads(output.read_text())['metadata']['generated_at'] == '2026-10-02'

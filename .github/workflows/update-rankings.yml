@@ -2,6 +2,18 @@ name: Update MVPI rankings
 
 on:
   workflow_dispatch:
+    inputs:
+      validate_only:
+        description: "Check the official source and tests without refreshing or publishing rankings"
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths:
+      - 'mvpi/live.py'
+      - 'calculate_volleyball.py'
+      - 'tests/**'
+      - '.github/workflows/update-rankings.yml'
   schedule:
     # 1:15 p.m. CST / 2:15 p.m. CDT every Tuesday, Friday, and Sunday.
     - cron: "15 19 * * 0,2,5"
@@ -30,26 +42,36 @@ jobs:
       - name: Install Python dependencies
         run: python -m pip install -r requirements.txt
 
+      - name: Validate ranking engine and source handling
+        run: python -m pytest -q
+
+      - name: Validate official classification source without publishing
+        if: github.event_name == 'push' || inputs.validate_only == true
+        run: |
+          python -c "from mvpi.live import fetch_teams; teams = fetch_teams(); print(f'Validated {len(teams)} official teams')"
+
       - name: Set up Node.js
+        if: github.event_name != 'push' && inputs.validate_only != true
         uses: actions/setup-node@v7
         with:
           node-version: "22"
           cache: npm
 
       - name: Install web dependencies
+        if: github.event_name != 'push' && inputs.validate_only != true
         run: npm ci
 
       - name: Pull results and calculate rankings
+        if: github.event_name != 'push' && inputs.validate_only != true
         run: python calculate_volleyball.py
 
-      - name: Validate rankings
-        run: python -m pytest -q
-
       - name: Verify production build
+        if: github.event_name != 'push' && inputs.validate_only != true
         run: npm run build
 
       - name: Publish updated snapshot
         id: publish
+        if: github.event_name != 'push' && inputs.validate_only != true
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -77,3 +99,12 @@ jobs:
             exit 0
           fi
           npx wrangler deploy --config dist/server/wrangler.json
+
+      - name: Retain official classification response diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: official-classification-response
+          path: work/classifications/
+          if-no-files-found: ignore
+          retention-days: 14

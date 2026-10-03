@@ -61,3 +61,6 @@ __pycache__/
 /data/current/
 /tests/*
 !/tests/test_volleyball.py
+
+!/tests/fixtures/
+!/tests/fixtures/*.html

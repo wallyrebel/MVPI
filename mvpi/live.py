@@ -2,11 +2,17 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
+import re
 import time
 from dataclasses import dataclass
 from datetime import date, datetime, timezone
+from html import unescape
 from html.parser import HTMLParser
+from pathlib import Path
+from urllib.error import HTTPError, URLError
+from urllib.parse import urlparse
 from urllib.request import Request, urlopen
 
 from .volleyball import Match
@@ -60,10 +66,7 @@ def _slug(value: str) -> str:
     return normalized
 
 
-def fetch_teams() -> list[Team]:
-    request = Request(CLASSIFICATIONS_URL, headers={"User-Agent": "MVPI/0.1"})
-    with urlopen(request, timeout=45) as response:
-        html = response.read().decode("utf-8", errors="replace")
+def _classification_rows(html: str) -> tuple[list[Team], int]:
     parser = _TableParser()
     parser.feed(html)
     teams: list[Team] = []
@@ -74,9 +77,97 @@ def fetch_teams() -> list[Team]:
         if class_number not in range(1, 8):
             continue
         teams.append(Team(_slug(row[0]), row[0].title(), f"{class_number}A", row[2]))
+    return teams, len(parser.rows)
+
+
+def _validate_classifications(teams: list[Team]) -> None:
     if len(teams) < 120:
         raise ValueError(f"Official volleyball classification parse returned only {len(teams)} teams")
-    return teams
+    if {team.classification for team in teams} != {f"{n}A" for n in range(1, 8)}:
+        raise ValueError("Official volleyball classifications do not contain all seven classes")
+    ids = [team.team_id for team in teams]
+    if any(not team.team_id or int(team.region) not in range(1, 9) for team in teams):
+        raise ValueError("Official volleyball classifications contain an invalid school or region")
+    if len(ids) != len(set(ids)):
+        raise ValueError("Official volleyball classifications contain duplicate school IDs")
+
+
+def fetch_teams(diagnostics_dir: Path = Path("work/classifications")) -> list[Team]:
+    """Validate the public response; retry transient failures at most twice.
+
+    Never substitute cached/invented schools. Keep public HTML and selected
+    response metadata (no cookies or authorization headers) for failed runs.
+    """
+    diagnostics_dir.mkdir(parents=True, exist_ok=True)
+    attempts = []
+    for attempt in range(1, 4):
+        raw = b""
+        diagnostic = {"attempt": attempt, "requested_url": CLASSIFICATIONS_URL,
+                      "retrieved_at": datetime.now(timezone.utc).isoformat()}
+        retryable = True
+        teams = []
+        error = None
+        try:
+            request = Request(CLASSIFICATIONS_URL, headers={"User-Agent": "MVPI/0.1",
+                                                           "Accept": "text/html,application/xhtml+xml"})
+            try:
+                response = urlopen(request, timeout=45)
+            except HTTPError as exc:
+                response = exc
+            with response:
+                raw = response.read()
+                status = response.status
+                final_url = response.geturl()
+                content_type = response.headers.get("Content-Type", "")
+                diagnostic.update(http_status=status, final_url=final_url,
+                                  content_type=content_type)
+            html = raw.decode("utf-8", errors="replace")
+            title = re.search(r"<title\b[^>]*>(.*?)</title>", html, re.I | re.S)
+            diagnostic.update(body_bytes=len(raw), body_sha256=hashlib.sha256(raw).hexdigest(),
+                              title=unescape(title.group(1)).strip()[:240] if title else None)
+            teams, row_count = _classification_rows(html)
+            diagnostic.update(table_rows=row_count, parsed_teams=len(teams),
+                              classes=sorted({team.classification for team in teams}))
+            if status != 200:
+                retryable = status in {408, 429} or 500 <= status < 600
+                diagnostic["failure_kind"] = "http_error"
+                raise ValueError(f"Official classification HTTP status {status}")
+            if (urlparse(final_url).hostname != urlparse(CLASSIFICATIONS_URL).hostname
+                    or urlparse(final_url).path != urlparse(CLASSIFICATIONS_URL).path):
+                retryable = False
+                diagnostic["failure_kind"] = "unexpected_redirect"
+                raise ValueError("Official classification response redirected away from the article")
+            if content_type.split(";", 1)[0].lower().strip() not in {"text/html", "application/xhtml+xml"}:
+                retryable = False
+                diagnostic["failure_kind"] = "unexpected_content_type"
+                raise ValueError(f"Official classification response is not HTML: {content_type}")
+            # Site-wide reCAPTCHA scripts can appear on valid articles. Identify
+            # challenge responses only when no usable school rows are present.
+            if not teams and any(marker in html.lower() for marker in
+                                 ("cf-chl-", "just a moment", "verify you are human", "sgcaptcha")):
+                retryable = False
+                diagnostic["failure_kind"] = "upstream_challenge"
+                raise ValueError("Official classification source returned a challenge page")
+            diagnostic["failure_kind"] = "incomplete_classifications"
+            _validate_classifications(teams)
+            diagnostic.pop("failure_kind")
+        except (ValueError, URLError, TimeoutError, OSError) as exc:
+            error = exc
+            diagnostic.setdefault("failure_kind", "transport_error")
+            diagnostic["error"] = str(exc)
+        attempts.append(diagnostic)
+        (diagnostics_dir / f"attempt-{attempt}.html").write_bytes(raw)
+        (diagnostics_dir / "response.json").write_text(
+            json.dumps({"source_url": CLASSIFICATIONS_URL, "attempts": attempts}, indent=2) + "\n",
+            encoding="utf-8")
+        if error is None:
+            return teams
+        print("Official classification fetch: " + json.dumps(diagnostic), flush=True)
+        if not retryable or attempt == 3:
+            raise ValueError(f"Official classification fetch failed after {attempt} attempt(s); "
+                             f"diagnostics: {diagnostics_dir / 'response.json'}; {error}") from error
+        time.sleep(attempt * 2)
+    raise AssertionError("Unreachable")
 
 
 _QUERY = """
