@@ -128,6 +128,14 @@ def fetch_teams(diagnostics_dir: Path = Path("work/classifications")) -> list[Te
             teams, row_count = _classification_rows(html)
             diagnostic.update(table_rows=row_count, parsed_teams=len(teams),
                               classes=sorted({team.classification for team in teams}))
+            # Site-wide reCAPTCHA scripts can appear on valid articles. Identify
+            # challenge responses only when no usable school rows are present.
+            # SiteGround returns its CAPTCHA redirect as HTTP 202, not 200.
+            if not teams and any(marker in html.lower() for marker in
+                                 ("cf-chl-", "just a moment", "verify you are human", "sgcaptcha")):
+                retryable = False
+                diagnostic["failure_kind"] = "upstream_challenge"
+                raise ValueError("Official classification source returned a challenge page")
             if status != 200:
                 retryable = status in {408, 429} or 500 <= status < 600
                 diagnostic["failure_kind"] = "http_error"
@@ -141,13 +149,6 @@ def fetch_teams(diagnostics_dir: Path = Path("work/classifications")) -> list[Te
                 retryable = False
                 diagnostic["failure_kind"] = "unexpected_content_type"
                 raise ValueError(f"Official classification response is not HTML: {content_type}")
-            # Site-wide reCAPTCHA scripts can appear on valid articles. Identify
-            # challenge responses only when no usable school rows are present.
-            if not teams and any(marker in html.lower() for marker in
-                                 ("cf-chl-", "just a moment", "verify you are human", "sgcaptcha")):
-                retryable = False
-                diagnostic["failure_kind"] = "upstream_challenge"
-                raise ValueError("Official classification source returned a challenge page")
             diagnostic["failure_kind"] = "incomplete_classifications"
             _validate_classifications(teams)
             diagnostic.pop("failure_kind")

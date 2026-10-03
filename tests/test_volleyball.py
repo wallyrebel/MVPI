@@ -476,3 +476,20 @@ def test_incomplete_refresh_cannot_replace_valid_snapshot(tmp_path):
             _validate_refresh(media, classes, failures, [None]*ranks, [None]*matches, output, date(2026, 10, 3))
     _validate_refresh(fresh, fresh, [], [None]*247, [None]*2907, output, date(2026, 10, 3))
     assert json.loads(output.read_text())['metadata']['generated_at'] == '2026-10-02'
+
+
+def test_official_http_202_siteground_challenge_is_diagnosed(monkeypatch, tmp_path):
+    import json
+    from pathlib import Path
+    import pytest
+    from mvpi import live
+    html = (Path(__file__).parent / 'fixtures/mhsaa-siteground-challenge.html').read_text()
+    monkeypatch.setattr(live, 'urlopen', lambda *a, **k: _official_response(html, status=202))
+    monkeypatch.setattr(live.time, 'sleep', lambda _: pytest.fail('Challenge must not be retried'))
+    with pytest.raises(ValueError, match='challenge page'):
+        live.fetch_teams(tmp_path)
+    audit = json.loads((tmp_path / 'response.json').read_text())['attempts']
+    assert len(audit) == 1
+    assert audit[0]['http_status'] == 202
+    assert audit[0]['failure_kind'] == 'upstream_challenge'
+    assert audit[0]['parsed_teams'] == 0
