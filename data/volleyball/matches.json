@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-10-03",
-    "matches": 2922,
+    "generated_at": "2026-10-04",
+    "matches": 2982,
     "teams_referenced": 407
   },
   "labels": {
@@ -19950,13 +19950,6 @@
     },
     {
       "date": "2026-09-28",
-      "home": "jackson-prep",
-      "away": "pillow-academy",
-      "home_sets": 3,
-      "away_sets": 1
-    },
-    {
-      "date": "2026-09-28",
       "home": "jumpertown",
       "away": "falkner",
       "home_sets": 0,
@@ -20072,6 +20065,13 @@
       "home": "picayune-memorial",
       "away": "bay",
       "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-09-28",
+      "home": "pillow-academy",
+      "away": "jackson-prep",
+      "home_sets": 1,
       "away_sets": 3
     },
     {
@@ -20608,6 +20608,13 @@
     },
     {
       "date": "2026-09-29",
+      "home": "north-pontotoc",
+      "away": "south-pontotoc",
+      "home_sets": 3,
+      "away_sets": 1
+    },
+    {
+      "date": "2026-09-29",
       "home": "northeast-jones",
       "away": "stringer",
       "home_sets": 3,
@@ -20808,6 +20815,13 @@
       "away": "biggersville",
       "home_sets": 3,
       "away_sets": 0
+    },
+    {
+      "date": "2026-09-29",
+      "home": "wilkinson-county-high",
+      "away": "wesson",
+      "home_sets": 0,
+      "away_sets": 3
     },
     {
       "date": "2026-09-29",
@@ -21343,6 +21357,203 @@
     },
     {
       "date": "2026-10-03",
+      "home": "amanda-elzy",
+      "away": "belmont-school",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-03",
+      "home": "bay",
+      "away": "richland",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "booneville",
+      "away": "o-bannon",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "charleston",
+      "away": "new-site",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-03",
+      "home": "choctaw-county",
+      "away": "north-panola",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "clarkdale",
+      "away": "north-forrest",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "coahoma-county-jr-sr",
+      "away": "aberdeen",
+      "home_sets": 3,
+      "away_sets": 1
+    },
+    {
+      "date": "2026-10-03",
+      "home": "crystal-springs",
+      "away": "st-andrew-s",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-03",
+      "home": "east-marion",
+      "away": "mize",
+      "home_sets": 3,
+      "away_sets": 1
+    },
+    {
+      "date": "2026-10-03",
+      "home": "east-union",
+      "away": "kemper-county",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "east-webster",
+      "away": "water-valley",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "enterprise",
+      "away": "perry-central",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "eupora",
+      "away": "strayhorn",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "forest",
+      "away": "greene-county",
+      "home_sets": 1,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-03",
+      "home": "forrest-county-agricultural-hi-sch",
+      "away": "morton",
+      "home_sets": 3,
+      "away_sets": 1
+    },
+    {
+      "date": "2026-10-03",
+      "home": "franklin",
+      "away": "southeast-lauderdale",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "hatley",
+      "away": "j-z-george",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "hickory-flat",
+      "away": "west-tallahatchie",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "holly-springs",
+      "away": "winona-secondary-school",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-03",
+      "home": "houlka",
+      "away": "ashland-middle",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "ingomar",
+      "away": "biggersville",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "kosciusko-senior",
+      "away": "houston",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "kossuth",
+      "away": "thomas-e-edwards",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "lake",
+      "away": "amite-county",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "leflore-county",
+      "away": "richton",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-03",
+      "home": "louisville",
+      "away": "amory",
+      "home_sets": 1,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-03",
+      "home": "loyd-star-school",
+      "away": "scott-central",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "miss-school-for-the-deaf",
+      "away": "external:/al/talladega/alabama-school-for-the-deaf-silent-warriors/volleyball",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-10-03",
       "home": "miss-school-for-the-deaf",
       "away": "external:/sc/spartanburg/south-carolina-school-for-the-deaf-and-blind-hornets/volleyball",
       "home_sets": 2,
@@ -21354,6 +21565,13 @@
       "home": "mississippi-school-for-the-deaf",
       "away": "alabama-school-for-the-deaf",
       "home_sets": 1,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "mississippi-school-for-the-deaf",
+      "away": "alabama-school-for-the-deaf",
+      "home_sets": 2,
       "away_sets": 0
     },
     {
@@ -21381,8 +21599,211 @@
       "date": "2026-10-03",
       "home": "mississippi-school-for-the-deaf",
       "away": "south-carolina-school-for-the-deaf-blind",
+      "home_sets": 1,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "mississippi-school-for-the-deaf",
+      "away": "south-carolina-school-for-the-deaf-blind",
       "home_sets": 2,
       "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "mooreville",
+      "away": "gentry",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "nettleton",
+      "away": "independence",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "new-albany",
+      "away": "byhalia-high-school-9-12",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "newton-county",
+      "away": "mccomb",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "northeast-lauderdale",
+      "away": "lawrence-county",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "northside",
+      "away": "baldwyn",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-03",
+      "home": "our-lady-academy",
+      "away": "magee",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "pass-christian",
+      "away": "raymond",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "pine-grove",
+      "away": "west-lowndes",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "pisgah",
+      "away": "port-gibson",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "poplarville-jr-sr",
+      "away": "west-lauderdale",
+      "home_sets": 1,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-03",
+      "home": "potts-camp-high-school-5-12",
+      "away": "shaw",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "presbyterian-christian-school",
+      "away": "mclaurin",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "puckett",
+      "away": "wilkinson-county-high",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "raleigh",
+      "away": "st-patrick",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-03",
+      "home": "ripley",
+      "away": "north-pontotoc",
+      "home_sets": 3,
+      "away_sets": 1
+    },
+    {
+      "date": "2026-10-03",
+      "home": "sacred-heart",
+      "away": "heidelberg",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "salem",
+      "away": "sebastopol",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "seminary",
+      "away": "west-marion",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "senatobia",
+      "away": "corinth",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-03",
+      "home": "taylorsville",
+      "away": "noxapater",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-03",
+      "home": "tishomingo-county",
+      "away": "clarksdale",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "tupelo-christian",
+      "away": "falkner",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "union",
+      "away": "hazlehurst",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "walnut",
+      "away": "leland",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "wesson",
+      "away": "newton",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "wheeler",
+      "away": "smithville",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "yazoo-county",
+      "away": "alcorn-central",
+      "home_sets": 0,
+      "away_sets": 3
     }
   ]
 }
