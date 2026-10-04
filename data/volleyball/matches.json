@@ -19950,6 +19950,13 @@
     },
     {
       "date": "2026-09-28",
+      "home": "jackson-prep",
+      "away": "pillow-academy",
+      "home_sets": 3,
+      "away_sets": 1
+    },
+    {
+      "date": "2026-09-28",
       "home": "jumpertown",
       "away": "falkner",
       "home_sets": 0,
@@ -20065,13 +20072,6 @@
       "home": "picayune-memorial",
       "away": "bay",
       "home_sets": 0,
-      "away_sets": 3
-    },
-    {
-      "date": "2026-09-28",
-      "home": "pillow-academy",
-      "away": "jackson-prep",
-      "home_sets": 1,
       "away_sets": 3
     },
     {
