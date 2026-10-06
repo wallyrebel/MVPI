@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "generated_at": "2026-10-04",
-    "matches": 2982,
-    "teams_referenced": 407
+    "generated_at": "2026-10-06",
+    "matches": 2996,
+    "teams_referenced": 410
   },
   "labels": {
     "aberdeen": "Aberdeen",
@@ -132,10 +132,13 @@
     "external:/ar/west-memphis/west-memphis-christian-black-knights/volleyball": "West Memphis Christian",
     "external:/fl/milton/west-florida-baptist-academy-conquerors/volleyball": "West Florida Baptist Academy",
     "external:/fl/navarre/navarre-raiders/volleyball": "Navarre",
+    "external:/ga/cave-spring/georgia-school-for-the-deaf-tigers/volleyball": "Georgia School for the Deaf",
     "external:/ga/jonesboro/elite-scholars-academy-knights/volleyball": "Elite Scholars Academy",
     "external:/ga/marietta/pope-greyhounds/volleyball": "Pope",
     "external:/il/red-bud/red-bud-musketeers/volleyball": "Red Bud",
     "external:/ks/olathe/kansas-school-for-the-deaf-jackrabbits/volleyball": "Kansas School for the Deaf",
+    "external:/ky/danville/kentucky-school-for-the-deaf-colonels/volleyball": "Kentucky School for the Deaf",
+    "external:/la/baton-rouge/louisiana-school-for-the-deaf-war-eagles/volleyball": "Louisiana School for the Deaf",
     "external:/la/donaldsonville/ascension-catholic-bulldogs/volleyball": "Ascension Catholic",
     "external:/la/gonzales/east-ascension-spartans/volleyball": "East Ascension",
     "external:/la/mandeville/mandeville-skippers/volleyball": "Mandeville",
@@ -1738,13 +1741,6 @@
       "away": "winona-secondary-school",
       "home_sets": 3,
       "away_sets": 0
-    },
-    {
-      "date": "2026-08-03",
-      "home": "raymond",
-      "away": "forest-hill",
-      "home_sets": 1,
-      "away_sets": 4
     },
     {
       "date": "2026-08-03",
@@ -3408,14 +3404,16 @@
       "home": "newton",
       "away": "kemper-county",
       "home_sets": 2,
-      "away_sets": 0
+      "away_sets": 0,
+      "tournament": true
     },
     {
       "date": "2026-08-08",
       "home": "newton",
       "away": "louisville",
       "home_sets": 2,
-      "away_sets": 1
+      "away_sets": 1,
+      "tournament": true
     },
     {
       "date": "2026-08-08",
@@ -3543,7 +3541,8 @@
       "home": "philadelphia",
       "away": "newton",
       "home_sets": 1,
-      "away_sets": 2
+      "away_sets": 2,
+      "tournament": true
     },
     {
       "date": "2026-08-08",
@@ -5835,6 +5834,14 @@
       "away": "new-albany",
       "home_sets": 0,
       "away_sets": 2,
+      "tournament": true
+    },
+    {
+      "date": "2026-08-15",
+      "home": "new-hope",
+      "away": "west-lauderdale",
+      "home_sets": 2,
+      "away_sets": 0,
       "tournament": true
     },
     {
@@ -19950,13 +19957,6 @@
     },
     {
       "date": "2026-09-28",
-      "home": "jackson-prep",
-      "away": "pillow-academy",
-      "home_sets": 3,
-      "away_sets": 1
-    },
-    {
-      "date": "2026-09-28",
       "home": "jumpertown",
       "away": "falkner",
       "home_sets": 0,
@@ -20010,13 +20010,6 @@
       "away": "sylva-bay-academy",
       "home_sets": 3,
       "away_sets": 1
-    },
-    {
-      "date": "2026-09-28",
-      "home": "natchez",
-      "away": "terry",
-      "home_sets": 1,
-      "away_sets": 3
     },
     {
       "date": "2026-09-28",
@@ -20076,6 +20069,13 @@
     },
     {
       "date": "2026-09-28",
+      "home": "pillow-academy",
+      "away": "jackson-prep",
+      "home_sets": 1,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-09-28",
       "home": "puckett",
       "away": "morton",
       "home_sets": 3,
@@ -20125,10 +20125,10 @@
     },
     {
       "date": "2026-09-28",
-      "home": "st-joseph-catholic",
-      "away": "st-andrew-s",
-      "home_sets": 3,
-      "away_sets": 0
+      "home": "st-andrew-s",
+      "away": "st-joseph-catholic",
+      "home_sets": 0,
+      "away_sets": 3
     },
     {
       "date": "2026-09-28",
@@ -20143,6 +20143,13 @@
       "away": "senatobia",
       "home_sets": 0,
       "away_sets": 3
+    },
+    {
+      "date": "2026-09-28",
+      "home": "terry",
+      "away": "natchez",
+      "home_sets": 3,
+      "away_sets": 1
     },
     {
       "date": "2026-09-28",
@@ -20321,13 +20328,6 @@
     },
     {
       "date": "2026-09-29",
-      "home": "east-marion",
-      "away": "west-marion",
-      "home_sets": 1,
-      "away_sets": 3
-    },
-    {
-      "date": "2026-09-29",
       "home": "east-union",
       "away": "tupelo-christian",
       "home_sets": 3,
@@ -20398,17 +20398,17 @@
     },
     {
       "date": "2026-09-29",
-      "home": "harrison-central",
-      "away": "pascagoula",
+      "home": "hancock",
+      "away": "st-martin",
       "home_sets": 3,
       "away_sets": 0
     },
     {
       "date": "2026-09-29",
-      "home": "hartfield-academy",
-      "away": "jackson-prep",
+      "home": "harrison-central",
+      "away": "pascagoula",
       "home_sets": 3,
-      "away_sets": 1
+      "away_sets": 0
     },
     {
       "date": "2026-09-29",
@@ -20454,13 +20454,6 @@
     },
     {
       "date": "2026-09-29",
-      "home": "houston",
-      "away": "shannon",
-      "home_sets": 2,
-      "away_sets": 3
-    },
-    {
-      "date": "2026-09-29",
       "home": "ingomar",
       "away": "saltillo",
       "home_sets": 3,
@@ -20472,6 +20465,20 @@
       "away": "west-point",
       "home_sets": 3,
       "away_sets": 0
+    },
+    {
+      "date": "2026-09-29",
+      "home": "jackson-prep",
+      "away": "hartfield-academy",
+      "home_sets": 1,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-09-29",
+      "home": "lafayette",
+      "away": "pontotoc",
+      "home_sets": 3,
+      "away_sets": 1
     },
     {
       "date": "2026-09-29",
@@ -20500,13 +20507,6 @@
       "away": "j-z-george",
       "home_sets": 3,
       "away_sets": 1
-    },
-    {
-      "date": "2026-09-29",
-      "home": "lewisburg",
-      "away": "northpoint-christian",
-      "home_sets": 1,
-      "away_sets": 3
     },
     {
       "date": "2026-09-29",
@@ -20566,6 +20566,13 @@
     },
     {
       "date": "2026-09-29",
+      "home": "neshoba-central",
+      "away": "newton-county",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-09-29",
       "home": "nettleton",
       "away": "winona-secondary-school",
       "home_sets": 3,
@@ -20594,13 +20601,6 @@
     },
     {
       "date": "2026-09-29",
-      "home": "newton-county",
-      "away": "neshoba-central",
-      "home_sets": 0,
-      "away_sets": 3
-    },
-    {
-      "date": "2026-09-29",
       "home": "north-panola",
       "away": "coahoma-county-jr-sr",
       "home_sets": 1,
@@ -20619,6 +20619,13 @@
       "away": "stringer",
       "home_sets": 3,
       "away_sets": 0
+    },
+    {
+      "date": "2026-09-29",
+      "home": "northpoint-christian",
+      "away": "lewisburg",
+      "home_sets": 3,
+      "away_sets": 1
     },
     {
       "date": "2026-09-29",
@@ -20660,13 +20667,6 @@
       "home": "philadelphia",
       "away": "east-webster",
       "home_sets": 0,
-      "away_sets": 3
-    },
-    {
-      "date": "2026-09-29",
-      "home": "pontotoc",
-      "away": "lafayette",
-      "home_sets": 1,
       "away_sets": 3
     },
     {
@@ -20741,6 +20741,13 @@
     },
     {
       "date": "2026-09-29",
+      "home": "shannon",
+      "away": "houston",
+      "home_sets": 3,
+      "away_sets": 2
+    },
+    {
+      "date": "2026-09-29",
       "home": "simmons",
       "away": "riverside",
       "home_sets": 1,
@@ -20759,13 +20766,6 @@
       "away": "quitman",
       "home_sets": 3,
       "away_sets": 0
-    },
-    {
-      "date": "2026-09-29",
-      "home": "st-martin",
-      "away": "hancock",
-      "home_sets": 0,
-      "away_sets": 3
     },
     {
       "date": "2026-09-29",
@@ -20808,6 +20808,13 @@
       "away": "leake",
       "home_sets": 3,
       "away_sets": 0
+    },
+    {
+      "date": "2026-09-29",
+      "home": "west-marion",
+      "away": "east-marion",
+      "home_sets": 3,
+      "away_sets": 1
     },
     {
       "date": "2026-09-29",
@@ -20902,6 +20909,13 @@
     },
     {
       "date": "2026-10-01",
+      "home": "brandon",
+      "away": "jackson-academy",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-01",
       "home": "brookhaven",
       "away": "north-pike-senior",
       "home_sets": 0,
@@ -20919,13 +20933,6 @@
       "home": "cleveland-central",
       "away": "grenada-high",
       "home_sets": 0,
-      "away_sets": 3
-    },
-    {
-      "date": "2026-10-01",
-      "home": "desoto-central",
-      "away": "oxford",
-      "home_sets": 1,
       "away_sets": 3
     },
     {
@@ -20948,13 +20955,6 @@
       "away": "east-webster",
       "home_sets": 3,
       "away_sets": 2
-    },
-    {
-      "date": "2026-10-01",
-      "home": "external:/ar/west-memphis/west-memphis-christian-black-knights/volleyball",
-      "away": "regents",
-      "home_sets": 3,
-      "away_sets": 0
     },
     {
       "date": "2026-10-01",
@@ -20993,6 +20993,13 @@
     },
     {
       "date": "2026-10-01",
+      "home": "greenville",
+      "away": "warren-central",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-01",
       "home": "greenwood",
       "away": "gentry",
       "home_sets": 2,
@@ -21004,13 +21011,6 @@
       "away": "gulfport",
       "home_sets": 2,
       "away_sets": 3
-    },
-    {
-      "date": "2026-10-01",
-      "home": "hartfield-academy",
-      "away": "simpson-academy",
-      "home_sets": 3,
-      "away_sets": 0
     },
     {
       "date": "2026-10-01",
@@ -21035,13 +21035,6 @@
     },
     {
       "date": "2026-10-01",
-      "home": "jackson-academy",
-      "away": "brandon",
-      "home_sets": 0,
-      "away_sets": 3
-    },
-    {
-      "date": "2026-10-01",
       "home": "jackson-prep",
       "away": "christ-covenant",
       "home_sets": 3,
@@ -21053,13 +21046,6 @@
       "away": "booneville",
       "home_sets": 3,
       "away_sets": 0
-    },
-    {
-      "date": "2026-10-01",
-      "home": "lafayette",
-      "away": "madison-central",
-      "home_sets": 0,
-      "away_sets": 3
     },
     {
       "date": "2026-10-01",
@@ -21077,17 +21063,10 @@
     },
     {
       "date": "2026-10-01",
-      "home": "madison-ridgeland-academy",
-      "away": "oak-grove",
-      "home_sets": 1,
-      "away_sets": 2
-    },
-    {
-      "date": "2026-10-01",
-      "home": "madison-ridgeland-academy",
-      "away": "purvis",
-      "home_sets": 2,
-      "away_sets": 1
+      "home": "madison-central",
+      "away": "lafayette",
+      "home_sets": 3,
+      "away_sets": 0
     },
     {
       "date": "2026-10-01",
@@ -21119,6 +21098,13 @@
     },
     {
       "date": "2026-10-01",
+      "home": "neshoba-central",
+      "away": "west-lauderdale",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-01",
       "home": "newton-county",
       "away": "union",
       "home_sets": 3,
@@ -21133,16 +21119,16 @@
     },
     {
       "date": "2026-10-01",
-      "home": "northeast-lauderdale",
-      "away": "starkville",
-      "home_sets": 0,
-      "away_sets": 3
-    },
-    {
-      "date": "2026-10-01",
       "home": "northpoint-christian",
       "away": "center-hill",
       "home_sets": 3,
+      "away_sets": 1
+    },
+    {
+      "date": "2026-10-01",
+      "home": "oak-grove",
+      "away": "madison-ridgeland-academy",
+      "home_sets": 2,
       "away_sets": 1
     },
     {
@@ -21151,6 +21137,13 @@
       "away": "harrison-central",
       "home_sets": 3,
       "away_sets": 0
+    },
+    {
+      "date": "2026-10-01",
+      "home": "oxford",
+      "away": "desoto-central",
+      "home_sets": 3,
+      "away_sets": 1
     },
     {
       "date": "2026-10-01",
@@ -21163,6 +21156,13 @@
       "date": "2026-10-01",
       "home": "picayune",
       "away": "poplarville",
+      "home_sets": 2,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-01",
+      "home": "picayune-memorial",
+      "away": "poplarville-jr-sr",
       "home_sets": 2,
       "away_sets": 3
     },
@@ -21189,13 +21189,6 @@
     },
     {
       "date": "2026-10-01",
-      "home": "poplarville-jr-sr",
-      "away": "picayune-memorial",
-      "home_sets": 3,
-      "away_sets": 2
-    },
-    {
-      "date": "2026-10-01",
       "home": "provine",
       "away": "leake",
       "home_sets": 3,
@@ -21211,6 +21204,13 @@
     {
       "date": "2026-10-01",
       "home": "purvis",
+      "away": "madison-ridgeland-academy",
+      "home_sets": 1,
+      "away_sets": 2
+    },
+    {
+      "date": "2026-10-01",
+      "home": "purvis",
       "away": "oak-grove",
       "home_sets": 2,
       "away_sets": 0
@@ -21219,6 +21219,13 @@
       "date": "2026-10-01",
       "home": "quitman",
       "away": "southeast-lauderdale",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-01",
+      "home": "regents",
+      "away": "external:/ar/west-memphis/west-memphis-christian-black-knights/volleyball",
       "home_sets": 0,
       "away_sets": 3
     },
@@ -21252,6 +21259,13 @@
     },
     {
       "date": "2026-10-01",
+      "home": "simpson-academy",
+      "away": "hartfield-academy",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-01",
       "home": "south-panola",
       "away": "horn-lake-high",
       "home_sets": 2,
@@ -21263,6 +21277,20 @@
       "away": "olive-branch",
       "home_sets": 1,
       "away_sets": 3
+    },
+    {
+      "date": "2026-10-01",
+      "home": "st-joseph-catholic",
+      "away": "st-aloysius",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-01",
+      "home": "starkville",
+      "away": "northeast-lauderdale",
+      "home_sets": 3,
+      "away_sets": 0
     },
     {
       "date": "2026-10-01",
@@ -21282,13 +21310,6 @@
       "date": "2026-10-01",
       "home": "vancleave",
       "away": "moss-point",
-      "home_sets": 3,
-      "away_sets": 0
-    },
-    {
-      "date": "2026-10-01",
-      "home": "warren-central",
-      "away": "greenville",
       "home_sets": 3,
       "away_sets": 0
     },
@@ -21314,18 +21335,19 @@
       "away_sets": 1
     },
     {
-      "date": "2026-10-01",
-      "home": "west-lauderdale",
-      "away": "neshoba-central",
-      "home_sets": 0,
-      "away_sets": 3
-    },
-    {
       "date": "2026-10-02",
       "home": "columbia",
       "away": "choctaw-central",
       "home_sets": 0,
       "away_sets": 3
+    },
+    {
+      "date": "2026-10-02",
+      "home": "external:/ga/cave-spring/georgia-school-for-the-deaf-tigers/volleyball",
+      "away": "miss-school-for-the-deaf",
+      "home_sets": 0,
+      "away_sets": 1,
+      "tournament": true
     },
     {
       "date": "2026-10-02",
@@ -21336,15 +21358,48 @@
     },
     {
       "date": "2026-10-02",
-      "home": "new-hope",
-      "away": "west-point",
-      "home_sets": 3,
-      "away_sets": 0
+      "home": "miss-school-for-the-deaf",
+      "away": "external:/al/talladega/alabama-school-for-the-deaf-silent-warriors/volleyball",
+      "home_sets": 1,
+      "away_sets": 0,
+      "tournament": true
     },
     {
       "date": "2026-10-02",
-      "home": "resurrection",
-      "away": "south-delta",
+      "home": "miss-school-for-the-deaf",
+      "away": "external:/ga/cave-spring/georgia-school-for-the-deaf-tigers/volleyball",
+      "home_sets": 1,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-10-02",
+      "home": "miss-school-for-the-deaf",
+      "away": "external:/ky/danville/kentucky-school-for-the-deaf-colonels/volleyball",
+      "home_sets": 1,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-10-02",
+      "home": "miss-school-for-the-deaf",
+      "away": "external:/la/baton-rouge/louisiana-school-for-the-deaf-war-eagles/volleyball",
+      "home_sets": 1,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-10-02",
+      "home": "miss-school-for-the-deaf",
+      "away": "external:/sc/spartanburg/south-carolina-school-for-the-deaf-and-blind-hornets/volleyball",
+      "home_sets": 1,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-10-02",
+      "home": "new-hope",
+      "away": "west-point",
       "home_sets": 3,
       "away_sets": 0
     },
@@ -21455,13 +21510,6 @@
     },
     {
       "date": "2026-10-03",
-      "home": "forrest-county-agricultural-hi-sch",
-      "away": "morton",
-      "home_sets": 3,
-      "away_sets": 1
-    },
-    {
-      "date": "2026-10-03",
       "home": "franklin",
       "away": "southeast-lauderdale",
       "home_sets": 3,
@@ -21555,6 +21603,14 @@
     {
       "date": "2026-10-03",
       "home": "miss-school-for-the-deaf",
+      "away": "external:/la/baton-rouge/louisiana-school-for-the-deaf-war-eagles/volleyball",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-10-03",
+      "home": "miss-school-for-the-deaf",
       "away": "external:/sc/spartanburg/south-carolina-school-for-the-deaf-and-blind-hornets/volleyball",
       "home_sets": 2,
       "away_sets": 0,
@@ -21618,6 +21674,13 @@
     },
     {
       "date": "2026-10-03",
+      "home": "morton",
+      "away": "forrest-county-agricultural-hi-sch",
+      "home_sets": 1,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-03",
       "home": "nettleton",
       "away": "independence",
       "home_sets": 3,
@@ -21664,6 +21727,13 @@
       "away": "raymond",
       "home_sets": 3,
       "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
+      "home": "pillow-academy",
+      "away": "madison-ridgeland-academy",
+      "home_sets": 0,
+      "away_sets": 3
     },
     {
       "date": "2026-10-03",
@@ -21803,6 +21873,48 @@
       "home": "yazoo-county",
       "away": "alcorn-central",
       "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-05",
+      "home": "east-union",
+      "away": "new-site",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-05",
+      "home": "lafayette",
+      "away": "vicksburg",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-05",
+      "home": "pass-christian",
+      "away": "northeast-lauderdale",
+      "home_sets": 3,
+      "away_sets": 1
+    },
+    {
+      "date": "2026-10-05",
+      "home": "pass-christian",
+      "away": "northeast-lauderdale",
+      "home_sets": 3,
+      "away_sets": 1
+    },
+    {
+      "date": "2026-10-05",
+      "home": "riverside",
+      "away": "lumberton",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-05",
+      "home": "simpson-academy",
+      "away": "pillow-academy",
+      "home_sets": 1,
       "away_sets": 3
     }
   ]
