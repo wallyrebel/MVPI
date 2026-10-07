@@ -95,7 +95,7 @@ def _validate_classifications(teams: list[Team]) -> None:
 def fetch_teams(diagnostics_dir: Path = Path("work/classifications")) -> list[Team]:
     """Validate the public response; retry transient failures at most twice.
 
-    Never substitute cached/invented schools. Keep public HTML and selected
+    This strict API never substitutes cached schools. Keep public HTML and selected
     response metadata (no cookies or authorization headers) for failed runs.
     """
     diagnostics_dir.mkdir(parents=True, exist_ok=True)

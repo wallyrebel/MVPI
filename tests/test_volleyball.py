@@ -493,3 +493,198 @@ def test_official_http_202_siteground_challenge_is_diagnosed(monkeypatch, tmp_pa
     assert audit[0]['http_status'] == 202
     assert audit[0]['failure_kind'] == 'upstream_challenge'
     assert audit[0]['parsed_teams'] == 0
+
+
+def _captured_classifications(monkeypatch, tmp_path):
+    from mvpi import live
+    from mvpi import classifications
+    from mvpi.classifications import fetch_classifications
+    class CaptureClock(datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return datetime(2026, 10, 7, 12, tzinfo=timezone.utc)
+    monkeypatch.setattr(live, 'datetime', CaptureClock)
+    monkeypatch.setattr(classifications, 'datetime', CaptureClock)
+    cache = tmp_path / 'official.json'
+    diagnostics = tmp_path / 'diagnostics'
+    monkeypatch.setattr(live, 'urlopen', lambda *a, **k: _official_response(_official_fixture()))
+    result = fetch_classifications(cache, diagnostics)
+    assert not result.audit['used_cache']
+    return cache, diagnostics, result
+
+
+def test_classification_challenge_reuses_verified_capture_without_retry_or_redating(monkeypatch, tmp_path):
+    import json
+    from mvpi import live
+    from mvpi.classifications import fetch_classifications
+    cache, diagnostics, fresh = _captured_classifications(monkeypatch, tmp_path)
+    original = cache.read_bytes()
+    requests = []
+    def challenge(*args, **kwargs):
+        requests.append(args)
+        return _official_response('<script>location="/.well-known/sgcaptcha/"</script>', status=202)
+    monkeypatch.setattr(live, 'urlopen', challenge)
+    monkeypatch.setattr(live.time, 'sleep', lambda _: __import__('pytest').fail('Do not retry challenges'))
+    result = fetch_classifications(cache, diagnostics)
+    assert result.teams == fresh.teams and len(result.teams) == 226
+    assert result.audit['used_cache'] and result.audit['fallback_reason'] == 'upstream_challenge'
+    assert result.audit['retrieved_at'] == fresh.audit['retrieved_at']
+    assert result.audit['expires_at'] == fresh.audit['expires_at']
+    assert cache.read_bytes() == original and len(requests) == 1
+    assert json.loads((diagnostics / 'response.json').read_text())['classification_fetch'] == result.audit
+
+
+def test_classification_cache_age_cycle_provenance_and_inventory_fail_closed(monkeypatch, tmp_path):
+    import copy
+    import json
+    import pytest
+    import hashlib
+    from datetime import timedelta
+    from mvpi.classifications import _validate_capture
+    cache, _, _ = _captured_classifications(monkeypatch, tmp_path)
+    original = json.loads(cache.read_text())
+    captured = datetime.fromisoformat(original['response']['retrieved_at'])
+    assert len(_validate_capture(original, captured + timedelta(days=7))[0]) == 226
+    for now in (captured + timedelta(days=7, seconds=1), captured - timedelta(seconds=1),
+                datetime(2027, 7, 1, tzinfo=timezone.utc)):
+        with pytest.raises(ValueError):
+            _validate_capture(original, now)
+    changes = [({'cycle': '2027-29'}, {}), ({'schema_version': 2}, {}),
+               ({'html': original['html'] + 'changed'}, {}),
+               ({}, {'http_status': 202}), ({}, {'final_url': 'https://example.com/'}),
+               ({}, {'requested_url': 'https://example.com/'}),
+               ({}, {'content_type': 'application/json'}), ({}, {'body_sha256': 'invalid'}),
+               ({}, {'retrieved_at': '2026-10-07'}), ({}, {'parsed_teams': 120}),
+               ({}, {'failure_kind': 'upstream_challenge'})]
+    for top, response in changes:
+        payload = copy.deepcopy(original)
+        payload.update(top)
+        payload['response'].update(response)
+        with pytest.raises(ValueError):
+            _validate_capture(payload, captured)
+    # A valid checksum cannot make an incomplete/duplicate/wrong-cycle table usable.
+    for html in ('<table></table>', original['html'].replace('2025-27', '2027-29'),
+                 original['html'] + '<table><tr><td>LEWISBURG HIGH SCHOOL</td><td>7</td><td>1</td></tr></table>'):
+        payload = copy.deepcopy(original)
+        payload['html'] = html
+        payload['response'].update(body_bytes=len(html.encode()), body_sha256=hashlib.sha256(html.encode()).hexdigest())
+        with pytest.raises(ValueError):
+            _validate_capture(payload, captured)
+
+
+def test_classification_cache_cannot_hide_changed_or_denied_source(monkeypatch, tmp_path):
+    import pytest
+    from mvpi import live
+    from mvpi.classifications import fetch_classifications
+    cache, diagnostics, _ = _captured_classifications(monkeypatch, tmp_path)
+    original = cache.read_bytes()
+    monkeypatch.setattr(live.time, 'sleep', lambda _: None)
+    for html, options in [('<table></table>', {}),
+                          (_official_fixture(), {'status': 403}),
+                          (_official_fixture(), {'status': 503}),
+                          (_official_fixture(), {'url': 'https://www.misshsaa.com/login/'}),
+                          (_official_fixture(), {'content_type': 'application/json'})]:
+        monkeypatch.setattr(live, 'urlopen', lambda *a, **k: _official_response(html, **options))
+        with pytest.raises(ValueError, match='Official classification fetch failed'):
+            fetch_classifications(cache, diagnostics)
+        assert cache.read_bytes() == original
+
+
+def test_classification_outage_requires_valid_cache_and_restored_source_updates_it(monkeypatch, tmp_path):
+    import json
+    import pytest
+    from urllib.error import URLError
+    from mvpi import live
+    from mvpi.classifications import fetch_classifications
+    cache, diagnostics, _ = _captured_classifications(monkeypatch, tmp_path)
+    original = cache.read_bytes()
+    def unavailable(*a, **k):
+        raise URLError('temporary outage')
+    monkeypatch.setattr(live, 'urlopen', unavailable)
+    waits = []
+    monkeypatch.setattr(live.time, 'sleep', waits.append)
+    result = fetch_classifications(cache, diagnostics)
+    assert result.audit['used_cache'] and waits == [2, 4]
+    assert cache.read_bytes() == original
+    payload = json.loads(original)
+    payload['response']['retrieved_at'] = '2026-09-01T00:00:00+00:00'
+    cache.write_text(json.dumps(payload))
+    with pytest.raises(ValueError, match='cache rejected'):
+        fetch_classifications(cache, diagnostics)
+    cache.unlink()
+    with pytest.raises(ValueError, match='cache rejected'):
+        fetch_classifications(cache, diagnostics)
+    monkeypatch.setattr(live, 'urlopen', lambda *a, **k: _official_response(_official_fixture()))
+    restored = fetch_classifications(cache, diagnostics)
+    assert not restored.audit['used_cache'] and len(restored.teams) == 226
+
+
+def test_cached_classification_conflict_with_current_media_class_is_blocked():
+    import pytest
+    official = Team('lewisburg', 'Lewisburg High School', '7A', '1')
+    row = ClassifiedMediaTeam('Lewisburg', 'https://www.maxpreps.com/ms/olive-branch/lewisburg/volleyball/', '6A')
+    with pytest.raises(ValueError, match='conflicts with current class feed'):
+        build_team_inventory([official], [row], require_class_agreement=True)
+    assert build_team_inventory([official], [row])[0][0].classification == '7A'
+
+
+def test_cached_classifications_keep_refresh_gates_and_publish_honest_audit(monkeypatch, tmp_path):
+    import json
+    import pytest
+    from types import SimpleNamespace
+    from datetime import date
+    import calculate_volleyball as calculate
+    from mvpi import live
+    from mvpi.classifications import CACHE_PATH
+    class CalculationDate(date):
+        @classmethod
+        def today(cls):
+            return date(2026, 10, 7)
+    monkeypatch.setattr(calculate, 'date', CalculationDate)
+    cache, _, captured = _captured_classifications(monkeypatch, tmp_path)
+    monkeypatch.chdir(tmp_path)
+    CACHE_PATH.parent.mkdir(parents=True)
+    CACHE_PATH.write_bytes(cache.read_bytes())
+    monkeypatch.setattr(live, 'urlopen', lambda *a, **k: _official_response('sgcaptcha', status=202))
+    signals = {team.team_id: MediaRanking(i, team.name, '3-0', 1, 1, '')
+               for i, team in enumerate(captured.teams, 1)}
+    media = SimpleNamespace(used_cache=False, source_updated_at=None, rankings=[])
+    classes = SimpleNamespace(used_cache=False, teams=[])
+    monkeypatch.setattr(calculate, 'fetch_rankings', lambda _: media)
+    monkeypatch.setattr(calculate, 'fetch_classified_teams', lambda _: classes)
+    monkeypatch.setattr(calculate, 'load_private_teams', lambda _: ([], {}, {}))
+    monkeypatch.setattr(calculate, 'reconcile_rankings', lambda *a: (signals, []))
+    played = datetime(2026, 8, 1, tzinfo=timezone.utc)
+    match = Match('verified', captured.teams[0].team_id, captured.teams[1].team_id, 3, 1, played_at=played)
+    monkeypatch.setattr(calculate, 'fetch_schedules', lambda *a, **k: ([match], []))
+    monkeypatch.setattr(calculate, 'fetch_matches', lambda *a: ([], {}))
+    monkeypatch.setattr(calculate, 'fetch_external_ratings', lambda *a: {})
+    rows = [SimpleNamespace(team_id=team.team_id, team=team.name, classification=team.classification,
+                            to_dict=lambda team=team: {'team': team.name, 'team_id': team.team_id})
+            for team in captured.teams]
+    monkeypatch.setattr(calculate, 'rank', lambda *a: rows)
+    output = CACHE_PATH.with_name('current.json')
+    schedule = CACHE_PATH.with_name('matches.json')
+    output.write_text(json.dumps({'metadata': {'generated_at': '2026-10-07',
+                                              'ranked_teams': 226, 'completed_matches': 1}}))
+    schedule.write_text('previous valid schedule')
+    original = output.read_bytes()
+    for feed in (media, classes):
+        feed.used_cache = True
+        with pytest.raises(ValueError, match='Incomplete source refresh'):
+            calculate.main()
+        assert output.read_bytes() == original and schedule.read_text() == 'previous valid schedule'
+        feed.used_cache = False
+    calculate.main()
+    audit = json.loads(output.read_text())['metadata']['classification_fetch']
+    assert audit['used_cache'] and audit['retrieved_at'] == captured.audit['retrieved_at']
+    assert audit['live_attempts'][0]['http_status'] == 202
+    assert json.loads(schedule.read_text())['metadata']['matches'] == 1
+    # Expiry fails before any ranking snapshot or schedule replacement.
+    published, published_schedule = output.read_bytes(), schedule.read_bytes()
+    payload = json.loads(CACHE_PATH.read_text())
+    payload['response']['retrieved_at'] = '2026-09-01T00:00:00+00:00'
+    CACHE_PATH.write_text(json.dumps(payload))
+    with pytest.raises(ValueError, match='cache rejected'):
+        calculate.main()
+    assert output.read_bytes() == published and schedule.read_bytes() == published_schedule

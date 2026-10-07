@@ -6,7 +6,8 @@ from datetime import date
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from mvpi.live import CLASSIFICATIONS_URL, SCORE_API_URL, fetch_matches, fetch_teams
+from mvpi.live import CLASSIFICATIONS_URL, SCORE_API_URL, fetch_matches
+from mvpi.classifications import fetch_classifications
 from mvpi.maxpreps import (
     RANKINGS_URL,
     build_team_inventory,
@@ -125,10 +126,13 @@ def _validate_refresh(media_fetch, classified_fetch, failed_schedules, rankings,
 
 def main() -> None:
     today = date.today()
-    official_teams = fetch_teams()
+    classification_fetch = fetch_classifications()
+    official_teams = classification_fetch.teams
     media_fetch = fetch_rankings(Path("data/cache/volleyball-rankings.json"))
     classified_fetch = fetch_classified_teams(Path("data/cache/volleyball-classes.json"))
-    teams, unverified_class_teams = build_team_inventory(official_teams, classified_fetch.teams)
+    teams, unverified_class_teams = build_team_inventory(
+        official_teams, classified_fetch.teams,
+        require_class_agreement=classification_fetch.audit["used_cache"])
     private_teams, private_urls, private_sources = load_private_teams(today.year)
     teams = include_private_teams(teams, private_teams)
     media_signals, unmatched_media = reconcile_rankings(teams, media_fetch.rankings)
@@ -178,6 +182,7 @@ def main() -> None:
             "unmatched_media_teams": len(unmatched_media),
             "missing_media_teams": len(missing_media),
             "classification_source": CLASSIFICATIONS_URL,
+            "classification_fetch": classification_fetch.audit,
             "team_discovery_source": RANKINGS_URL.format(page=1),
             "ranking_source": RANKINGS_URL.format(page=1),
             "fallback_score_source": SCORE_API_URL,

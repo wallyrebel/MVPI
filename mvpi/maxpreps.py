@@ -351,6 +351,7 @@ def reconcile_rankings(teams: list[Team], rankings: list[MediaRanking]) -> tuple
 def build_team_inventory(
     official_teams: list[Team],
     classified_media_teams: list[ClassifiedMediaTeam],
+    *, require_class_agreement: bool = False,
 ) -> tuple[list[Team], list[str]]:
     """Merge class-feed discovery with official class and region metadata.
 
@@ -377,6 +378,9 @@ def build_team_inventory(
     for row in classified_media_teams:
         official = official_by_url.get(_url_key(row.team_url))
         if official:
+            if require_class_agreement and row.classification != official.classification:
+                raise ValueError(f"Cached official classification conflicts with current class feed: "
+                                 f"{official.name}: {official.classification} vs {row.classification}")
             team = Team(official.team_id, row.team_name, official.classification, official.region, official.association)
         else:
             media_only.append(row.team_name)

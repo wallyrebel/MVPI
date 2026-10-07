@@ -35,6 +35,9 @@ export default function Home() {
   const [scope, setScope] = useState<Scope>('7A');
   const [query, setQuery] = useState('');
   const rankedWithMatches = snapshot.rankings;
+  const classificationFetch = (snapshot.metadata as typeof snapshot.metadata & {
+    classification_fetch?: { used_cache: boolean; retrieved_at: string; expires_at: string };
+  }).classification_fetch;
   const normalizedQuery = query.trim().toLocaleLowerCase();
   const searching = normalizedQuery.length > 0;
   const displayed = searching
@@ -127,6 +130,7 @@ export default function Home() {
           {displayed.length === 0 && <p className="vb-empty" role="status">No ranked teams match “{query.trim()}”.</p>}
         </div>
         <p className="vb-source-note">Private includes MAIS teams and Northpoint Christian (TSSAA). Schools without current-season results or a published ranking remain unranked. Record is the statewide media record. “Sets” totals publicly listed match scores; “Set data” shows how many published matches have usable set scores. Official association results only fill missing data and never override the media record.</p>
+        {classificationFetch?.used_cache && <p className="vb-source-note">Official MHSAA classes and regions use a verified capture from {classificationFetch.retrieved_at.slice(0, 10)} because the latest official source check failed. This capture expires {classificationFetch.expires_at.slice(0, 10)}. Match scores and media feeds passed the current refresh checks.</p>}
         <p className="vb-source-note">Out-of-state opponent ratings: {snapshot.metadata.external_opponents_rated} of {snapshot.metadata.external_opponents} available from the national media ratings feed. {snapshot.metadata.external_rating_calibration.status === 'calibrated' ? 'Ratings are blended with match results when calculating opponent strength.' : 'There is not enough reliable calibration data to apply external ratings yet; opponent strength uses imported results.'}
           {Object.values(snapshot.external_opponents).filter((opponent) => opponent.rating === null).map((opponent) => (
             <span key={`${opponent.state}-${opponent.team}`}> Rating unavailable for {opponent.team.replaceAll('-', ' ')} ({opponent.state}); its strength uses available results and a neutral starting estimate.</span>

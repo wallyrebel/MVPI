@@ -11,6 +11,8 @@ on:
     branches: [main]
     paths:
       - 'mvpi/live.py'
+      - 'mvpi/classifications.py'
+      - 'mvpi/maxpreps.py'
       - 'calculate_volleyball.py'
       - 'tests/**'
       - '.github/workflows/update-rankings.yml'
@@ -48,7 +50,11 @@ jobs:
       - name: Validate official classification source without publishing
         if: github.event_name == 'push' || inputs.validate_only == true
         run: |
-          python -c "from mvpi.live import fetch_teams; teams = fetch_teams(); print(f'Validated {len(teams)} official teams')"
+          python - <<'PY'
+          from mvpi.classifications import fetch_classifications
+          result = fetch_classifications()
+          print(f"Validated {len(result.teams)} official teams; cached: {result.audit['used_cache']}")
+          PY
 
       - name: Set up Node.js
         if: github.event_name != 'push' && inputs.validate_only != true
@@ -75,7 +81,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/volleyball/current.json data/volleyball/matches.json
+          git add data/volleyball/current.json data/volleyball/matches.json data/volleyball/official-classifications.json
           if git diff --cached --quiet; then
             echo "No ranking changes to publish."
             echo "changed=false" >> "$GITHUB_OUTPUT"
