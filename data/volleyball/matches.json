@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "generated_at": "2026-10-06",
-    "matches": 2996,
-    "teams_referenced": 410
+    "generated_at": "2026-10-07",
+    "matches": 3060,
+    "teams_referenced": 411
   },
   "labels": {
     "aberdeen": "Aberdeen",
@@ -46,6 +46,7 @@
     "cleveland-central": "Cleveland Central",
     "clinton": "Clinton",
     "clinton-christian-academy": "Clinton Christian Academy",
+    "coahoma-county": "Coahoma County",
     "coahoma-county-jr-sr": "Coahoma County",
     "coastal-mississippi-homeschool": "coastal-mississippi-homeschool",
     "columbia": "Columbia",
@@ -8015,6 +8016,14 @@
     {
       "date": "2026-08-21",
       "home": "lamar",
+      "away": "external:/al/athens/athens-golden-eagles/volleyball",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-08-21",
+      "home": "lamar",
       "away": "external:/al/pell-city/pell-city-panthers/volleyball",
       "home_sets": 2,
       "away_sets": 1,
@@ -14405,8 +14414,8 @@
       "date": "2026-09-10",
       "home": "provine",
       "away": "holmes-county-central",
-      "home_sets": 2,
-      "away_sets": 1
+      "home_sets": 3,
+      "away_sets": 2
     },
     {
       "date": "2026-09-10",
@@ -19831,6 +19840,13 @@
     },
     {
       "date": "2026-09-28",
+      "home": "christian-collegiate-academy",
+      "away": "heritage-christian-academy",
+      "home_sets": 3,
+      "away_sets": 1
+    },
+    {
+      "date": "2026-09-28",
       "home": "clarkdale",
       "away": "lake",
       "home_sets": 2,
@@ -19933,13 +19949,6 @@
       "away": "grace-christian",
       "home_sets": 3,
       "away_sets": 2
-    },
-    {
-      "date": "2026-09-28",
-      "home": "heritage-christian-academy",
-      "away": "christian-collegiate-academy",
-      "home_sets": 1,
-      "away_sets": 3
     },
     {
       "date": "2026-09-28",
@@ -20524,13 +20533,6 @@
     },
     {
       "date": "2026-09-29",
-      "home": "madison-ridgeland-academy",
-      "away": "starkville-academy",
-      "home_sets": 3,
-      "away_sets": 0
-    },
-    {
-      "date": "2026-09-29",
       "home": "meridian",
       "away": "wayne-county",
       "home_sets": 3,
@@ -20769,6 +20771,13 @@
     },
     {
       "date": "2026-09-29",
+      "home": "starkville-academy",
+      "away": "madison-ridgeland-academy",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-09-29",
       "home": "stone",
       "away": "pearl-river-central",
       "home_sets": 3,
@@ -20923,6 +20932,13 @@
     },
     {
       "date": "2026-10-01",
+      "home": "christ-covenant",
+      "away": "jackson-prep",
+      "home_sets": 1,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-01",
       "home": "cleveland",
       "away": "grenada",
       "home_sets": 0,
@@ -21014,6 +21030,13 @@
     },
     {
       "date": "2026-10-01",
+      "home": "heritage-academy",
+      "away": "lamar",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-01",
       "home": "hickory-flat",
       "away": "baldwyn",
       "home_sets": 3,
@@ -21032,13 +21055,6 @@
       "away": "okolona",
       "home_sets": 3,
       "away_sets": 0
-    },
-    {
-      "date": "2026-10-01",
-      "home": "jackson-prep",
-      "away": "christ-covenant",
-      "home_sets": 3,
-      "away_sets": 1
     },
     {
       "date": "2026-10-01",
@@ -21412,6 +21428,13 @@
     },
     {
       "date": "2026-10-03",
+      "home": "alcorn-central",
+      "away": "yazoo-county",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
       "home": "amanda-elzy",
       "away": "belmont-school",
       "home_sets": 0,
@@ -21573,6 +21596,13 @@
     },
     {
       "date": "2026-10-03",
+      "home": "lawrence-county",
+      "away": "northeast-lauderdale",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-03",
       "home": "leflore-county",
       "away": "richton",
       "home_sets": 0,
@@ -21697,13 +21727,6 @@
       "date": "2026-10-03",
       "home": "newton-county",
       "away": "mccomb",
-      "home_sets": 3,
-      "away_sets": 0
-    },
-    {
-      "date": "2026-10-03",
-      "home": "northeast-lauderdale",
-      "away": "lawrence-county",
       "home_sets": 3,
       "away_sets": 0
     },
@@ -21869,13 +21892,6 @@
       "away_sets": 0
     },
     {
-      "date": "2026-10-03",
-      "home": "yazoo-county",
-      "away": "alcorn-central",
-      "home_sets": 0,
-      "away_sets": 3
-    },
-    {
       "date": "2026-10-05",
       "home": "east-union",
       "away": "new-site",
@@ -21915,6 +21931,440 @@
       "home": "simpson-academy",
       "away": "pillow-academy",
       "home_sets": 1,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-05",
+      "home": "winston-academy",
+      "away": "columbus-christian-academy",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-06",
+      "home": "alcorn-central",
+      "away": "winona-secondary-school",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-06",
+      "home": "baldwyn",
+      "away": "myrtle",
+      "home_sets": 1,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-06",
+      "home": "bay",
+      "away": "newton-county",
+      "home_sets": 1,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-06",
+      "home": "belmont-school",
+      "away": "coahoma-county-jr-sr",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-06",
+      "home": "brandon",
+      "away": "harrison-central",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-06",
+      "home": "caledonia",
+      "away": "lanier",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-06",
+      "home": "center-hill",
+      "away": "callaway",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-06",
+      "home": "choctaw-central",
+      "away": "forrest-county-agricultural-hi-sch",
+      "home_sets": 3,
+      "away_sets": 1
+    },
+    {
+      "date": "2026-10-06",
+      "home": "choctaw-county",
+      "away": "booneville",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-06",
+      "home": "cleveland-central",
+      "away": "pontotoc",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-06",
+      "home": "coahoma-county",
+      "away": "belmont",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-06",
+      "home": "coahoma-county-jr-sr",
+      "away": "belmont-school",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-06",
+      "home": "desoto-central",
+      "away": "madison-central",
+      "home_sets": 3,
+      "away_sets": 2
+    },
+    {
+      "date": "2026-10-06",
+      "home": "east-marion",
+      "away": "puckett",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-06",
+      "home": "enterprise",
+      "away": "wesson",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-06",
+      "home": "ethel",
+      "away": "resurrection",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-06",
+      "home": "florence",
+      "away": "new-hope",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-06",
+      "home": "george-county",
+      "away": "gautier",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-06",
+      "home": "germantown",
+      "away": "tupelo",
+      "home_sets": 3,
+      "away_sets": 1
+    },
+    {
+      "date": "2026-10-06",
+      "home": "gulfport",
+      "away": "northwest-rankin",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-06",
+      "home": "hancock",
+      "away": "forest-hill",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-06",
+      "home": "hatley",
+      "away": "eupora",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-06",
+      "home": "hickory-flat",
+      "away": "tupelo-christian",
+      "home_sets": 1,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-06",
+      "home": "houlka",
+      "away": "wheeler",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-06",
+      "home": "ingomar",
+      "away": "potts-camp-high-school-5-12",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-06",
+      "home": "itawamba-agricultural",
+      "away": "ripley",
+      "home_sets": 1,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-06",
+      "home": "jackson-academy",
+      "away": "lamar",
+      "home_sets": 1,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-06",
+      "home": "jackson-prep",
+      "away": "st-joseph-catholic",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-06",
+      "home": "lake",
+      "away": "sacred-heart",
+      "home_sets": 3,
+      "away_sets": 2
+    },
+    {
+      "date": "2026-10-06",
+      "home": "lake-cormorant-high",
+      "away": "ridgeland",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-06",
+      "home": "lewisburg",
+      "away": "starkville",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-06",
+      "home": "loyd-star-school",
+      "away": "clarkdale",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-06",
+      "home": "madison-ridgeland-academy",
+      "away": "hartfield-academy",
+      "home_sets": 2,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-06",
+      "home": "mooreville",
+      "away": "corinth",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-06",
+      "home": "nanih-waiya",
+      "away": "stringer",
+      "home_sets": 3,
+      "away_sets": 1
+    },
+    {
+      "date": "2026-10-06",
+      "home": "neshoba-central",
+      "away": "olive-branch",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-06",
+      "home": "nettleton",
+      "away": "kossuth",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-06",
+      "home": "new-albany",
+      "away": "amory",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-06",
+      "home": "north-pike-senior",
+      "away": "purvis",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-06",
+      "home": "noxapater",
+      "away": "riverside",
+      "home_sets": 2,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-06",
+      "home": "oak-grove",
+      "away": "west-harrison",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-06",
+      "home": "ocean-springs",
+      "away": "petal",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-06",
+      "home": "oxford",
+      "away": "hernando",
+      "home_sets": 2,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-06",
+      "home": "picayune-memorial",
+      "away": "hattiesburg",
+      "home_sets": 3,
+      "away_sets": 1
+    },
+    {
+      "date": "2026-10-06",
+      "home": "presbyterian-christian-school",
+      "away": "pisgah",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-06",
+      "home": "regents",
+      "away": "winston-academy",
+      "home_sets": 3,
+      "away_sets": 1
+    },
+    {
+      "date": "2026-10-06",
+      "home": "riverside",
+      "away": "noxapater",
+      "home_sets": 3,
+      "away_sets": 2
+    },
+    {
+      "date": "2026-10-06",
+      "home": "russell-christian-academy",
+      "away": "columbus-christian-academy",
+      "home_sets": 3,
+      "away_sets": 1
+    },
+    {
+      "date": "2026-10-06",
+      "home": "salem",
+      "away": "richton",
+      "home_sets": 3,
+      "away_sets": 1
+    },
+    {
+      "date": "2026-10-06",
+      "home": "seminary",
+      "away": "st-andrew-s",
+      "home_sets": 3,
+      "away_sets": 1
+    },
+    {
+      "date": "2026-10-06",
+      "home": "south-jones",
+      "away": "east-central",
+      "home_sets": 2,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-06",
+      "home": "st-patrick",
+      "away": "franklin",
+      "home_sets": 3,
+      "away_sets": 1
+    },
+    {
+      "date": "2026-10-06",
+      "home": "sumrall",
+      "away": "northeast-jones",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-06",
+      "home": "tishomingo-county",
+      "away": "kosciusko-senior",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-06",
+      "home": "union",
+      "away": "our-lady-academy",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-06",
+      "home": "vancleave",
+      "away": "brookhaven",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-06",
+      "home": "walnut",
+      "away": "east-webster",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-06",
+      "home": "warren-central",
+      "away": "saltillo",
+      "home_sets": 1,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-06",
+      "home": "west-jones",
+      "away": "long-beach-senior",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-06",
+      "home": "west-lauderdale",
+      "away": "greene-county",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-06",
+      "home": "west-union",
+      "away": "pine-grove",
+      "home_sets": 0,
       "away_sets": 3
     }
   ]
