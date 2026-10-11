@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-10-09",
-    "matches": 3098,
+    "generated_at": "2026-10-11",
+    "matches": 3102,
     "teams_referenced": 411
   },
   "labels": {
@@ -19636,6 +19636,14 @@
     },
     {
       "date": "2026-09-26",
+      "home": "jackson-homeschool",
+      "away": "sacred-heart",
+      "home_sets": 2,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-09-26",
       "home": "kansas-school-for-the-deaf",
       "away": "mississippi-school-for-the-deaf",
       "home_sets": 1,
@@ -20486,6 +20494,13 @@
       "date": "2026-09-29",
       "home": "itawamba-agricultural",
       "away": "west-point",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-09-29",
+      "home": "jackson-homeschool",
+      "away": "hillcrest-christian",
       "home_sets": 3,
       "away_sets": 0
     },
@@ -22180,6 +22195,13 @@
     },
     {
       "date": "2026-10-06",
+      "home": "jackson-homeschool",
+      "away": "clinton-christian-academy",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-06",
       "home": "jackson-prep",
       "away": "st-joseph-catholic",
       "home_sets": 3,
@@ -22624,7 +22646,7 @@
       "home": "vancleave",
       "away": "east-central",
       "home_sets": 3,
-      "away_sets": 1
+      "away_sets": 2
     },
     {
       "date": "2026-10-08",
@@ -22632,6 +22654,13 @@
       "away": "myrtle",
       "home_sets": 3,
       "away_sets": 0
+    },
+    {
+      "date": "2026-10-10",
+      "home": "salem",
+      "away": "nanih-waiya",
+      "home_sets": 3,
+      "away_sets": 2
     }
   ]
 }
