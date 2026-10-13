@@ -22181,6 +22181,13 @@
     },
     {
       "date": "2026-10-06",
+      "home": "jackson-academy",
+      "away": "lamar",
+      "home_sets": 1,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-06",
       "home": "jackson-homeschool",
       "away": "clinton-christian-academy",
       "home_sets": 3,
@@ -22220,13 +22227,6 @@
       "away": "ridgeland",
       "home_sets": 3,
       "away_sets": 0
-    },
-    {
-      "date": "2026-10-06",
-      "home": "lamar",
-      "away": "jackson-academy",
-      "home_sets": 3,
-      "away_sets": 1
     },
     {
       "date": "2026-10-06",
@@ -22797,10 +22797,10 @@
     },
     {
       "date": "2026-10-12",
-      "home": "vancleave",
-      "away": "sumrall",
-      "home_sets": 1,
-      "away_sets": 3
+      "home": "sumrall",
+      "away": "vancleave",
+      "home_sets": 3,
+      "away_sets": 1
     },
     {
       "date": "2026-10-12",
