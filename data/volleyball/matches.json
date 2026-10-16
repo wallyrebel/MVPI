@@ -1,7 +1,7 @@
 {
   "metadata": {
     "generated_at": "2026-10-16",
-    "matches": 3134,
+    "matches": 3137,
     "teams_referenced": 411
   },
   "labels": {
@@ -22853,6 +22853,13 @@
     },
     {
       "date": "2026-10-15",
+      "home": "enterprise",
+      "away": "east-union",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-15",
       "home": "hartfield-academy",
       "away": "st-joseph-catholic",
       "home_sets": 3,
@@ -22874,6 +22881,13 @@
     },
     {
       "date": "2026-10-15",
+      "home": "ocean-springs",
+      "away": "lewisburg",
+      "home_sets": 1,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-15",
       "home": "simpson-academy",
       "away": "jackson-homeschool",
       "home_sets": 0,
@@ -22885,6 +22899,13 @@
       "away": "new-hope",
       "home_sets": 3,
       "away_sets": 0
+    },
+    {
+      "date": "2026-10-16",
+      "home": "kossuth",
+      "away": "our-lady-academy",
+      "home_sets": 1,
+      "away_sets": 3
     }
   ]
 }
