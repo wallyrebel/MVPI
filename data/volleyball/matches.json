@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-10-13",
-    "matches": 3124,
+    "generated_at": "2026-10-16",
+    "matches": 3134,
     "teams_referenced": 411
   },
   "labels": {
@@ -179,8 +179,8 @@
     "external:/tn/newbern/dyer-county-choctaws/volleyball": "Dyer County",
     "external:/tn/rossville/rossville-christian-academy-wolves/volleyball": "Rossville Christian Academy",
     "external:/tn/selmer/mcnairy-central-bobcats/volleyball": "McNairy Central",
-    "external:/ut/ogden/utah-school-for-the-deaf-and-blind-eagles/volleyball": "utah-school-for-the-deaf-and-blind-eagles",
-    "external:/wi/delavan/wisconsin-school-for-the-deaf-firebirds/volleyball": "wisconsin-school-for-the-deaf-firebirds",
+    "external:/ut/ogden/utah-school-for-the-deaf-and-blind-eagles/volleyball": "Utah School for the Deaf & Blind",
+    "external:/wi/delavan/wisconsin-school-for-the-deaf-firebirds/volleyball": "Wisconsin School for the Deaf",
     "falkner": "Falkner",
     "florence": "Florence",
     "forest": "Forest",
@@ -20471,6 +20471,13 @@
     },
     {
       "date": "2026-09-29",
+      "home": "hillcrest-christian",
+      "away": "jackson-homeschool",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-09-29",
       "home": "holmes-county-central",
       "away": "lanier",
       "home_sets": 3,
@@ -20494,13 +20501,6 @@
       "date": "2026-09-29",
       "home": "itawamba-agricultural",
       "away": "west-point",
-      "home_sets": 3,
-      "away_sets": 0
-    },
-    {
-      "date": "2026-09-29",
-      "home": "jackson-homeschool",
-      "away": "hillcrest-christian",
       "home_sets": 3,
       "away_sets": 0
     },
@@ -20790,6 +20790,13 @@
       "away": "brookhaven",
       "home_sets": 3,
       "away_sets": 0
+    },
+    {
+      "date": "2026-09-29",
+      "home": "south-panola",
+      "away": "water-valley",
+      "home_sets": 3,
+      "away_sets": 2
     },
     {
       "date": "2026-09-29",
@@ -21583,13 +21590,6 @@
     },
     {
       "date": "2026-10-03",
-      "home": "hazlehurst",
-      "away": "union",
-      "home_sets": 0,
-      "away_sets": 3
-    },
-    {
-      "date": "2026-10-03",
       "home": "hickory-flat",
       "away": "west-tallahatchie",
       "home_sets": 3,
@@ -21636,13 +21636,6 @@
       "away": "amite-county",
       "home_sets": 3,
       "away_sets": 0
-    },
-    {
-      "date": "2026-10-03",
-      "home": "lawrence-county",
-      "away": "northeast-lauderdale",
-      "home_sets": 0,
-      "away_sets": 3
     },
     {
       "date": "2026-10-03",
@@ -21782,6 +21775,13 @@
     },
     {
       "date": "2026-10-03",
+      "home": "northeast-lauderdale",
+      "away": "lawrence-county",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
       "home": "northside",
       "away": "baldwyn",
       "home_sets": 0,
@@ -21908,6 +21908,13 @@
     },
     {
       "date": "2026-10-03",
+      "home": "union",
+      "away": "hazlehurst",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-03",
       "home": "walnut",
       "away": "leland",
       "home_sets": 3,
@@ -21978,13 +21985,6 @@
     },
     {
       "date": "2026-10-06",
-      "home": "baldwyn",
-      "away": "myrtle",
-      "home_sets": 1,
-      "away_sets": 3
-    },
-    {
-      "date": "2026-10-06",
       "home": "belmont",
       "away": "coahoma-county",
       "home_sets": 3,
@@ -22041,6 +22041,13 @@
     },
     {
       "date": "2026-10-06",
+      "home": "clinton-christian-academy",
+      "away": "jackson-homeschool",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-06",
       "home": "coahoma-county-jr-sr",
       "away": "belmont-school",
       "home_sets": 0,
@@ -22080,6 +22087,13 @@
       "away": "hatley",
       "home_sets": 0,
       "away_sets": 3
+    },
+    {
+      "date": "2026-10-06",
+      "home": "external:/pseudo/unknown/varsity-opponent/volleyball",
+      "away": "heritage-christian-academy",
+      "home_sets": 3,
+      "away_sets": 0
     },
     {
       "date": "2026-10-06",
@@ -22146,20 +22160,6 @@
     },
     {
       "date": "2026-10-06",
-      "home": "heritage-academy",
-      "away": "starkville-academy",
-      "home_sets": 3,
-      "away_sets": 0
-    },
-    {
-      "date": "2026-10-06",
-      "home": "heritage-christian-academy",
-      "away": "external:/pseudo/unknown/varsity-opponent/volleyball",
-      "home_sets": 0,
-      "away_sets": 3
-    },
-    {
-      "date": "2026-10-06",
       "home": "hickory-flat",
       "away": "tupelo-christian",
       "home_sets": 1,
@@ -22176,20 +22176,6 @@
       "date": "2026-10-06",
       "home": "ingomar",
       "away": "potts-camp-high-school-5-12",
-      "home_sets": 3,
-      "away_sets": 0
-    },
-    {
-      "date": "2026-10-06",
-      "home": "jackson-academy",
-      "away": "lamar",
-      "home_sets": 1,
-      "away_sets": 3
-    },
-    {
-      "date": "2026-10-06",
-      "home": "jackson-homeschool",
-      "away": "clinton-christian-academy",
       "home_sets": 3,
       "away_sets": 0
     },
@@ -22216,17 +22202,17 @@
     },
     {
       "date": "2026-10-06",
-      "home": "lake",
-      "away": "sacred-heart",
-      "home_sets": 3,
-      "away_sets": 2
-    },
-    {
-      "date": "2026-10-06",
       "home": "lake-cormorant-high",
       "away": "ridgeland",
       "home_sets": 3,
       "away_sets": 0
+    },
+    {
+      "date": "2026-10-06",
+      "home": "lamar",
+      "away": "jackson-academy",
+      "home_sets": 3,
+      "away_sets": 1
     },
     {
       "date": "2026-10-06",
@@ -22248,6 +22234,13 @@
       "away": "corinth",
       "home_sets": 3,
       "away_sets": 0
+    },
+    {
+      "date": "2026-10-06",
+      "home": "myrtle",
+      "away": "baldwyn",
+      "home_sets": 3,
+      "away_sets": 1
     },
     {
       "date": "2026-10-06",
@@ -22370,6 +22363,13 @@
     },
     {
       "date": "2026-10-06",
+      "home": "sacred-heart",
+      "away": "lake",
+      "home_sets": 2,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-06",
       "home": "salem",
       "away": "richton",
       "home_sets": 3,
@@ -22387,6 +22387,13 @@
       "home": "south-jones",
       "away": "east-central",
       "home_sets": 2,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-06",
+      "home": "starkville-academy",
+      "away": "heritage-academy",
+      "home_sets": 0,
       "away_sets": 3
     },
     {
@@ -22517,9 +22524,9 @@
     },
     {
       "date": "2026-10-08",
-      "home": "hernando",
-      "away": "lewisburg",
-      "home_sets": 1,
+      "home": "hillcrest-christian",
+      "away": "st-joseph-catholic",
+      "home_sets": 0,
       "away_sets": 3
     },
     {
@@ -22542,6 +22549,13 @@
       "away": "enterprise",
       "home_sets": 1,
       "away_sets": 3
+    },
+    {
+      "date": "2026-10-08",
+      "home": "lewisburg",
+      "away": "hernando",
+      "home_sets": 3,
+      "away_sets": 1
     },
     {
       "date": "2026-10-08",
@@ -22636,13 +22650,6 @@
     },
     {
       "date": "2026-10-08",
-      "home": "st-joseph-catholic",
-      "away": "hillcrest-christian",
-      "home_sets": 3,
-      "away_sets": 0
-    },
-    {
-      "date": "2026-10-08",
       "home": "sumrall",
       "away": "purvis",
       "home_sets": 3,
@@ -22706,13 +22713,6 @@
     },
     {
       "date": "2026-10-12",
-      "home": "external:/ar/west-memphis/west-memphis-christian-black-knights/volleyball",
-      "away": "north-delta",
-      "home_sets": 3,
-      "away_sets": 0
-    },
-    {
-      "date": "2026-10-12",
       "home": "germantown",
       "away": "lewisburg",
       "home_sets": 2,
@@ -22762,6 +22762,13 @@
     },
     {
       "date": "2026-10-12",
+      "home": "north-delta",
+      "away": "external:/ar/west-memphis/west-memphis-christian-black-knights/volleyball",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-12",
       "home": "ocean-springs",
       "away": "brandon",
       "home_sets": 3,
@@ -22797,10 +22804,10 @@
     },
     {
       "date": "2026-10-12",
-      "home": "sumrall",
-      "away": "vancleave",
-      "home_sets": 3,
-      "away_sets": 1
+      "home": "vancleave",
+      "away": "sumrall",
+      "home_sets": 1,
+      "away_sets": 3
     },
     {
       "date": "2026-10-12",
@@ -22815,6 +22822,69 @@
       "away": "christian-collegiate-academy",
       "home_sets": 3,
       "away_sets": 2
+    },
+    {
+      "date": "2026-10-13",
+      "home": "heritage-academy",
+      "away": "winston-academy",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-13",
+      "home": "madison-ridgeland-academy",
+      "away": "jackson-prep",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-13",
+      "home": "regents",
+      "away": "north-delta",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-15",
+      "home": "center-hill",
+      "away": "hancock",
+      "home_sets": 3,
+      "away_sets": 2
+    },
+    {
+      "date": "2026-10-15",
+      "home": "hartfield-academy",
+      "away": "st-joseph-catholic",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-15",
+      "home": "heritage-academy",
+      "away": "pillow-academy",
+      "home_sets": 2,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-15",
+      "home": "jackson-academy",
+      "away": "jackson-prep",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-15",
+      "home": "simpson-academy",
+      "away": "jackson-homeschool",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-15",
+      "home": "sumrall",
+      "away": "new-hope",
+      "home_sets": 3,
+      "away_sets": 0
     }
   ]
 }
