@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-10-16",
-    "matches": 3137,
+    "generated_at": "2026-10-18",
+    "matches": 3138,
     "teams_referenced": 411
   },
   "labels": {
@@ -22867,13 +22867,6 @@
     },
     {
       "date": "2026-10-15",
-      "home": "heritage-academy",
-      "away": "pillow-academy",
-      "home_sets": 2,
-      "away_sets": 3
-    },
-    {
-      "date": "2026-10-15",
       "home": "jackson-academy",
       "away": "jackson-prep",
       "home_sets": 3,
@@ -22885,6 +22878,13 @@
       "away": "lewisburg",
       "home_sets": 1,
       "away_sets": 3
+    },
+    {
+      "date": "2026-10-15",
+      "home": "pillow-academy",
+      "away": "heritage-academy",
+      "home_sets": 3,
+      "away_sets": 2
     },
     {
       "date": "2026-10-15",
@@ -22906,6 +22906,13 @@
       "away": "our-lady-academy",
       "home_sets": 1,
       "away_sets": 3
+    },
+    {
+      "date": "2026-10-16",
+      "home": "new-albany",
+      "away": "choctaw-central",
+      "home_sets": 3,
+      "away_sets": 1
     }
   ]
 }
