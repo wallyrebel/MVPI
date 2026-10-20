@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-10-18",
-    "matches": 3138,
+    "generated_at": "2026-10-20",
+    "matches": 3146,
     "teams_referenced": 411
   },
   "labels": {
@@ -20793,13 +20793,6 @@
     },
     {
       "date": "2026-09-29",
-      "home": "south-panola",
-      "away": "water-valley",
-      "home_sets": 3,
-      "away_sets": 2
-    },
-    {
-      "date": "2026-09-29",
       "home": "st-andrew-s",
       "away": "quitman",
       "home_sets": 3,
@@ -20853,6 +20846,13 @@
       "away": "leake",
       "home_sets": 3,
       "away_sets": 0
+    },
+    {
+      "date": "2026-09-29",
+      "home": "water-valley",
+      "away": "south-panola",
+      "home_sets": 2,
+      "away_sets": 3
     },
     {
       "date": "2026-09-29",
@@ -21819,7 +21819,7 @@
       "date": "2026-10-03",
       "home": "poplarville-jr-sr",
       "away": "west-lauderdale",
-      "home_sets": 1,
+      "home_sets": 0,
       "away_sets": 3
     },
     {
@@ -22699,10 +22699,10 @@
     },
     {
       "date": "2026-10-12",
-      "home": "choctaw-central",
-      "away": "newton-county",
+      "home": "east-union",
+      "away": "walnut",
       "home_sets": 3,
-      "away_sets": 1
+      "away_sets": 0
     },
     {
       "date": "2026-10-12",
@@ -22762,6 +22762,13 @@
     },
     {
       "date": "2026-10-12",
+      "home": "newton-county",
+      "away": "choctaw-central",
+      "home_sets": 1,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-12",
       "home": "north-delta",
       "away": "external:/ar/west-memphis/west-memphis-christian-black-knights/volleyball",
       "home_sets": 0,
@@ -22790,13 +22797,6 @@
     },
     {
       "date": "2026-10-12",
-      "home": "resurrection",
-      "away": "salem",
-      "home_sets": 3,
-      "away_sets": 0
-    },
-    {
-      "date": "2026-10-12",
       "home": "st-joseph-catholic",
       "away": "winston-academy",
       "home_sets": 3,
@@ -22807,13 +22807,6 @@
       "home": "vancleave",
       "away": "sumrall",
       "home_sets": 1,
-      "away_sets": 3
-    },
-    {
-      "date": "2026-10-12",
-      "home": "walnut",
-      "away": "east-union",
-      "home_sets": 0,
       "away_sets": 3
     },
     {
@@ -22853,10 +22846,10 @@
     },
     {
       "date": "2026-10-15",
-      "home": "enterprise",
-      "away": "east-union",
-      "home_sets": 0,
-      "away_sets": 3
+      "home": "east-union",
+      "away": "enterprise",
+      "home_sets": 3,
+      "away_sets": 0
     },
     {
       "date": "2026-10-15",
@@ -22874,9 +22867,23 @@
     },
     {
       "date": "2026-10-15",
-      "home": "ocean-springs",
-      "away": "lewisburg",
-      "home_sets": 1,
+      "home": "jackson-homeschool",
+      "away": "simpson-academy",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-15",
+      "home": "lewisburg",
+      "away": "ocean-springs",
+      "home_sets": 3,
+      "away_sets": 1
+    },
+    {
+      "date": "2026-10-15",
+      "home": "new-hope",
+      "away": "sumrall",
+      "home_sets": 0,
       "away_sets": 3
     },
     {
@@ -22885,20 +22892,6 @@
       "away": "heritage-academy",
       "home_sets": 3,
       "away_sets": 2
-    },
-    {
-      "date": "2026-10-15",
-      "home": "simpson-academy",
-      "away": "jackson-homeschool",
-      "home_sets": 0,
-      "away_sets": 3
-    },
-    {
-      "date": "2026-10-15",
-      "home": "sumrall",
-      "away": "new-hope",
-      "home_sets": 3,
-      "away_sets": 0
     },
     {
       "date": "2026-10-16",
@@ -22913,6 +22906,72 @@
       "away": "choctaw-central",
       "home_sets": 3,
       "away_sets": 1
+    },
+    {
+      "date": "2026-10-16",
+      "home": "resurrection",
+      "away": "ingomar",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-19",
+      "home": "christian-collegiate-academy",
+      "away": "winston-academy",
+      "home_sets": 1,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-19",
+      "home": "external:/ar/west-memphis/west-memphis-christian-black-knights/volleyball",
+      "away": "heritage-academy",
+      "home_sets": 3,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-10-19",
+      "home": "external:/ar/west-memphis/west-memphis-christian-black-knights/volleyball",
+      "away": "winston-academy",
+      "home_sets": 3,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-10-19",
+      "home": "external:/tn/rossville/rossville-christian-academy-wolves/volleyball",
+      "away": "st-aloysius",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-19",
+      "home": "heritage-academy",
+      "away": "christ-covenant",
+      "home_sets": 3,
+      "away_sets": 0,
+      "tournament": true
+    },
+    {
+      "date": "2026-10-19",
+      "home": "heritage-academy",
+      "away": "heritage-christian-academy",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-19",
+      "home": "jackson-academy",
+      "away": "jackson-prep",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-19",
+      "home": "pillow-academy",
+      "away": "simpson-academy",
+      "home_sets": 3,
+      "away_sets": 0
     }
   ]
 }
