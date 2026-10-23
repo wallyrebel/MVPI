@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "generated_at": "2026-10-20",
-    "matches": 3146,
-    "teams_referenced": 411
+    "generated_at": "2026-10-23",
+    "matches": 3158,
+    "teams_referenced": 412
   },
   "labels": {
     "aberdeen": "Aberdeen",
@@ -161,6 +161,7 @@
     "external:/tn/cordova/evangelical-christian-eagles/volleyball": "Evangelical Christian",
     "external:/tn/cordova/st-benedict-at-auburndale-eagles/volleyball": "St. Benedict at Auburndale",
     "external:/tn/dyer/gibson-county-pioneers/volleyball": "Gibson County",
+    "external:/tn/franklin/battle-ground-academy-wildcats/volleyball": "Battle Ground Academy",
     "external:/tn/germantown/germantown-red-devils/volleyball": "Germantown",
     "external:/tn/germantown/houston-mustangs/volleyball": "Houston",
     "external:/tn/jackson/jackson-christian-eagles/volleyball": "Jackson Christian",
@@ -22692,13 +22693,6 @@
     },
     {
       "date": "2026-10-12",
-      "home": "caledonia",
-      "away": "new-hope",
-      "home_sets": 2,
-      "away_sets": 3
-    },
-    {
-      "date": "2026-10-12",
       "home": "east-union",
       "away": "walnut",
       "home_sets": 3,
@@ -22915,10 +22909,31 @@
       "away_sets": 3
     },
     {
+      "date": "2026-10-17",
+      "home": "northpoint-christian",
+      "away": "external:/tn/franklin/battle-ground-academy-wildcats/volleyball",
+      "home_sets": 1,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-19",
+      "home": "christ-covenant",
+      "away": "heritage-academy",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
       "date": "2026-10-19",
       "home": "christian-collegiate-academy",
       "away": "winston-academy",
       "home_sets": 1,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-19",
+      "home": "clinton-christian-academy",
+      "away": "regents",
+      "home_sets": 0,
       "away_sets": 3
     },
     {
@@ -22934,8 +22949,29 @@
       "home": "external:/ar/west-memphis/west-memphis-christian-black-knights/volleyball",
       "away": "winston-academy",
       "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-19",
+      "home": "external:/ar/west-memphis/west-memphis-christian-black-knights/volleyball",
+      "away": "winston-academy",
+      "home_sets": 3,
       "away_sets": 0,
       "tournament": true
+    },
+    {
+      "date": "2026-10-19",
+      "home": "external:/tn/rossville/rossville-christian-academy-wolves/volleyball",
+      "away": "lamar",
+      "home_sets": 2,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-19",
+      "home": "external:/tn/rossville/rossville-christian-academy-wolves/volleyball",
+      "away": "lamar",
+      "home_sets": 0,
+      "away_sets": 3
     },
     {
       "date": "2026-10-19",
@@ -22946,11 +22982,17 @@
     },
     {
       "date": "2026-10-19",
+      "home": "hartfield-academy",
+      "away": "madison-ridgeland-academy",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-19",
       "home": "heritage-academy",
-      "away": "christ-covenant",
-      "home_sets": 3,
-      "away_sets": 0,
-      "tournament": true
+      "away": "external:/ar/west-memphis/west-memphis-christian-black-knights/volleyball",
+      "home_sets": 0,
+      "away_sets": 3
     },
     {
       "date": "2026-10-19",
@@ -22968,10 +23010,52 @@
     },
     {
       "date": "2026-10-19",
+      "home": "lamar",
+      "away": "regents",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-19",
       "home": "pillow-academy",
       "away": "simpson-academy",
       "home_sets": 3,
       "away_sets": 0
+    },
+    {
+      "date": "2026-10-19",
+      "home": "st-joseph-catholic",
+      "away": "starkville-academy",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-20",
+      "home": "external:/ar/west-memphis/west-memphis-christian-black-knights/volleyball",
+      "away": "lamar",
+      "home_sets": 3,
+      "away_sets": 2
+    },
+    {
+      "date": "2026-10-20",
+      "home": "jackson-academy",
+      "away": "madison-ridgeland-academy",
+      "home_sets": 2,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-20",
+      "home": "jackson-academy",
+      "away": "madison-ridgeland-academy",
+      "home_sets": 2,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-20",
+      "home": "pillow-academy",
+      "away": "st-joseph-catholic",
+      "home_sets": 0,
+      "away_sets": 3
     }
   ]
 }
