@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-10-23",
-    "matches": 3158,
+    "generated_at": "2026-10-25",
+    "matches": 3157,
     "teams_referenced": 412
   },
   "labels": {
@@ -22964,13 +22964,6 @@
       "home": "external:/tn/rossville/rossville-christian-academy-wolves/volleyball",
       "away": "lamar",
       "home_sets": 2,
-      "away_sets": 3
-    },
-    {
-      "date": "2026-10-19",
-      "home": "external:/tn/rossville/rossville-christian-academy-wolves/volleyball",
-      "away": "lamar",
-      "home_sets": 0,
       "away_sets": 3
     },
     {
