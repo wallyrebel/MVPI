@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-10-25",
+    "generated_at": "2026-10-27",
     "matches": 3157,
     "teams_referenced": 412
   },
@@ -21151,6 +21151,13 @@
     },
     {
       "date": "2026-10-01",
+      "home": "north-panola",
+      "away": "m-s-palmer",
+      "home_sets": 3,
+      "away_sets": 0
+    },
+    {
+      "date": "2026-10-01",
       "home": "northeast-jones",
       "away": "laurel",
       "home_sets": 3,
@@ -23028,13 +23035,6 @@
       "away": "lamar",
       "home_sets": 3,
       "away_sets": 2
-    },
-    {
-      "date": "2026-10-20",
-      "home": "jackson-academy",
-      "away": "madison-ridgeland-academy",
-      "home_sets": 2,
-      "away_sets": 3
     },
     {
       "date": "2026-10-20",
