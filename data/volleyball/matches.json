@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-10-27",
-    "matches": 3157,
+    "generated_at": "2026-10-30",
+    "matches": 3155,
     "teams_referenced": 412
   },
   "labels": {
@@ -22956,13 +22956,6 @@
       "home": "external:/ar/west-memphis/west-memphis-christian-black-knights/volleyball",
       "away": "winston-academy",
       "home_sets": 3,
-      "away_sets": 0
-    },
-    {
-      "date": "2026-10-19",
-      "home": "external:/ar/west-memphis/west-memphis-christian-black-knights/volleyball",
-      "away": "winston-academy",
-      "home_sets": 3,
       "away_sets": 0,
       "tournament": true
     },
@@ -22984,13 +22977,6 @@
       "date": "2026-10-19",
       "home": "hartfield-academy",
       "away": "madison-ridgeland-academy",
-      "home_sets": 0,
-      "away_sets": 3
-    },
-    {
-      "date": "2026-10-19",
-      "home": "heritage-academy",
-      "away": "external:/ar/west-memphis/west-memphis-christian-black-knights/volleyball",
       "home_sets": 0,
       "away_sets": 3
     },
