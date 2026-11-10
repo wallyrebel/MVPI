@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-11-08",
-    "matches": 3155,
+    "generated_at": "2026-11-10",
+    "matches": 3156,
     "teams_referenced": 412
   },
   "labels": {
@@ -20510,6 +20510,13 @@
       "home": "jackson-prep",
       "away": "hartfield-academy",
       "home_sets": 1,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-09-29",
+      "home": "jefferson-davis-county",
+      "away": "mclaurin",
+      "home_sets": 0,
       "away_sets": 3
     },
     {
