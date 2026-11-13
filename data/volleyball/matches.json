@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-11-10",
+    "generated_at": "2026-11-13",
     "matches": 3156,
     "teams_referenced": 412
   },
@@ -1907,13 +1907,6 @@
     },
     {
       "date": "2026-08-04",
-      "home": "hancock",
-      "away": "our-lady-academy",
-      "home_sets": 3,
-      "away_sets": 2
-    },
-    {
-      "date": "2026-08-04",
       "home": "harrison-central",
       "away": "purvis",
       "home_sets": 0,
@@ -2114,6 +2107,13 @@
       "away": "jackson-academy",
       "home_sets": 3,
       "away_sets": 1
+    },
+    {
+      "date": "2026-08-04",
+      "home": "our-lady-academy",
+      "away": "hancock",
+      "home_sets": 2,
+      "away_sets": 3
     },
     {
       "date": "2026-08-04",
