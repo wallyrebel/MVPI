@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "generated_at": "2026-11-17",
-    "matches": 3156,
-    "teams_referenced": 412
+    "generated_at": "2026-11-20",
+    "matches": 3157,
+    "teams_referenced": 413
   },
   "labels": {
     "aberdeen": "Aberdeen",
@@ -130,6 +130,7 @@
     "external:/al/vernon/lamar-county-bulldogs/volleyball": "Lamar County",
     "external:/al/vestavia-hills/vestavia-hills-rebels/volleyball": "Vestavia Hills",
     "external:/al/wetumpka/wetumpka-indians/volleyball": "Wetumpka",
+    "external:/ar/little-rock/arkansas-school-for-the-deaf-leopards/volleyball": "Arkansas School for the Deaf",
     "external:/ar/west-memphis/west-memphis-christian-black-knights/volleyball": "West Memphis Christian",
     "external:/fl/milton/west-florida-baptist-academy-conquerors/volleyball": "West Florida Baptist Academy",
     "external:/fl/navarre/navarre-raiders/volleyball": "Navarre",
@@ -23040,6 +23041,13 @@
       "date": "2026-10-20",
       "home": "pillow-academy",
       "away": "st-joseph-catholic",
+      "home_sets": 0,
+      "away_sets": 3
+    },
+    {
+      "date": "2026-10-31",
+      "home": "external:/ar/little-rock/arkansas-school-for-the-deaf-leopards/volleyball",
+      "away": "miss-school-for-the-deaf",
       "home_sets": 0,
       "away_sets": 3
     }
