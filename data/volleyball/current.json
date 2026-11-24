@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-11-22",
+    "generated_at": "2026-11-24",
     "formula_version": "MVPI-0.3",
     "external_opponents": 114,
     "external_opponents_rated": 113,
@@ -10,123 +10,123 @@
     "external_rating_calibration": {
       "status": "calibrated",
       "teams": 246,
-      "slope": 0.08261971779003675,
-      "intercept": 0.10981732625265689,
+      "slope": 0.08261739713065173,
+      "intercept": 0.10957922622186485,
       "equivalent_matches": 8,
       "opponent_priors": {
-        "external:/al/albertville/albertville-aggies/volleyball": 1.2334454881971568,
-        "external:/al/alexandria/alexandria-valley-cubs/volleyball": 1.4978285851252744,
-        "external:/al/anniston/faith-christian-lions/volleyball": 0.7872990121309582,
-        "external:/al/arab/arab-knights/volleyball": 1.762211682053392,
-        "external:/al/athens/athens-golden-eagles/volleyball": 0.58901168943487,
-        "external:/al/athens/lindsay-lane-christian-academy-lions/volleyball": 0.7129412661199253,
-        "external:/al/auburn/auburn-tigers/volleyball": 1.0351581655010684,
-        "external:/al/birmingham/briarwood-christian-lions/volleyball": 2.745386323754829,
-        "external:/al/birmingham/mountain-brook-spartans/volleyball": 2.935411674671914,
-        "external:/al/birmingham/oak-mountain-eagles/volleyball": 1.6465440771473407,
-        "external:/al/birmingham/shades-valley-mounties/volleyball": 0.4402961974128039,
-        "external:/al/butler/choctaw-county-tigers/volleyball": -0.7989995694377474,
-        "external:/al/chelsea/chelsea-hornets/volleyball": 1.6961159078213626,
-        "external:/al/daphne/bayside-academy-admirals/volleyball": 2.5388370292797373,
-        "external:/al/decatur/austin-black-bears/volleyball": 2.423169424373686,
-        "external:/al/decatur/decatur-heritage-christian-academy-eagles/volleyball": -0.5428784442886334,
-        "external:/al/elberta/elberta-warriors/volleyball": 0.5311778869818443,
-        "external:/al/fairhope/fairhope-pirates/volleyball": 2.2166201298985944,
-        "external:/al/fayette/fayette-county-tigers/volleyball": 1.4234708391142414,
-        "external:/al/florence/rogers-pirates/volleyball": -0.05542210932741662,
-        "external:/al/foley/foley-lions/volleyball": 0.2750567618327304,
-        "external:/al/gardendale/gardendale-rockets/volleyball": 1.1177778832911052,
-        "external:/al/grant/kate-duncan-smith-dar-patriots/volleyball": 1.4565187262302561,
-        "external:/al/guin/marion-county-red-raiders/volleyball": 0.2750567618327304,
-        "external:/al/gulf-shores/gulf-shores-dolphins/volleyball": 1.71263985137937,
-        "external:/al/guntersville/guntersville-wildcats/volleyball": 2.4644792832687044,
-        "external:/al/harvest/sparkman-senators/volleyball": 1.1177778832911052,
-        "external:/al/helena/helena-huskies/volleyball": 1.4730426697882635,
-        "external:/al/homewood/homewood-patriots/volleyball": 2.241406045235605,
-        "external:/al/hoover/hoover-bucs/volleyball": 1.5969722464733185,
-        "external:/al/hoover/spain-park-jaguars/volleyball": 2.5470990010587413,
-        "external:/al/huntsville/grissom-tigers/volleyball": 0.5477018305398517,
-        "external:/al/huntsville/st-john-paul-ii-falcons/volleyball": 1.786997597390403,
-        "external:/al/irvington/bryant-hurricanes/volleyball": 0.9855863348270464,
-        "external:/al/madison/bob-jones-patriots/volleyball": 2.828006041544866,
-        "external:/al/madison/james-clemens-jets/volleyball": 1.5391384440202929,
-        "external:/al/millry/millry-wildcats/volleyball": 0.22548493115870832,
-        "external:/al/mobile/baker-hornets/volleyball": 0.564225774097859,
-        "external:/al/mobile/faith-academy-rams/volleyball": 2.315763791246638,
-        "external:/al/mobile/mcgill-toolen-yellowjackets/volleyball": 4.0094680059423915,
-        "external:/al/mobile/mobile-christian-leopards/volleyball": 1.6713299924843514,
-        "external:/al/mobile/st-lukes-episcopal-wildcats/volleyball": 0.7707750685729509,
-        "external:/al/mobile/st-pauls-episcopal-saints/volleyball": 1.5721863311363073,
-        "external:/al/mobile/ums-wright-prep-bulldogs/volleyball": 1.3738990084402194,
-        "external:/al/montgomery/montgomery-academy-eagles/volleyball": 2.5636229446167484,
-        "external:/al/montgomery/trinity-presbyterian-wildcats/volleyball": 0.8120849274679693,
-        "external:/al/moody/moody-blue-devils/volleyball": 0.7212032378989288,
-        "external:/al/northport/tuscaloosa-county-wildcats/volleyball": 0.48986802808682595,
-        "external:/al/odenville/st-clair-county-fighting-saints/volleyball": 1.3078032342081898,
-        "external:/al/pelham/pelham-panthers/volleyball": 1.4482567544512523,
-        "external:/al/pell-city/pell-city-panthers/volleyball": 0.74598915323594,
-        "external:/al/pike-road/pike-road-patriots/volleyball": 1.7952595691694067,
-        "external:/al/pinson/clay-chalkville-cougars/volleyball": -0.15456577067546073,
-        "external:/al/red-bay/red-bay-tigers/volleyball": -0.4767826700566041,
-        "external:/al/rogersville/lauderdale-county-tigers/volleyball": 1.258231403534168,
-        "external:/al/semmes/mary-g-montgomery-vikings/volleyball": 0.19243704404269363,
-        "external:/al/spanish-fort/spanish-fort-toros/volleyball": 3.2493666022740535,
-        "external:/al/sweet-water/sweet-water-bulldogs/volleyball": -0.12151788355944601,
-        "external:/al/sylacauga/sylacauga-aggies/volleyball": 0.6716314072249068,
-        "external:/al/talladega/alabama-school-for-the-deaf-silent-warriors/volleyball": -1.7573882958021738,
-        "external:/al/tuscaloosa/hillcrest-patriots/volleyball": 0.6303215483298885,
-        "external:/al/vernon/lamar-county-bulldogs/volleyball": 1.051682109059076,
-        "external:/al/vestavia-hills/vestavia-hills-rebels/volleyball": 1.9191891458544617,
-        "external:/al/wetumpka/wetumpka-indians/volleyball": 0.29984267716974145,
-        "external:/ar/little-rock/arkansas-school-for-the-deaf-leopards/volleyball": -2.1291770258573393,
-        "external:/ar/west-memphis/west-memphis-christian-black-knights/volleyball": 1.9274511176334654,
-        "external:/fl/milton/west-florida-baptist-academy-conquerors/volleyball": 0.6881553507829141,
-        "external:/fl/navarre/navarre-raiders/volleyball": 1.2912792906501827,
-        "external:/ga/cave-spring/georgia-school-for-the-deaf-tigers/volleyball": -2.3439882921114346,
-        "external:/ga/jonesboro/elite-scholars-academy-knights/volleyball": 1.0847299961750907,
-        "external:/ga/marietta/pope-greyhounds/volleyball": 2.7701722390918406,
-        "external:/il/red-bud/red-bud-musketeers/volleyball": 1.993546891865495,
-        "external:/ks/olathe/kansas-school-for-the-deaf-jackrabbits/volleyball": -1.724340408686159,
-        "external:/ky/danville/kentucky-school-for-the-deaf-colonels/volleyball": -2.666205191492578,
-        "external:/la/baton-rouge/louisiana-school-for-the-deaf-war-eagles/volleyball": -2.335726320332431,
-        "external:/la/donaldsonville/ascension-catholic-bulldogs/volleyball": 1.382160980219223,
-        "external:/la/gonzales/east-ascension-spartans/volleyball": 0.613797604771881,
-        "external:/la/mandeville/mandeville-skippers/volleyball": 3.092389138472984,
-        "external:/la/ruston/ruston-bearcats/volleyball": 1.8696173151804398,
-        "external:/la/st-amant/st-amant-gators/volleyball": 1.2334454881971568,
-        "external:/la/watson/live-oak-eagles/volleyball": 0.9029666170370096,
-        "external:/mo/jackson/jackson-fighting-indians/volleyball": 2.885839843997892,
-        "external:/ok/sulphur/oklahoma-school-for-the-deaf-bison/volleyball": -0.9311911179018062,
-        "external:/sc/spartanburg/south-carolina-school-for-the-deaf-and-blind-hornets/volleyball": -1.9143657596032435,
-        "external:/tn/alamo/crockett-county-cavaliers/volleyball": 1.3243271777661971,
-        "external:/tn/arlington/arlington-tigers/volleyball": 2.9271497028929105,
-        "external:/tn/bartlett/bartlett-panthers/volleyball": 1.6795919642633552,
-        "external:/tn/brighton/brighton-cardinals/volleyball": 0.4485581691918075,
-        "external:/tn/collierville/collierville-dragons/volleyball": 2.381859565478668,
-        "external:/tn/collierville/st-georges-gryphons/volleyball": 0.3411525360647598,
-        "external:/tn/cordova/evangelical-christian-eagles/volleyball": 1.638282105368337,
-        "external:/tn/cordova/st-benedict-at-auburndale-eagles/volleyball": 0.8781807016999987,
-        "external:/tn/dyer/gibson-county-pioneers/volleyball": 0.3742004231807745,
-        "external:/tn/franklin/battle-ground-academy-wildcats/volleyball": 2.2909778759096273,
-        "external:/tn/germantown/germantown-red-devils/volleyball": 0.8286088710259767,
-        "external:/tn/germantown/houston-mustangs/volleyball": 1.71263985137937,
-        "external:/tn/jackson/jackson-christian-eagles/volleyball": 1.101253939733098,
-        "external:/tn/jackson/university-school-of-jackson-bruins/volleyball": 1.3738990084402194,
-        "external:/tn/lakeland/lakeland-preparatory-lions/volleyball": 1.1260398550701092,
-        "external:/tn/lawrenceburg/lawrence-county-wildcats/volleyball": 1.9109271740754583,
-        "external:/tn/memphis/harding-academy-lions/volleyball": -0.4767826700566041,
-        "external:/tn/memphis/hutchison-sting/volleyball": 0.6551074636668994,
-        "external:/tn/memphis/lausanne-collegiate-lynx/volleyball": 1.7704736538323957,
-        "external:/tn/memphis/st-marys-episcopal-turkeys/volleyball": 2.1174764685505503,
-        "external:/tn/memphis/white-station-spartans/volleyball": 0.29984267716974145,
-        "external:/tn/middleton/middleton-tigers/volleyball": 0.42377225385479655,
-        "external:/tn/millington/tipton-rosemark-academy-rebels/volleyball": 0.8038229556889656,
-        "external:/tn/nashville/valor-college-prep-wildcats/volleyball": 3.026293364240954,
-        "external:/tn/newbern/dyer-county-choctaws/volleyball": 2.1835722427825797,
-        "external:/tn/rossville/rossville-christian-academy-wolves/volleyball": 1.1673497139651274,
-        "external:/tn/selmer/mcnairy-central-bobcats/volleyball": -0.24544746024450115,
-        "external:/ut/ogden/utah-school-for-the-deaf-and-blind-eagles/volleyball": -2.600109417260548,
-        "external:/wi/delavan/wisconsin-school-for-the-deaf-firebirds/volleyball": -0.6502840774156813
+        "external:/al/albertville/albertville-aggies/volleyball": 1.2414375669117936,
+        "external:/al/alexandria/alexandria-valley-cubs/volleyball": 1.5058132377298792,
+        "external:/al/anniston/faith-christian-lions/volleyball": 0.7953036224062744,
+        "external:/al/arab/arab-knights/volleyball": 1.7619271688348996,
+        "external:/al/athens/athens-golden-eagles/volleyball": 0.5970218692927102,
+        "external:/al/athens/lindsay-lane-christian-academy-lions/volleyball": 0.7126862252756225,
+        "external:/al/auburn/auburn-tigers/volleyball": 1.0348940740851642,
+        "external:/al/birmingham/briarwood-christian-lions/volleyball": 2.73681245497659,
+        "external:/al/birmingham/mountain-brook-spartans/volleyball": 2.8937855095248284,
+        "external:/al/birmingham/oak-mountain-eagles/volleyball": 1.6462628128519872,
+        "external:/al/birmingham/shades-valley-mounties/volleyball": 0.4400488147444718,
+        "external:/al/butler/choctaw-county-tigers/volleyball": -0.7744269230761086,
+        "external:/al/chelsea/chelsea-hornets/volleyball": 1.6958332511303782,
+        "external:/al/daphne/bayside-academy-admirals/volleyball": 2.546792441576091,
+        "external:/al/decatur/austin-black-bears/volleyball": 2.4228663458801134,
+        "external:/al/decatur/decatur-heritage-christian-academy-eagles/volleyball": -0.5348364713972186,
+        "external:/al/elberta/elberta-warriors/volleyball": 0.5309279515881887,
+        "external:/al/fairhope/fairhope-pirates/volleyball": 2.216322853053484,
+        "external:/al/fayette/fayette-county-tigers/volleyball": 1.4231958405992275,
+        "external:/al/florence/rogers-pirates/volleyball": -0.05565556803943862,
+        "external:/al/foley/foley-lions/volleyball": 0.27481402048316833,
+        "external:/al/gardendale/gardendale-rockets/volleyball": 1.117511471215816,
+        "external:/al/grant/kate-duncan-smith-dar-patriots/volleyball": 1.4562427994514882,
+        "external:/al/guin/marion-county-red-raiders/volleyball": 0.27481402048316833,
+        "external:/al/gulf-shores/gulf-shores-dolphins/volleyball": 1.7123567305565084,
+        "external:/al/guntersville/guntersville-wildcats/volleyball": 2.4641750444454393,
+        "external:/al/harvest/sparkman-senators/volleyball": 1.1257732109288814,
+        "external:/al/helena/helena-huskies/volleyball": 1.4727662788776186,
+        "external:/al/homewood/homewood-patriots/volleyball": 2.2906785104710705,
+        "external:/al/hoover/hoover-bucs/volleyball": 1.5966923745735961,
+        "external:/al/hoover/spain-park-jaguars/volleyball": 2.546792441576091,
+        "external:/al/huntsville/grissom-tigers/volleyball": 0.547451431014319,
+        "external:/al/huntsville/st-john-paul-ii-falcons/volleyball": 1.7867123879740952,
+        "external:/al/irvington/bryant-hurricanes/volleyball": 0.9853236358067733,
+        "external:/al/madison/bob-jones-patriots/volleyball": 2.8276915918203067,
+        "external:/al/madison/james-clemens-jets/volleyball": 1.53886019658214,
+        "external:/al/millry/millry-wildcats/volleyball": 0.22524358220477725,
+        "external:/al/mobile/baker-hornets/volleyball": 0.5639749104404495,
+        "external:/al/mobile/faith-academy-rams/volleyball": 2.3154637296102663,
+        "external:/al/mobile/mcgill-toolen-yellowjackets/volleyball": 4.009120370788627,
+        "external:/al/mobile/mobile-christian-leopards/volleyball": 1.6710480319911825,
+        "external:/al/mobile/st-lukes-episcopal-wildcats/volleyball": 0.7705184032670788,
+        "external:/al/mobile/st-pauls-episcopal-saints/volleyball": 1.5801688951474657,
+        "external:/al/mobile/ums-wright-prep-bulldogs/volleyball": 1.3736254023208365,
+        "external:/al/montgomery/montgomery-academy-eagles/volleyball": 2.5633159210022214,
+        "external:/al/montgomery/trinity-presbyterian-wildcats/volleyball": 0.8118271018324046,
+        "external:/al/moody/moody-blue-devils/volleyball": 0.7209479649886877,
+        "external:/al/northport/tuscaloosa-county-wildcats/volleyball": 0.4896192530228628,
+        "external:/al/odenville/st-clair-county-fighting-saints/volleyball": 1.307531484616315,
+        "external:/al/pelham/pelham-panthers/volleyball": 1.4479810597384228,
+        "external:/al/pell-city/pell-city-panthers/volleyball": 0.7539949238409484,
+        "external:/al/pike-road/pike-road-patriots/volleyball": 1.7949741276871602,
+        "external:/al/pinson/clay-chalkville-cougars/volleyball": -0.15479644459622072,
+        "external:/al/red-bay/red-bay-tigers/volleyball": -0.4770042934057625,
+        "external:/al/rogersville/lauderdale-county-tigers/volleyball": 1.257961046337924,
+        "external:/al/semmes/mary-g-montgomery-vikings/volleyball": 0.19219662335251658,
+        "external:/al/spanish-fort/spanish-fort-toros/volleyball": 3.2407785774735656,
+        "external:/al/sweet-water/sweet-water-bulldogs/volleyball": -0.12174948574395998,
+        "external:/al/sylacauga/sylacauga-aggies/volleyball": 0.6713775267102967,
+        "external:/al/talladega/alabama-school-for-the-deaf-silent-warriors/volleyball": -1.7658356886439295,
+        "external:/al/tuscaloosa/hillcrest-patriots/volleyball": 0.6300688281449708,
+        "external:/al/vernon/lamar-county-bulldogs/volleyball": 1.0514175535112946,
+        "external:/al/vestavia-hills/vestavia-hills-rebels/volleyball": 1.9189002233831378,
+        "external:/al/wetumpka/wetumpka-indians/volleyball": 0.29959923962236384,
+        "external:/ar/little-rock/arkansas-school-for-the-deaf-leopards/volleyball": -2.1293522360187973,
+        "external:/ar/west-memphis/west-memphis-christian-black-knights/volleyball": 1.9271619630962031,
+        "external:/fl/milton/west-florida-baptist-academy-conquerors/volleyball": 0.687901006136427,
+        "external:/fl/navarre/navarre-raiders/volleyball": 1.2910080051901847,
+        "external:/ga/cave-spring/georgia-school-for-the-deaf-tigers/volleyball": -2.3441574685584916,
+        "external:/ga/jonesboro/elite-scholars-academy-knights/volleyball": 1.0844645123635555,
+        "external:/ga/marietta/pope-greyhounds/volleyball": 2.769859413828851,
+        "external:/il/red-bud/red-bud-musketeers/volleyball": 1.9932558808007246,
+        "external:/ks/olathe/kansas-school-for-the-deaf-jackrabbits/volleyball": -1.7245269900786035,
+        "external:/ky/danville/kentucky-school-for-the-deaf-colonels/volleyball": -2.6663653173680335,
+        "external:/la/baton-rouge/louisiana-school-for-the-deaf-war-eagles/volleyball": -2.3358957288454265,
+        "external:/la/donaldsonville/ascension-catholic-bulldogs/volleyball": 1.3818871420339016,
+        "external:/la/gonzales/east-ascension-spartans/volleyball": 0.6135453487188405,
+        "external:/la/mandeville/mandeville-skippers/volleyball": 3.0920672626383925,
+        "external:/la/ruston/ruston-bearcats/volleyball": 1.836282826252486,
+        "external:/la/st-amant/st-amant-gators/volleyball": 1.2331758271987285,
+        "external:/la/watson/live-oak-eagles/volleyball": 0.9027062386761215,
+        "external:/mo/jackson/jackson-fighting-indians/volleyball": 2.8855237698117633,
+        "external:/ok/sulphur/oklahoma-school-for-the-deaf-bison/volleyball": -0.9313999776243469,
+        "external:/sc/spartanburg/south-carolina-school-for-the-deaf-and-blind-hornets/volleyball": -1.922808743192168,
+        "external:/tn/alamo/crockett-county-cavaliers/volleyball": 1.3240549640424453,
+        "external:/tn/arlington/arlington-tigers/volleyball": 2.926832468377089,
+        "external:/tn/bartlett/bartlett-panthers/volleyball": 1.6793097717042478,
+        "external:/tn/brighton/brighton-cardinals/volleyball": 0.4483105544575369,
+        "external:/tn/collierville/collierville-dragons/volleyball": 2.3815576473147875,
+        "external:/tn/collierville/st-georges-gryphons/volleyball": 0.34090793818768966,
+        "external:/tn/cordova/evangelical-christian-eagles/volleyball": 1.638001073138922,
+        "external:/tn/cordova/st-benedict-at-auburndale-eagles/volleyball": 0.877921019536926,
+        "external:/tn/dyer/gibson-county-pioneers/volleyball": 0.36569315732688523,
+        "external:/tn/franklin/battle-ground-academy-wildcats/volleyball": 2.2906785104710705,
+        "external:/tn/germantown/germantown-red-devils/volleyball": 0.8283505812585349,
+        "external:/tn/germantown/houston-mustangs/volleyball": 1.7123567305565084,
+        "external:/tn/jackson/jackson-christian-eagles/volleyball": 1.1009879917896856,
+        "external:/tn/jackson/university-school-of-jackson-bruins/volleyball": 1.3736254023208365,
+        "external:/tn/lakeland/lakeland-preparatory-lions/volleyball": 1.1257732109288814,
+        "external:/tn/lawrenceburg/lawrence-county-wildcats/volleyball": 1.9106384836700727,
+        "external:/tn/memphis/harding-academy-lions/volleyball": -0.4770042934057625,
+        "external:/tn/memphis/hutchison-sting/volleyball": 0.6548540472841663,
+        "external:/tn/memphis/lausanne-collegiate-lynx/volleyball": 1.770188908547965,
+        "external:/tn/memphis/st-marys-episcopal-turkeys/volleyball": 2.117181976496702,
+        "external:/tn/memphis/white-station-spartans/volleyball": 0.29959923962236384,
+        "external:/tn/middleton/middleton-tigers/volleyball": 0.4235253353183414,
+        "external:/tn/millington/tipton-rosemark-academy-rebels/volleyball": 0.8035653621193395,
+        "external:/tn/nashville/valor-college-prep-wildcats/volleyball": 3.025973344933871,
+        "external:/tn/newbern/dyer-county-choctaws/volleyball": 2.1832758942012234,
+        "external:/tn/rossville/rossville-christian-academy-wolves/volleyball": 1.167081909494207,
+        "external:/tn/selmer/mcnairy-central-bobcats/volleyball": -0.24567558143993762,
+        "external:/ut/ogden/utah-school-for-the-deaf-and-blind-eagles/volleyball": -2.600271399663512,
+        "external:/wi/delavan/wisconsin-school-for-the-deaf-firebirds/volleyball": -0.6422390876670658
       }
     },
     "teams": 248,
@@ -151,23 +151,23 @@
     "classification_fetch": {
       "source_url": "https://www.misshsaa.com/2024/11/19/2025-27-volleyball-regions/",
       "cycle": "2025-27",
-      "retrieved_at": "2026-11-22T19:22:20.800110+00:00",
-      "expires_at": "2026-11-29T19:22:20.800110+00:00",
-      "body_sha256": "2b9282a756f1315878b2c693761eb94a7c1900c8e489dd0a6410a270c768e47f",
+      "retrieved_at": "2026-11-24T19:18:25.563689+00:00",
+      "expires_at": "2026-12-01T19:18:25.563689+00:00",
+      "body_sha256": "9626cdb58833141ae87bbf18d7262aee536569add7e7785ee7b5df1289823151",
       "teams": 226,
       "used_cache": false,
-      "checked_at": "2026-11-22T19:22:21.216937+00:00",
+      "checked_at": "2026-11-24T19:18:25.994910+00:00",
       "fallback_reason": null,
       "live_attempts": [
         {
           "attempt": 1,
           "requested_url": "https://www.misshsaa.com/2024/11/19/2025-27-volleyball-regions/",
-          "retrieved_at": "2026-11-22T19:22:20.800110+00:00",
+          "retrieved_at": "2026-11-24T19:18:25.563689+00:00",
           "http_status": 200,
           "final_url": "https://www.misshsaa.com/2024/11/19/2025-27-volleyball-regions/",
           "content_type": "text/html; charset=UTF-8",
-          "body_bytes": 156960,
-          "body_sha256": "2b9282a756f1315878b2c693761eb94a7c1900c8e489dd0a6410a270c768e47f",
+          "body_bytes": 156959,
+          "body_sha256": "9626cdb58833141ae87bbf18d7262aee536569add7e7785ee7b5df1289823151",
           "title": "2025-27 Volleyball Regions \u2013 Mississippi High School Activities Association",
           "table_rows": 261,
           "parsed_teams": 226,
@@ -186,7 +186,7 @@
     "team_discovery_source": "https://www.maxpreps.com/ms/volleyball/rankings/1/",
     "ranking_source": "https://www.maxpreps.com/ms/volleyball/rankings/1/",
     "fallback_score_source": "https://api.scorebooklive.com/v2/graphql",
-    "ranking_source_updated_at": "11/19/2026",
+    "ranking_source_updated_at": "11/23/2026",
     "status": "LIVE"
   },
   "rankings": [
@@ -229,7 +229,7 @@
       "set_percentage": 95.1,
       "recent": 97.6,
       "media_rank": 3,
-      "media_rating": 30.51,
+      "media_rating": 30.52,
       "association": "TSSAA"
     },
     {
@@ -250,7 +250,7 @@
       "set_percentage": 93.9,
       "recent": 99.6,
       "media_rank": 5,
-      "media_rating": 27.96,
+      "media_rating": 27.97,
       "association": "MHSAA"
     },
     {
@@ -271,7 +271,7 @@
       "set_percentage": 89.4,
       "recent": 99.2,
       "media_rank": 7,
-      "media_rating": 26.93,
+      "media_rating": 26.92,
       "association": "MHSAA"
     },
     {
@@ -306,14 +306,14 @@
       "set_matches": 39,
       "sets_for": 80,
       "sets_against": 36,
-      "mvpi": 95.1,
+      "mvpi": 95.0,
       "sos": 16.6,
       "opponent_sos": 96.7,
       "performance": 97.6,
       "set_percentage": 86.2,
       "recent": 98.4,
-      "media_rank": 11,
-      "media_rating": 25.22,
+      "media_rank": 12,
+      "media_rating": 25.21,
       "association": "MAIS"
     },
     {
@@ -349,13 +349,13 @@
       "sets_for": 74,
       "sets_against": 41,
       "mvpi": 93.4,
-      "sos": 18.2,
+      "sos": 18.3,
       "opponent_sos": 99.2,
       "performance": 96.7,
       "set_percentage": 76.4,
       "recent": 96.7,
       "media_rank": 13,
-      "media_rating": 24.91,
+      "media_rating": 24.94,
       "association": "MHSAA"
     },
     {
@@ -460,7 +460,7 @@
       "set_percentage": 82.5,
       "recent": 92.3,
       "media_rank": 21,
-      "media_rating": 20.57,
+      "media_rating": 20.58,
       "association": "MHSAA"
     },
     {
@@ -481,7 +481,7 @@
       "set_percentage": 87.0,
       "recent": 90.2,
       "media_rank": 15,
-      "media_rating": 23.98,
+      "media_rating": 23.99,
       "association": "MHSAA"
     },
     {
@@ -523,7 +523,7 @@
       "set_percentage": 80.9,
       "recent": 96.3,
       "media_rank": 31,
-      "media_rating": 18.05,
+      "media_rating": 18.06,
       "association": "MHSAA"
     },
     {
@@ -544,7 +544,7 @@
       "set_percentage": 93.1,
       "recent": 93.9,
       "media_rank": 22,
-      "media_rating": 20.19,
+      "media_rating": 20.2,
       "association": "MAIS"
     },
     {
@@ -565,7 +565,7 @@
       "set_percentage": 94.7,
       "recent": 87.0,
       "media_rank": 16,
-      "media_rating": 22.38,
+      "media_rating": 22.39,
       "association": "MHSAA"
     },
     {
@@ -607,7 +607,7 @@
       "set_percentage": 89.0,
       "recent": 88.2,
       "media_rank": 19,
-      "media_rating": 21.49,
+      "media_rating": 21.5,
       "association": "MHSAA"
     },
     {
@@ -628,7 +628,7 @@
       "set_percentage": 78.9,
       "recent": 92.7,
       "media_rank": 28,
-      "media_rating": 19.19,
+      "media_rating": 19.2,
       "association": "MHSAA"
     },
     {
@@ -675,6 +675,27 @@
     },
     {
       "rank": 24,
+      "team_id": "kossuth",
+      "team": "Kossuth",
+      "classification": "3A",
+      "region": "1",
+      "record": "30-5",
+      "matches": 35,
+      "set_matches": 35,
+      "sets_for": 85,
+      "sets_against": 15,
+      "mvpi": 87.8,
+      "sos": 9.6,
+      "opponent_sos": 68.7,
+      "performance": 90.7,
+      "set_percentage": 99.2,
+      "recent": 82.1,
+      "media_rank": 11,
+      "media_rating": 25.22,
+      "association": "MHSAA"
+    },
+    {
+      "rank": 25,
       "team_id": "walnut",
       "team": "Walnut",
       "classification": "2A",
@@ -685,34 +706,13 @@
       "sets_for": 86,
       "sets_against": 19,
       "mvpi": 87.8,
-      "sos": 9.9,
+      "sos": 10.0,
       "opponent_sos": 69.5,
       "performance": 90.2,
       "set_percentage": 98.4,
       "recent": 84.1,
       "media_rank": 14,
-      "media_rating": 24.3,
-      "association": "MHSAA"
-    },
-    {
-      "rank": 25,
-      "team_id": "kossuth",
-      "team": "Kossuth",
-      "classification": "3A",
-      "region": "1",
-      "record": "30-5",
-      "matches": 35,
-      "set_matches": 35,
-      "sets_for": 85,
-      "sets_against": 15,
-      "mvpi": 87.7,
-      "sos": 9.6,
-      "opponent_sos": 68.7,
-      "performance": 90.7,
-      "set_percentage": 99.2,
-      "recent": 82.1,
-      "media_rank": 12,
-      "media_rating": 25.21,
+      "media_rating": 24.31,
       "association": "MHSAA"
     },
     {
@@ -747,13 +747,13 @@
       "set_matches": 26,
       "sets_for": 51,
       "sets_against": 31,
-      "mvpi": 86.8,
+      "mvpi": 86.7,
       "sos": 14.9,
       "opponent_sos": 92.7,
       "performance": 89.4,
       "set_percentage": 72.4,
       "recent": 93.5,
-      "media_rank": 24,
+      "media_rank": 25,
       "media_rating": 19.47,
       "association": "MAIS"
     },
@@ -817,7 +817,7 @@
       "set_percentage": 64.2,
       "recent": 85.4,
       "media_rank": 41,
-      "media_rating": 15.62,
+      "media_rating": 15.63,
       "association": "MHSAA"
     },
     {
@@ -880,7 +880,7 @@
       "set_percentage": 78.0,
       "recent": 85.0,
       "media_rank": 32,
-      "media_rating": 17.9,
+      "media_rating": 17.91,
       "association": "MHSAA"
     },
     {
@@ -963,8 +963,8 @@
       "performance": 87.0,
       "set_percentage": 98.0,
       "recent": 83.3,
-      "media_rank": 25,
-      "media_rating": 19.46,
+      "media_rank": 24,
+      "media_rating": 19.47,
       "association": "MHSAA"
     },
     {
@@ -985,7 +985,7 @@
       "set_percentage": 67.5,
       "recent": 82.5,
       "media_rank": 44,
-      "media_rating": 14.16,
+      "media_rating": 14.17,
       "association": "MHSAA"
     },
     {
@@ -1006,7 +1006,7 @@
       "set_percentage": 74.8,
       "recent": 70.3,
       "media_rank": 34,
-      "media_rating": 17.25,
+      "media_rating": 17.26,
       "association": "MHSAA"
     },
     {
@@ -1111,7 +1111,7 @@
       "set_percentage": 89.8,
       "recent": 77.6,
       "media_rank": 58,
-      "media_rating": 10.87,
+      "media_rating": 10.88,
       "association": "MHSAA"
     },
     {
@@ -1174,7 +1174,7 @@
       "set_percentage": 52.0,
       "recent": 82.9,
       "media_rank": 61,
-      "media_rating": 10.18,
+      "media_rating": 10.19,
       "association": "MHSAA"
     },
     {
@@ -1195,7 +1195,7 @@
       "set_percentage": 74.0,
       "recent": 63.4,
       "media_rank": 57,
-      "media_rating": 11.14,
+      "media_rating": 11.15,
       "association": "MHSAA"
     },
     {
@@ -1253,7 +1253,7 @@
       "sets_against": 40,
       "mvpi": 75.5,
       "sos": 8.3,
-      "opponent_sos": 72.4,
+      "opponent_sos": 72.0,
       "performance": 79.3,
       "set_percentage": 65.9,
       "recent": 83.7,
@@ -1300,7 +1300,7 @@
       "set_percentage": 45.5,
       "recent": 90.7,
       "media_rank": 59,
-      "media_rating": 10.72,
+      "media_rating": 10.73,
       "association": "MHSAA"
     },
     {
@@ -1447,7 +1447,7 @@
       "set_percentage": 50.8,
       "recent": 61.8,
       "media_rank": 64,
-      "media_rating": 9.65,
+      "media_rating": 9.66,
       "association": "MHSAA"
     },
     {
@@ -1468,7 +1468,7 @@
       "set_percentage": 70.7,
       "recent": 78.0,
       "media_rank": 49,
-      "media_rating": 13.0,
+      "media_rating": 13.01,
       "association": "MHSAA"
     },
     {
@@ -1483,7 +1483,7 @@
       "sets_for": 60,
       "sets_against": 33,
       "mvpi": 71.3,
-      "sos": 2.5,
+      "sos": 2.6,
       "opponent_sos": 57.7,
       "performance": 76.4,
       "set_percentage": 77.2,
@@ -1531,7 +1531,7 @@
       "set_percentage": 69.1,
       "recent": 76.8,
       "media_rank": 55,
-      "media_rating": 11.69,
+      "media_rating": 11.7,
       "association": "MHSAA"
     },
     {
@@ -1552,11 +1552,32 @@
       "set_percentage": 93.5,
       "recent": 65.0,
       "media_rank": 65,
-      "media_rating": 9.59,
+      "media_rating": 9.6,
       "association": "MHSAA"
     },
     {
       "rank": 66,
+      "team_id": "lake",
+      "team": "Lake",
+      "classification": "2A",
+      "region": "5",
+      "record": "18-15",
+      "matches": 33,
+      "set_matches": 33,
+      "sets_for": 55,
+      "sets_against": 53,
+      "mvpi": 69.1,
+      "sos": 7.0,
+      "opponent_sos": 72.4,
+      "performance": 71.1,
+      "set_percentage": 55.7,
+      "recent": 80.1,
+      "media_rank": 68,
+      "media_rating": 8.71,
+      "association": "MHSAA"
+    },
+    {
+      "rank": 67,
       "team_id": "warren-central",
       "team": "Warren Central",
       "classification": "6A",
@@ -1577,27 +1598,6 @@
       "association": "MHSAA"
     },
     {
-      "rank": 67,
-      "team_id": "lake",
-      "team": "Lake",
-      "classification": "2A",
-      "region": "5",
-      "record": "18-15",
-      "matches": 33,
-      "set_matches": 33,
-      "sets_for": 55,
-      "sets_against": 53,
-      "mvpi": 69.0,
-      "sos": 7.0,
-      "opponent_sos": 72.0,
-      "performance": 71.1,
-      "set_percentage": 55.7,
-      "recent": 80.1,
-      "media_rank": 68,
-      "media_rating": 8.7,
-      "association": "MHSAA"
-    },
-    {
       "rank": 68,
       "team_id": "olive-branch",
       "team": "Olive Branch",
@@ -1615,7 +1615,7 @@
       "set_percentage": 56.5,
       "recent": 64.2,
       "media_rank": 77,
-      "media_rating": 7.29,
+      "media_rating": 7.3,
       "association": "MHSAA"
     },
     {
@@ -1783,7 +1783,7 @@
       "set_percentage": 30.5,
       "recent": 69.9,
       "media_rank": 92,
-      "media_rating": 4.99,
+      "media_rating": 5.0,
       "association": "MHSAA"
     },
     {
@@ -2077,7 +2077,7 @@
       "set_percentage": 73.6,
       "recent": 59.8,
       "media_rank": 107,
-      "media_rating": 2.3,
+      "media_rating": 2.31,
       "association": "MHSAA"
     },
     {
@@ -2155,7 +2155,7 @@
       "sets_for": 40,
       "sets_against": 40,
       "mvpi": 59.2,
-      "sos": 4.1,
+      "sos": 4.2,
       "opponent_sos": 65.4,
       "performance": 62.6,
       "set_percentage": 54.9,
@@ -2203,7 +2203,7 @@
       "set_percentage": 35.0,
       "recent": 64.6,
       "media_rank": 106,
-      "media_rating": 2.42,
+      "media_rating": 2.43,
       "association": "MHSAA"
     },
     {
@@ -2245,7 +2245,7 @@
       "set_percentage": 37.8,
       "recent": 62.6,
       "media_rank": 90,
-      "media_rating": 5.35,
+      "media_rating": 5.36,
       "association": "MHSAA"
     },
     {
@@ -2266,7 +2266,7 @@
       "set_percentage": 87.8,
       "recent": 62.2,
       "media_rank": 113,
-      "media_rating": 1.15,
+      "media_rating": 1.16,
       "association": "MHSAA"
     },
     {
@@ -2350,7 +2350,7 @@
       "set_percentage": 24.4,
       "recent": 60.2,
       "media_rank": 119,
-      "media_rating": 0.78,
+      "media_rating": 0.79,
       "association": "MHSAA"
     },
     {
@@ -2412,7 +2412,7 @@
       "performance": 54.5,
       "set_percentage": 17.5,
       "recent": 67.5,
-      "media_rank": 117,
+      "media_rank": 118,
       "media_rating": 0.93,
       "association": "MAIS"
     },
@@ -2455,7 +2455,7 @@
       "set_percentage": 63.0,
       "recent": 42.3,
       "media_rank": 103,
-      "media_rating": 3.06,
+      "media_rating": 3.07,
       "association": "MHSAA"
     },
     {
@@ -2574,13 +2574,13 @@
       "set_matches": 25,
       "sets_for": 41,
       "sets_against": 41,
-      "mvpi": 53.1,
+      "mvpi": 53.2,
       "sos": 0.5,
       "opponent_sos": 46.7,
       "performance": 53.3,
       "set_percentage": 54.5,
       "recent": 65.4,
-      "media_rank": 118,
+      "media_rank": 117,
       "media_rating": 0.93,
       "association": "MHSAA"
     },
@@ -2602,7 +2602,7 @@
       "set_percentage": 60.2,
       "recent": 66.3,
       "media_rank": 124,
-      "media_rating": -1.06,
+      "media_rating": -1.05,
       "association": "MHSAA"
     },
     {
@@ -2623,7 +2623,7 @@
       "set_percentage": 79.3,
       "recent": 66.7,
       "media_rank": 123,
-      "media_rating": -0.98,
+      "media_rating": -0.97,
       "association": "MHSAA"
     },
     {
@@ -2812,7 +2812,7 @@
       "set_percentage": 78.5,
       "recent": 58.1,
       "media_rank": 130,
-      "media_rating": -2.69,
+      "media_rating": -2.68,
       "association": "MHSAA"
     },
     {
@@ -2833,7 +2833,7 @@
       "set_percentage": 54.1,
       "recent": 58.9,
       "media_rank": 137,
-      "media_rating": -3.7,
+      "media_rating": -3.69,
       "association": "MHSAA"
     },
     {
@@ -2854,7 +2854,7 @@
       "set_percentage": 7.3,
       "recent": 50.8,
       "media_rank": 149,
-      "media_rating": -5.28,
+      "media_rating": -5.27,
       "association": "MHSAA"
     },
     {
@@ -3022,7 +3022,7 @@
       "set_percentage": 67.9,
       "recent": 52.0,
       "media_rank": 147,
-      "media_rating": -5.09,
+      "media_rating": -5.08,
       "association": "MHSAA"
     },
     {
@@ -3148,7 +3148,7 @@
       "set_percentage": 23.2,
       "recent": 44.7,
       "media_rank": 152,
-      "media_rating": -5.48,
+      "media_rating": -5.44,
       "association": "MHSAA"
     },
     {
@@ -3232,7 +3232,7 @@
       "set_percentage": 20.3,
       "recent": 56.5,
       "media_rank": 155,
-      "media_rating": -5.71,
+      "media_rating": -5.7,
       "association": "MHSAA"
     },
     {
@@ -3253,7 +3253,7 @@
       "set_percentage": 27.6,
       "recent": 37.0,
       "media_rank": 158,
-      "media_rating": -5.91,
+      "media_rating": -5.87,
       "association": "MHSAA"
     },
     {
@@ -3274,7 +3274,7 @@
       "set_percentage": 12.6,
       "recent": 39.0,
       "media_rank": 163,
-      "media_rating": -7.14,
+      "media_rating": -7.13,
       "association": "MHSAA"
     },
     {
@@ -3316,7 +3316,7 @@
       "set_percentage": 52.8,
       "recent": 26.4,
       "media_rank": 156,
-      "media_rating": -5.73,
+      "media_rating": -5.72,
       "association": "MHSAA"
     },
     {
@@ -3337,7 +3337,7 @@
       "set_percentage": 43.9,
       "recent": 57.7,
       "media_rank": 164,
-      "media_rating": -7.16,
+      "media_rating": -7.15,
       "association": "MHSAA"
     },
     {
@@ -3400,7 +3400,7 @@
       "set_percentage": 41.5,
       "recent": 53.3,
       "media_rank": 171,
-      "media_rating": -8.01,
+      "media_rating": -8.0,
       "association": "MHSAA"
     },
     {
@@ -3715,7 +3715,7 @@
       "set_percentage": 50.0,
       "recent": 48.0,
       "media_rank": 186,
-      "media_rating": -10.77,
+      "media_rating": -10.76,
       "association": "MHSAA"
     },
     {
@@ -3778,7 +3778,7 @@
       "set_percentage": 32.9,
       "recent": 35.8,
       "media_rank": 184,
-      "media_rating": -9.84,
+      "media_rating": -9.83,
       "association": "MHSAA"
     },
     {
@@ -3820,7 +3820,7 @@
       "set_percentage": 17.9,
       "recent": 38.6,
       "media_rank": 172,
-      "media_rating": -8.02,
+      "media_rating": -8.01,
       "association": "MHSAA"
     },
     {
@@ -3862,7 +3862,7 @@
       "set_percentage": 23.6,
       "recent": 11.8,
       "media_rank": 183,
-      "media_rating": -9.83,
+      "media_rating": -9.82,
       "association": "MHSAA"
     },
     {
@@ -4177,7 +4177,7 @@
       "set_percentage": 19.9,
       "recent": 37.4,
       "media_rank": 212,
-      "media_rating": -15.93,
+      "media_rating": -15.92,
       "association": "MHSAA"
     },
     {
@@ -4282,7 +4282,7 @@
       "set_percentage": 63.4,
       "recent": 31.3,
       "media_rank": 207,
-      "media_rating": -15.23,
+      "media_rating": -15.24,
       "association": "MHSAA"
     },
     {
@@ -4303,7 +4303,7 @@
       "set_percentage": 13.0,
       "recent": 13.0,
       "media_rank": 206,
-      "media_rating": -14.87,
+      "media_rating": -14.86,
       "association": "MHSAA"
     },
     {
@@ -4345,7 +4345,7 @@
       "set_percentage": 45.9,
       "recent": 16.7,
       "media_rank": 226,
-      "media_rating": -18.37,
+      "media_rating": -18.36,
       "association": "MHSAA"
     },
     {
@@ -4450,7 +4450,7 @@
       "set_percentage": 28.0,
       "recent": 19.5,
       "media_rank": 215,
-      "media_rating": -16.74,
+      "media_rating": -16.73,
       "association": "MHSAA"
     },
     {
@@ -4513,7 +4513,7 @@
       "set_percentage": 5.7,
       "recent": 10.2,
       "media_rank": 202,
-      "media_rating": -14.22,
+      "media_rating": -14.21,
       "association": "MHSAA"
     },
     {
@@ -4555,7 +4555,7 @@
       "set_percentage": 4.1,
       "recent": 8.1,
       "media_rank": 224,
-      "media_rating": -17.87,
+      "media_rating": -17.86,
       "association": "MHSAA"
     },
     {
@@ -4723,7 +4723,7 @@
       "set_percentage": 31.7,
       "recent": 13.8,
       "media_rank": 240,
-      "media_rating": -21.05,
+      "media_rating": -21.04,
       "association": "MHSAA"
     },
     {
@@ -4744,7 +4744,7 @@
       "set_percentage": 11.8,
       "recent": 23.6,
       "media_rank": 234,
-      "media_rating": -20.07,
+      "media_rating": -20.06,
       "association": "MHSAA"
     },
     {
@@ -4807,7 +4807,7 @@
       "set_percentage": 11.4,
       "recent": 9.3,
       "media_rank": 227,
-      "media_rating": -18.46,
+      "media_rating": -18.45,
       "association": "MHSAA"
     },
     {
@@ -4870,7 +4870,7 @@
       "set_percentage": 26.8,
       "recent": 15.9,
       "media_rank": 247,
-      "media_rating": -22.27,
+      "media_rating": -22.26,
       "association": "MHSAA"
     },
     {
@@ -4933,7 +4933,7 @@
       "set_percentage": 21.5,
       "recent": 6.9,
       "media_rank": 232,
-      "media_rating": -19.89,
+      "media_rating": -19.88,
       "association": "MHSAA"
     },
     {
@@ -5038,7 +5038,7 @@
       "set_percentage": 26.4,
       "recent": 1.2,
       "media_rank": 248,
-      "media_rating": -23.0,
+      "media_rating": -22.99,
       "association": "MHSAA"
     },
     {
@@ -5227,7 +5227,7 @@
       "set_percentage": 13.8,
       "recent": 7.3,
       "media_rank": 260,
-      "media_rating": -27.11,
+      "media_rating": -27.1,
       "association": "MHSAA"
     },
     {
@@ -5290,7 +5290,7 @@
       "set_percentage": 2.0,
       "recent": 5.7,
       "media_rank": 256,
-      "media_rating": -26.09,
+      "media_rating": -26.08,
       "association": "MHSAA"
     },
     {
@@ -5382,1072 +5382,1072 @@
     "external:/al/albertville/albertville-aggies/volleyball": {
       "team": "Albertville",
       "state": "AL",
-      "rating": 13.6,
+      "rating": 13.7,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/albertville/albertville-aggies/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:05.809099+00:00"
+      "retrieved_at": "2026-11-24T19:19:39.445476+00:00"
     },
     "external:/al/alexandria/alexandria-valley-cubs/volleyball": {
       "team": "Alexandria",
       "state": "AL",
-      "rating": 16.8,
+      "rating": 16.9,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/alexandria/alexandria-valley-cubs/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:05.742949+00:00"
+      "retrieved_at": "2026-11-24T19:19:39.507280+00:00"
     },
     "external:/al/anniston/faith-christian-lions/volleyball": {
       "team": "Faith Christian",
       "state": "AL",
-      "rating": 8.2,
+      "rating": 8.3,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/anniston/faith-christian-lions/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:05.738664+00:00"
+      "retrieved_at": "2026-11-24T19:19:39.391790+00:00"
     },
     "external:/al/arab/arab-knights/volleyball": {
       "team": "Arab",
       "state": "AL",
       "rating": 20,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/arab/arab-knights/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:05.686073+00:00"
+      "retrieved_at": "2026-11-24T19:19:39.431015+00:00"
     },
     "external:/al/athens/athens-golden-eagles/volleyball": {
       "team": "Athens",
       "state": "AL",
-      "rating": 5.8,
+      "rating": 5.9,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/athens/athens-golden-eagles/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:05.797772+00:00"
+      "retrieved_at": "2026-11-24T19:19:39.608659+00:00"
     },
     "external:/al/athens/lindsay-lane-christian-academy-lions/volleyball": {
       "team": "Lindsay Lane Christian Academy",
       "state": "AL",
       "rating": 7.3,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/athens/lindsay-lane-christian-academy-lions/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:05.799390+00:00"
+      "retrieved_at": "2026-11-24T19:19:39.443127+00:00"
     },
     "external:/al/auburn/auburn-tigers/volleyball": {
       "team": "Auburn",
       "state": "AL",
       "rating": 11.2,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/auburn/auburn-tigers/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:06.025739+00:00"
+      "retrieved_at": "2026-11-24T19:19:39.950858+00:00"
     },
     "external:/al/birmingham/briarwood-christian-lions/volleyball": {
       "team": "Briarwood Christian",
       "state": "AL",
-      "rating": 31.9,
+      "rating": 31.8,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/birmingham/briarwood-christian-lions/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:06.178540+00:00"
+      "retrieved_at": "2026-11-24T19:19:39.660697+00:00"
     },
     "external:/al/birmingham/mountain-brook-spartans/volleyball": {
       "team": "Mountain Brook",
       "state": "AL",
-      "rating": 34.2,
+      "rating": 33.7,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/birmingham/mountain-brook-spartans/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:06.163085+00:00"
+      "retrieved_at": "2026-11-24T19:19:39.711734+00:00"
     },
     "external:/al/birmingham/oak-mountain-eagles/volleyball": {
       "team": "Oak Mountain",
       "state": "AL",
       "rating": 18.6,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/birmingham/oak-mountain-eagles/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:06.256185+00:00"
+      "retrieved_at": "2026-11-24T19:19:39.697568+00:00"
     },
     "external:/al/birmingham/shades-valley-mounties/volleyball": {
       "team": "Shades Valley",
       "state": "AL",
       "rating": 4,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/birmingham/shades-valley-mounties/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:06.211378+00:00"
+      "retrieved_at": "2026-11-24T19:19:39.759192+00:00"
     },
     "external:/al/butler/choctaw-county-tigers/volleyball": {
       "team": "Choctaw County",
       "state": "AL",
-      "rating": -11,
+      "rating": -10.7,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/butler/choctaw-county-tigers/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:06.173643+00:00"
+      "retrieved_at": "2026-11-24T19:19:39.919394+00:00"
     },
     "external:/al/chelsea/chelsea-hornets/volleyball": {
       "team": "Chelsea",
       "state": "AL",
       "rating": 19.2,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/chelsea/chelsea-hornets/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:06.394920+00:00"
+      "retrieved_at": "2026-11-24T19:19:40.144981+00:00"
     },
     "external:/al/daphne/bayside-academy-admirals/volleyball": {
       "team": "Bayside Academy",
       "state": "AL",
-      "rating": 29.4,
+      "rating": 29.5,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/daphne/bayside-academy-admirals/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:06.525974+00:00"
+      "retrieved_at": "2026-11-24T19:19:40.212450+00:00"
     },
     "external:/al/decatur/austin-black-bears/volleyball": {
       "team": "Austin",
       "state": "AL",
       "rating": 28,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/decatur/austin-black-bears/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:06.550918+00:00"
+      "retrieved_at": "2026-11-24T19:19:39.945803+00:00"
     },
     "external:/al/decatur/decatur-heritage-christian-academy-eagles/volleyball": {
       "team": "Decatur Heritage Christian Academy",
       "state": "AL",
-      "rating": -7.9,
+      "rating": -7.8,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/decatur/decatur-heritage-christian-academy-eagles/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:06.555312+00:00"
+      "retrieved_at": "2026-11-24T19:19:40.264890+00:00"
     },
     "external:/al/elberta/elberta-warriors/volleyball": {
       "team": "Elberta",
       "state": "AL",
       "rating": 5.1,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/elberta/elberta-warriors/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:06.685672+00:00"
+      "retrieved_at": "2026-11-24T19:19:40.153669+00:00"
     },
     "external:/al/fairhope/fairhope-pirates/volleyball": {
       "team": "Fairhope",
       "state": "AL",
       "rating": 25.5,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/fairhope/fairhope-pirates/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:06.622941+00:00"
+      "retrieved_at": "2026-11-24T19:19:40.195835+00:00"
     },
     "external:/al/fayette/fayette-county-tigers/volleyball": {
       "team": "Fayette County",
       "state": "AL",
       "rating": 15.9,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/fayette/fayette-county-tigers/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:06.893844+00:00"
+      "retrieved_at": "2026-11-24T19:19:40.231757+00:00"
     },
     "external:/al/florence/rogers-pirates/volleyball": {
       "team": "Rogers",
       "state": "AL",
       "rating": -2,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/florence/rogers-pirates/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:06.821607+00:00"
+      "retrieved_at": "2026-11-24T19:19:40.383762+00:00"
     },
     "external:/al/foley/foley-lions/volleyball": {
       "team": "Foley",
       "state": "AL",
       "rating": 2,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/foley/foley-lions/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:06.898266+00:00"
+      "retrieved_at": "2026-11-24T19:19:40.515938+00:00"
     },
     "external:/al/gardendale/gardendale-rockets/volleyball": {
       "team": "Gardendale",
       "state": "AL",
       "rating": 12.2,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/gardendale/gardendale-rockets/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:06.918245+00:00"
+      "retrieved_at": "2026-11-24T19:19:40.451411+00:00"
     },
     "external:/al/grant/kate-duncan-smith-dar-patriots/volleyball": {
       "team": "Kate Duncan Smith DAR",
       "state": "AL",
       "rating": 16.3,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/grant/kate-duncan-smith-dar-patriots/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:07.048131+00:00"
+      "retrieved_at": "2026-11-24T19:19:40.464986+00:00"
     },
     "external:/al/guin/marion-county-red-raiders/volleyball": {
       "team": "Marion County",
       "state": "AL",
       "rating": 2,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/guin/marion-county-red-raiders/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:07.025446+00:00"
+      "retrieved_at": "2026-11-24T19:19:40.476030+00:00"
     },
     "external:/al/gulf-shores/gulf-shores-dolphins/volleyball": {
       "team": "Gulf Shores",
       "state": "AL",
       "rating": 19.4,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/gulf-shores/gulf-shores-dolphins/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:07.135968+00:00"
+      "retrieved_at": "2026-11-24T19:19:40.529668+00:00"
     },
     "external:/al/guntersville/guntersville-wildcats/volleyball": {
       "team": "Guntersville",
       "state": "AL",
       "rating": 28.5,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/guntersville/guntersville-wildcats/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:07.245101+00:00"
+      "retrieved_at": "2026-11-24T19:19:40.662165+00:00"
     },
     "external:/al/harvest/sparkman-senators/volleyball": {
       "team": "Sparkman",
       "state": "AL",
-      "rating": 12.2,
+      "rating": 12.3,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/harvest/sparkman-senators/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:07.195303+00:00"
+      "retrieved_at": "2026-11-24T19:19:40.693131+00:00"
     },
     "external:/al/helena/helena-huskies/volleyball": {
       "team": "Helena",
       "state": "AL",
       "rating": 16.5,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/helena/helena-huskies/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:07.502334+00:00"
+      "retrieved_at": "2026-11-24T19:19:40.694756+00:00"
     },
     "external:/al/homewood/homewood-patriots/volleyball": {
       "team": "Homewood",
       "state": "AL",
-      "rating": 25.8,
+      "rating": 26.4,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/homewood/homewood-patriots/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:07.408641+00:00"
+      "retrieved_at": "2026-11-24T19:19:40.830134+00:00"
     },
     "external:/al/hoover/hoover-bucs/volleyball": {
       "team": "Hoover",
       "state": "AL",
       "rating": 18,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/hoover/hoover-bucs/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:07.484416+00:00"
+      "retrieved_at": "2026-11-24T19:19:40.852370+00:00"
     },
     "external:/al/hoover/spain-park-jaguars/volleyball": {
       "team": "Spain Park",
       "state": "AL",
       "rating": 29.5,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/hoover/spain-park-jaguars/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:07.511977+00:00"
+      "retrieved_at": "2026-11-24T19:19:40.850237+00:00"
     },
     "external:/al/huntsville/grissom-tigers/volleyball": {
       "team": "Grissom",
       "state": "AL",
       "rating": 5.3,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/huntsville/grissom-tigers/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:07.510494+00:00"
+      "retrieved_at": "2026-11-24T19:19:40.943235+00:00"
     },
     "external:/al/huntsville/st-john-paul-ii-falcons/volleyball": {
       "team": "St. John Paul II",
       "state": "AL",
       "rating": 20.3,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/huntsville/st-john-paul-ii-falcons/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:07.682174+00:00"
+      "retrieved_at": "2026-11-24T19:19:41.030811+00:00"
     },
     "external:/al/irvington/bryant-hurricanes/volleyball": {
       "team": "Bryant",
       "state": "AL",
       "rating": 10.6,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/irvington/bryant-hurricanes/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:07.694403+00:00"
+      "retrieved_at": "2026-11-24T19:19:40.940737+00:00"
     },
     "external:/al/madison/bob-jones-patriots/volleyball": {
       "team": "Bob Jones",
       "state": "AL",
       "rating": 32.9,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/madison/bob-jones-patriots/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:08.067565+00:00"
+      "retrieved_at": "2026-11-24T19:19:41.064952+00:00"
     },
     "external:/al/madison/james-clemens-jets/volleyball": {
       "team": "James Clemens",
       "state": "AL",
       "rating": 17.3,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/madison/james-clemens-jets/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:07.902426+00:00"
+      "retrieved_at": "2026-11-24T19:19:41.102530+00:00"
     },
     "external:/al/millry/millry-wildcats/volleyball": {
       "team": "Millry",
       "state": "AL",
       "rating": 1.4,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/millry/millry-wildcats/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:07.864568+00:00"
+      "retrieved_at": "2026-11-24T19:19:41.124779+00:00"
     },
     "external:/al/mobile/baker-hornets/volleyball": {
       "team": "Baker",
       "state": "AL",
       "rating": 5.5,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/mobile/baker-hornets/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:07.844152+00:00"
+      "retrieved_at": "2026-11-24T19:19:41.183751+00:00"
     },
     "external:/al/mobile/faith-academy-rams/volleyball": {
       "team": "Faith Academy",
       "state": "AL",
       "rating": 26.7,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/mobile/faith-academy-rams/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:08.151880+00:00"
+      "retrieved_at": "2026-11-24T19:19:41.193409+00:00"
     },
     "external:/al/mobile/mcgill-toolen-yellowjackets/volleyball": {
       "team": "McGill-Toolen",
       "state": "AL",
       "rating": 47.2,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/mobile/mcgill-toolen-yellowjackets/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:08.060661+00:00"
+      "retrieved_at": "2026-11-24T19:19:41.384955+00:00"
     },
     "external:/al/mobile/mobile-christian-leopards/volleyball": {
       "team": "Mobile Christian",
       "state": "AL",
       "rating": 18.9,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/mobile/mobile-christian-leopards/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:08.272232+00:00"
+      "retrieved_at": "2026-11-24T19:19:41.267903+00:00"
     },
     "external:/al/mobile/st-lukes-episcopal-wildcats/volleyball": {
       "team": "St. Luke's Episcopal",
       "state": "AL",
       "rating": 8,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/mobile/st-lukes-episcopal-wildcats/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:08.192258+00:00"
+      "retrieved_at": "2026-11-24T19:19:41.358780+00:00"
     },
     "external:/al/mobile/st-pauls-episcopal-saints/volleyball": {
       "team": "St. Paul's Episcopal",
       "state": "AL",
-      "rating": 17.7,
+      "rating": 17.8,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/mobile/st-pauls-episcopal-saints/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:08.315869+00:00"
+      "retrieved_at": "2026-11-24T19:19:41.771246+00:00"
     },
     "external:/al/mobile/ums-wright-prep-bulldogs/volleyball": {
       "team": "UMS-Wright Prep",
       "state": "AL",
       "rating": 15.3,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/mobile/ums-wright-prep-bulldogs/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:08.477592+00:00"
+      "retrieved_at": "2026-11-24T19:19:41.437815+00:00"
     },
     "external:/al/montgomery/montgomery-academy-eagles/volleyball": {
       "team": "Montgomery Academy",
       "state": "AL",
       "rating": 29.7,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/montgomery/montgomery-academy-eagles/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:08.439119+00:00"
+      "retrieved_at": "2026-11-24T19:19:41.473582+00:00"
     },
     "external:/al/montgomery/trinity-presbyterian-wildcats/volleyball": {
       "team": "Trinity Presbyterian",
       "state": "AL",
       "rating": 8.5,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/montgomery/trinity-presbyterian-wildcats/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:08.566922+00:00"
+      "retrieved_at": "2026-11-24T19:19:41.502170+00:00"
     },
     "external:/al/moody/moody-blue-devils/volleyball": {
       "team": "Moody",
       "state": "AL",
       "rating": 7.4,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/moody/moody-blue-devils/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:08.508259+00:00"
+      "retrieved_at": "2026-11-24T19:19:41.592151+00:00"
     },
     "external:/al/northport/tuscaloosa-county-wildcats/volleyball": {
       "team": "Tuscaloosa County",
       "state": "AL",
       "rating": 4.6,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/northport/tuscaloosa-county-wildcats/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:08.752906+00:00"
+      "retrieved_at": "2026-11-24T19:19:41.720849+00:00"
     },
     "external:/al/odenville/st-clair-county-fighting-saints/volleyball": {
       "team": "St. Clair County",
       "state": "AL",
       "rating": 14.5,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/odenville/st-clair-county-fighting-saints/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:08.649359+00:00"
+      "retrieved_at": "2026-11-24T19:19:41.668296+00:00"
     },
     "external:/al/pelham/pelham-panthers/volleyball": {
       "team": "Pelham",
       "state": "AL",
       "rating": 16.2,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/pelham/pelham-panthers/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:08.754521+00:00"
+      "retrieved_at": "2026-11-24T19:19:41.845452+00:00"
     },
     "external:/al/pell-city/pell-city-panthers/volleyball": {
       "team": "Pell City",
       "state": "AL",
-      "rating": 7.7,
+      "rating": 7.8,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/pell-city/pell-city-panthers/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:09.233934+00:00"
+      "retrieved_at": "2026-11-24T19:19:41.751175+00:00"
     },
     "external:/al/pike-road/pike-road-patriots/volleyball": {
       "team": "Pike Road",
       "state": "AL",
       "rating": 20.4,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/pike-road/pike-road-patriots/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:08.789668+00:00"
+      "retrieved_at": "2026-11-24T19:19:41.813534+00:00"
     },
     "external:/al/pinson/clay-chalkville-cougars/volleyball": {
       "team": "Clay-Chalkville",
       "state": "AL",
       "rating": -3.2,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/pinson/clay-chalkville-cougars/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:09.004127+00:00"
+      "retrieved_at": "2026-11-24T19:19:41.932033+00:00"
     },
     "external:/al/red-bay/red-bay-tigers/volleyball": {
       "team": "Red Bay",
       "state": "AL",
       "rating": -7.1,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/red-bay/red-bay-tigers/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:09.305616+00:00"
+      "retrieved_at": "2026-11-24T19:19:41.975006+00:00"
     },
     "external:/al/rogersville/lauderdale-county-tigers/volleyball": {
       "team": "Lauderdale County",
       "state": "AL",
       "rating": 13.9,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/rogersville/lauderdale-county-tigers/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:09.184098+00:00"
+      "retrieved_at": "2026-11-24T19:19:41.970669+00:00"
     },
     "external:/al/semmes/mary-g-montgomery-vikings/volleyball": {
       "team": "Mary G. Montgomery",
       "state": "AL",
       "rating": 1,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/semmes/mary-g-montgomery-vikings/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:09.115035+00:00"
+      "retrieved_at": "2026-11-24T19:19:42.012630+00:00"
     },
     "external:/al/spanish-fort/spanish-fort-toros/volleyball": {
       "team": "Spanish Fort",
       "state": "AL",
-      "rating": 38,
+      "rating": 37.9,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/spanish-fort/spanish-fort-toros/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:09.182004+00:00"
+      "retrieved_at": "2026-11-24T19:19:42.054117+00:00"
     },
     "external:/al/sweet-water/sweet-water-bulldogs/volleyball": {
       "team": "Sweet Water",
       "state": "AL",
       "rating": -2.8,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/sweet-water/sweet-water-bulldogs/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:09.452270+00:00"
+      "retrieved_at": "2026-11-24T19:19:42.073971+00:00"
     },
     "external:/al/sylacauga/sylacauga-aggies/volleyball": {
       "team": "Sylacauga",
       "state": "AL",
       "rating": 6.8,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/sylacauga/sylacauga-aggies/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:09.450465+00:00"
+      "retrieved_at": "2026-11-24T19:19:42.204499+00:00"
     },
     "external:/al/talladega/alabama-school-for-the-deaf-silent-warriors/volleyball": {
       "team": "Alabama School for the Deaf",
       "state": "AL",
-      "rating": -22.6,
+      "rating": -22.7,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/talladega/alabama-school-for-the-deaf-silent-warriors/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:09.569725+00:00"
+      "retrieved_at": "2026-11-24T19:19:42.198992+00:00"
     },
     "external:/al/tuscaloosa/hillcrest-patriots/volleyball": {
       "team": "Hillcrest",
       "state": "AL",
       "rating": 6.3,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/tuscaloosa/hillcrest-patriots/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:09.671733+00:00"
+      "retrieved_at": "2026-11-24T19:19:42.224233+00:00"
     },
     "external:/al/vernon/lamar-county-bulldogs/volleyball": {
       "team": "Lamar County",
       "state": "AL",
       "rating": 11.4,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/vernon/lamar-county-bulldogs/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:09.667892+00:00"
+      "retrieved_at": "2026-11-24T19:19:42.238846+00:00"
     },
     "external:/al/vestavia-hills/vestavia-hills-rebels/volleyball": {
       "team": "Vestavia Hills",
       "state": "AL",
       "rating": 21.9,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/vestavia-hills/vestavia-hills-rebels/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:09.770270+00:00"
+      "retrieved_at": "2026-11-24T19:19:42.265473+00:00"
     },
     "external:/al/wetumpka/wetumpka-indians/volleyball": {
       "team": "Wetumpka",
       "state": "AL",
       "rating": 2.3,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/al/wetumpka/wetumpka-indians/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:09.936071+00:00"
+      "retrieved_at": "2026-11-24T19:19:42.325863+00:00"
     },
     "external:/ar/little-rock/arkansas-school-for-the-deaf-leopards/volleyball": {
       "team": "Arkansas School for the Deaf",
       "state": "AR",
       "rating": -27.1,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/ar/little-rock/arkansas-school-for-the-deaf-leopards/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:09.937674+00:00"
+      "retrieved_at": "2026-11-24T19:19:42.425369+00:00"
     },
     "external:/ar/west-memphis/west-memphis-christian-black-knights/volleyball": {
       "team": "West Memphis Christian",
       "state": "AR",
       "rating": 22,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/ar/west-memphis/west-memphis-christian-black-knights/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:09.928634+00:00"
+      "retrieved_at": "2026-11-24T19:19:42.411368+00:00"
     },
     "external:/fl/milton/west-florida-baptist-academy-conquerors/volleyball": {
       "team": "West Florida Baptist Academy",
       "state": "FL",
       "rating": 7,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/fl/milton/west-florida-baptist-academy-conquerors/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:10.007483+00:00"
+      "retrieved_at": "2026-11-24T19:19:42.448456+00:00"
     },
     "external:/fl/navarre/navarre-raiders/volleyball": {
       "team": "Navarre",
       "state": "FL",
       "rating": 14.3,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/fl/navarre/navarre-raiders/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:10.150429+00:00"
+      "retrieved_at": "2026-11-24T19:19:42.514939+00:00"
     },
     "external:/ga/cave-spring/georgia-school-for-the-deaf-tigers/volleyball": {
       "team": "Georgia School for the Deaf",
       "state": "GA",
       "rating": -29.7,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/ga/cave-spring/georgia-school-for-the-deaf-tigers/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:10.456471+00:00"
+      "retrieved_at": "2026-11-24T19:19:42.522047+00:00"
     },
     "external:/ga/jonesboro/elite-scholars-academy-knights/volleyball": {
       "team": "Elite Scholars Academy",
       "state": "GA",
       "rating": 11.8,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/ga/jonesboro/elite-scholars-academy-knights/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:10.481539+00:00"
+      "retrieved_at": "2026-11-24T19:19:42.575966+00:00"
     },
     "external:/ga/marietta/pope-greyhounds/volleyball": {
       "team": "Pope",
       "state": "GA",
       "rating": 32.2,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/ga/marietta/pope-greyhounds/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:10.264274+00:00"
+      "retrieved_at": "2026-11-24T19:19:42.686136+00:00"
     },
     "external:/il/red-bud/red-bud-musketeers/volleyball": {
       "team": "Red Bud",
       "state": "IL",
       "rating": 22.8,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/il/red-bud/red-bud-musketeers/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:10.545570+00:00"
+      "retrieved_at": "2026-11-24T19:19:42.676929+00:00"
     },
     "external:/ks/olathe/kansas-school-for-the-deaf-jackrabbits/volleyball": {
       "team": "Kansas School for the Deaf",
       "state": "KS",
       "rating": -22.2,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/ks/olathe/kansas-school-for-the-deaf-jackrabbits/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:10.551780+00:00"
+      "retrieved_at": "2026-11-24T19:19:42.709103+00:00"
     },
     "external:/ky/danville/kentucky-school-for-the-deaf-colonels/volleyball": {
       "team": "Kentucky School for the Deaf",
       "state": "KY",
       "rating": -33.6,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/ky/danville/kentucky-school-for-the-deaf-colonels/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:10.775382+00:00"
+      "retrieved_at": "2026-11-24T19:19:42.782334+00:00"
     },
     "external:/la/baton-rouge/louisiana-school-for-the-deaf-war-eagles/volleyball": {
       "team": "Louisiana School for the Deaf",
       "state": "LA",
       "rating": -29.6,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/la/baton-rouge/louisiana-school-for-the-deaf-war-eagles/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:10.726532+00:00"
+      "retrieved_at": "2026-11-24T19:19:42.774715+00:00"
     },
     "external:/la/donaldsonville/ascension-catholic-bulldogs/volleyball": {
       "team": "Ascension Catholic",
       "state": "LA",
       "rating": 15.4,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/la/donaldsonville/ascension-catholic-bulldogs/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:10.943281+00:00"
+      "retrieved_at": "2026-11-24T19:19:42.856468+00:00"
     },
     "external:/la/gonzales/east-ascension-spartans/volleyball": {
       "team": "East Ascension",
       "state": "LA",
       "rating": 6.1,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/la/gonzales/east-ascension-spartans/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:10.925692+00:00"
+      "retrieved_at": "2026-11-24T19:19:42.973036+00:00"
     },
     "external:/la/mandeville/mandeville-skippers/volleyball": {
       "team": "Mandeville",
       "state": "LA",
       "rating": 36.1,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/la/mandeville/mandeville-skippers/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:10.994006+00:00"
+      "retrieved_at": "2026-11-24T19:19:42.976272+00:00"
     },
     "external:/la/ruston/ruston-bearcats/volleyball": {
       "team": "Ruston",
       "state": "LA",
-      "rating": 21.3,
+      "rating": 20.9,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/la/ruston/ruston-bearcats/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:11.058490+00:00"
+      "retrieved_at": "2026-11-24T19:19:42.950221+00:00"
     },
     "external:/la/st-amant/st-amant-gators/volleyball": {
       "team": "St. Amant",
       "state": "LA",
       "rating": 13.6,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/la/st-amant/st-amant-gators/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:11.145086+00:00"
+      "retrieved_at": "2026-11-24T19:19:43.111413+00:00"
     },
     "external:/la/watson/live-oak-eagles/volleyball": {
       "team": "Live Oak",
       "state": "LA",
       "rating": 9.6,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/la/watson/live-oak-eagles/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:11.262393+00:00"
+      "retrieved_at": "2026-11-24T19:19:43.149056+00:00"
     },
     "external:/mo/jackson/jackson-fighting-indians/volleyball": {
       "team": "Jackson",
       "state": "MO",
       "rating": 33.6,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/mo/jackson/jackson-fighting-indians/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:11.251170+00:00"
+      "retrieved_at": "2026-11-24T19:19:43.146709+00:00"
     },
     "external:/ok/sulphur/oklahoma-school-for-the-deaf-bison/volleyball": {
       "team": "Oklahoma School for the Deaf",
       "state": "OK",
       "rating": -12.6,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/ok/sulphur/oklahoma-school-for-the-deaf-bison/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:11.291788+00:00"
+      "retrieved_at": "2026-11-24T19:19:43.190831+00:00"
     },
     "external:/sc/spartanburg/south-carolina-school-for-the-deaf-and-blind-hornets/volleyball": {
       "team": "South Carolina School for the Deaf & Blind",
       "state": "SC",
-      "rating": -24.5,
+      "rating": -24.6,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/sc/spartanburg/south-carolina-school-for-the-deaf-and-blind-hornets/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:11.369463+00:00"
+      "retrieved_at": "2026-11-24T19:19:43.245255+00:00"
     },
     "external:/tn/alamo/crockett-county-cavaliers/volleyball": {
       "team": "Crockett County",
       "state": "TN",
       "rating": 14.7,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/tn/alamo/crockett-county-cavaliers/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:11.517759+00:00"
+      "retrieved_at": "2026-11-24T19:19:43.210766+00:00"
     },
     "external:/tn/arlington/arlington-tigers/volleyball": {
       "team": "Arlington",
       "state": "TN",
       "rating": 34.1,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/tn/arlington/arlington-tigers/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:11.509768+00:00"
+      "retrieved_at": "2026-11-24T19:19:43.364177+00:00"
     },
     "external:/tn/bartlett/bartlett-panthers/volleyball": {
       "team": "Bartlett",
       "state": "TN",
       "rating": 19,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/tn/bartlett/bartlett-panthers/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:11.654700+00:00"
+      "retrieved_at": "2026-11-24T19:19:43.417184+00:00"
     },
     "external:/tn/brighton/brighton-cardinals/volleyball": {
       "team": "Brighton",
       "state": "TN",
       "rating": 4.1,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/tn/brighton/brighton-cardinals/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:11.580458+00:00"
+      "retrieved_at": "2026-11-24T19:19:43.376148+00:00"
     },
     "external:/tn/collierville/collierville-dragons/volleyball": {
       "team": "Collierville",
       "state": "TN",
       "rating": 27.5,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/tn/collierville/collierville-dragons/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:11.721671+00:00"
+      "retrieved_at": "2026-11-24T19:19:43.557563+00:00"
     },
     "external:/tn/collierville/st-georges-gryphons/volleyball": {
       "team": "St. George's",
       "state": "TN",
       "rating": 2.8,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/tn/collierville/st-georges-gryphons/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:11.825092+00:00"
+      "retrieved_at": "2026-11-24T19:19:43.444788+00:00"
     },
     "external:/tn/cordova/evangelical-christian-eagles/volleyball": {
       "team": "Evangelical Christian",
       "state": "TN",
       "rating": 18.5,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/tn/cordova/evangelical-christian-eagles/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:11.838073+00:00"
+      "retrieved_at": "2026-11-24T19:19:43.626330+00:00"
     },
     "external:/tn/cordova/st-benedict-at-auburndale-eagles/volleyball": {
       "team": "St. Benedict at Auburndale",
       "state": "TN",
       "rating": 9.3,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/tn/cordova/st-benedict-at-auburndale-eagles/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:11.879457+00:00"
+      "retrieved_at": "2026-11-24T19:19:43.633862+00:00"
     },
     "external:/tn/dyer/gibson-county-pioneers/volleyball": {
       "team": "Gibson County",
       "state": "TN",
-      "rating": 3.2,
+      "rating": 3.1,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/tn/dyer/gibson-county-pioneers/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:11.889358+00:00"
+      "retrieved_at": "2026-11-24T19:19:43.579678+00:00"
     },
     "external:/tn/franklin/battle-ground-academy-wildcats/volleyball": {
       "team": "Battle Ground Academy",
       "state": "TN",
       "rating": 26.4,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/tn/franklin/battle-ground-academy-wildcats/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:12.008212+00:00"
+      "retrieved_at": "2026-11-24T19:19:43.668456+00:00"
     },
     "external:/tn/germantown/germantown-red-devils/volleyball": {
       "team": "Germantown",
       "state": "TN",
       "rating": 8.7,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/tn/germantown/germantown-red-devils/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:12.073326+00:00"
+      "retrieved_at": "2026-11-24T19:19:43.677274+00:00"
     },
     "external:/tn/germantown/houston-mustangs/volleyball": {
       "team": "Houston",
       "state": "TN",
       "rating": 19.4,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/tn/germantown/houston-mustangs/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:12.259584+00:00"
+      "retrieved_at": "2026-11-24T19:19:43.791416+00:00"
     },
     "external:/tn/jackson/jackson-christian-eagles/volleyball": {
       "team": "Jackson Christian",
       "state": "TN",
       "rating": 12,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/tn/jackson/jackson-christian-eagles/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:12.129352+00:00"
+      "retrieved_at": "2026-11-24T19:19:43.878396+00:00"
     },
     "external:/tn/jackson/university-school-of-jackson-bruins/volleyball": {
       "team": "University School of Jackson",
       "state": "TN",
       "rating": 15.3,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/tn/jackson/university-school-of-jackson-bruins/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:12.223651+00:00"
+      "retrieved_at": "2026-11-24T19:19:43.880866+00:00"
     },
     "external:/tn/lakeland/lakeland-preparatory-lions/volleyball": {
       "team": "Lakeland Preparatory",
       "state": "TN",
       "rating": 12.3,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/tn/lakeland/lakeland-preparatory-lions/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:12.310456+00:00"
+      "retrieved_at": "2026-11-24T19:19:43.864742+00:00"
     },
     "external:/tn/lawrenceburg/lawrence-county-wildcats/volleyball": {
       "team": "Lawrence County",
       "state": "TN",
       "rating": 21.8,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/tn/lawrenceburg/lawrence-county-wildcats/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:12.461068+00:00"
+      "retrieved_at": "2026-11-24T19:19:43.963052+00:00"
     },
     "external:/tn/memphis/harding-academy-lions/volleyball": {
       "team": "Harding Academy",
       "state": "TN",
       "rating": -7.1,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/tn/memphis/harding-academy-lions/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:12.450150+00:00"
+      "retrieved_at": "2026-11-24T19:19:43.956119+00:00"
     },
     "external:/tn/memphis/hutchison-sting/volleyball": {
       "team": "Hutchison",
       "state": "TN",
       "rating": 6.6,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/tn/memphis/hutchison-sting/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:12.513481+00:00"
+      "retrieved_at": "2026-11-24T19:19:44.032831+00:00"
     },
     "external:/tn/memphis/lausanne-collegiate-lynx/volleyball": {
       "team": "Lausanne Collegiate",
       "state": "TN",
       "rating": 20.1,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/tn/memphis/lausanne-collegiate-lynx/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:12.611458+00:00"
+      "retrieved_at": "2026-11-24T19:19:44.201225+00:00"
     },
     "external:/tn/memphis/st-marys-episcopal-turkeys/volleyball": {
       "team": "St. Mary's Episcopal",
       "state": "TN",
       "rating": 24.3,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/tn/memphis/st-marys-episcopal-turkeys/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:12.855184+00:00"
+      "retrieved_at": "2026-11-24T19:19:44.072760+00:00"
     },
     "external:/tn/memphis/white-station-spartans/volleyball": {
       "team": "White Station",
       "state": "TN",
       "rating": 2.3,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/tn/memphis/white-station-spartans/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:12.636209+00:00"
+      "retrieved_at": "2026-11-24T19:19:44.111394+00:00"
     },
     "external:/tn/middleton/middleton-tigers/volleyball": {
       "team": "Middleton",
       "state": "TN",
       "rating": 3.8,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/tn/middleton/middleton-tigers/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:12.898002+00:00"
+      "retrieved_at": "2026-11-24T19:19:44.338372+00:00"
     },
     "external:/tn/millington/tipton-rosemark-academy-rebels/volleyball": {
       "team": "Tipton-Rosemark Academy",
       "state": "TN",
       "rating": 8.4,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/tn/millington/tipton-rosemark-academy-rebels/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:12.781486+00:00"
+      "retrieved_at": "2026-11-24T19:19:44.210374+00:00"
     },
     "external:/tn/nashville/middle-college/volleyball": {
       "team": "middle-college",
@@ -6463,60 +6463,60 @@
       "state": "TN",
       "rating": 35.3,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/tn/nashville/valor-college-prep-wildcats/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:12.995976+00:00"
+      "retrieved_at": "2026-11-24T19:19:44.328664+00:00"
     },
     "external:/tn/newbern/dyer-county-choctaws/volleyball": {
       "team": "Dyer County",
       "state": "TN",
       "rating": 25.1,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/tn/newbern/dyer-county-choctaws/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:13.088822+00:00"
+      "retrieved_at": "2026-11-24T19:19:44.363409+00:00"
     },
     "external:/tn/rossville/rossville-christian-academy-wolves/volleyball": {
       "team": "Rossville Christian Academy",
       "state": "TN",
       "rating": 12.8,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/tn/rossville/rossville-christian-academy-wolves/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:13.118686+00:00"
+      "retrieved_at": "2026-11-24T19:19:44.432507+00:00"
     },
     "external:/tn/selmer/mcnairy-central-bobcats/volleyball": {
       "team": "McNairy Central",
       "state": "TN",
       "rating": -4.3,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/tn/selmer/mcnairy-central-bobcats/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:13.231759+00:00"
+      "retrieved_at": "2026-11-24T19:19:44.609625+00:00"
     },
     "external:/ut/ogden/utah-school-for-the-deaf-and-blind-eagles/volleyball": {
       "team": "Utah School for the Deaf & Blind",
       "state": "UT",
       "rating": -32.8,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/ut/ogden/utah-school-for-the-deaf-and-blind-eagles/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:13.356382+00:00"
+      "retrieved_at": "2026-11-24T19:19:44.568954+00:00"
     },
     "external:/wi/delavan/wisconsin-school-for-the-deaf-firebirds/volleyball": {
       "team": "Wisconsin School for the Deaf",
       "state": "WI",
-      "rating": -9.2,
+      "rating": -9.1,
       "season": 2026,
-      "source_updated_at": "2026-11-19",
+      "source_updated_at": "2026-11-23",
       "source_url": "https://www.maxpreps.com/wi/delavan/wisconsin-school-for-the-deaf-firebirds/volleyball/rankings/",
       "status": "fresh",
-      "retrieved_at": "2026-11-22T19:24:13.345575+00:00"
+      "retrieved_at": "2026-11-24T19:19:44.601251+00:00"
     }
   }
 }

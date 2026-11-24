@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-11-22",
+    "generated_at": "2026-11-24",
     "matches": 3157,
     "teams_referenced": 413
   },
@@ -9173,14 +9173,6 @@
     },
     {
       "date": "2026-08-22",
-      "home": "senatobia",
-      "away": "winona-secondary-school",
-      "home_sets": 2,
-      "away_sets": 1,
-      "tournament": true
-    },
-    {
-      "date": "2026-08-22",
       "home": "south-jones",
       "away": "presbyterian-christian-school",
       "home_sets": 2,
@@ -9312,6 +9304,14 @@
       "away": "ethel",
       "home_sets": 0,
       "away_sets": 1
+    },
+    {
+      "date": "2026-08-22",
+      "home": "winona-secondary-school",
+      "away": "senatobia",
+      "home_sets": 1,
+      "away_sets": 2,
+      "tournament": true
     },
     {
       "date": "2026-08-24",
